@@ -4,6 +4,7 @@ import QtQuick
 import Quickshell
 import Quickshell.Io
 import qs.Common
+import qs.DCommon.Common as DCommon
 
 // Canonical Dux Connect IPC client. Targets daemon apiVersion 1.
 Item {
@@ -216,7 +217,7 @@ Item {
         eventReceived(topic, message.data);
     }
 
-    DuxSocket {
+    DCommon.DSocket {
         id: requestSocket
 
         path: root.socketPath
@@ -241,7 +242,7 @@ Item {
         }
     }
 
-    DuxSocket {
+    DCommon.DSocket {
         id: subscriptionSocket
 
         path: root.socketPath
