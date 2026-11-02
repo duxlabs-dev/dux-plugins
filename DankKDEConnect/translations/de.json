@@ -15,7 +15,7 @@
     "Clipboard sent": "Zwischenablage gesendet"
   },
   "Device paired": {
-    "Device paired": "Gerät verbunden"
+    "Device paired": "Gerät gekoppelt"
   },
   "Device unpaired": {
     "Device unpaired": "Gerät entkoppelt"
@@ -36,19 +36,19 @@
     "Failed to launch SMS app": "SMS-App konnte nicht gestartet werden"
   },
   "Failed to reject pairing": {
-    "Failed to reject pairing": "Kopplung konnte nicht abgelehnt werden"
+    "Failed to reject pairing": "Kopplung konnte nicht aufgehoben werden"
   },
   "Failed to ring device": {
     "Failed to ring device": "Gerät konnte nicht klingeln gelassen werden"
   },
   "Failed to send SMS": {
-    "Failed to send SMS": "Senden der SMS fehlgeschlagen"
+    "Failed to send SMS": "SMS konnte nicht gesendet werden"
   },
   "Failed to send clipboard": {
     "Failed to send clipboard": "Zwischenablage konnte nicht gesendet werden"
   },
   "Failed to send file": {
-    "Failed to send file": "Datei senden fehlgeschlagen"
+    "Failed to send file": "Datei konnte nicht gesendet werden"
   },
   "Failed to send ping": {
     "Failed to send ping": "Ping konnte nicht gesendet werden"
@@ -72,7 +72,7 @@
     "Good": "Gut"
   },
   "Make sure KDE Connect or Valent is running on your other devices": {
-    "Make sure KDE Connect or Valent is running on your other devices": "Stellen Sie sicher, dass KDE Connect oder Valent auf Ihren anderen Geräten läuft"
+    "Make sure KDE Connect or Valent is running on your other devices": "Stellen Sie sicher, dass KDE Connect oder Valent auf Ihren anderen Geräten ausgeführt wird"
   },
   "Media Player": {
     "Media Player": "Mediaplayer"
@@ -93,7 +93,7 @@
     "No devices": "Keine Geräte"
   },
   "No devices found": {
-    "No devices found": "Kein Gerät gefunden"
+    "No devices found": "Keine Geräte gefunden"
   },
   "No images found": {
     "No images found": "Keine Bilder gefunden"
@@ -120,7 +120,7 @@
     "Pairing failed": "Koppeln fehlgeschlagen"
   },
   "Pairing request from %1": {
-    "Pairing request from %1": "Pairing-Anfrage von %1"
+    "Pairing request from %1": "Kopplungsanfrage von %1"
   },
   "Pairing request sent": {
     "Pairing request sent": "Kopplungsanfrage gesendet"
@@ -129,7 +129,7 @@
     "Pairing requested": "Kopplung angefordert"
   },
   "Pairing...": {
-    "Pairing...": "Koppeln..."
+    "Pairing...": "Kopplung ..."
   },
   "Pause": {
     "Pause": "Pause"
@@ -168,7 +168,7 @@
     "Ring": "Klingeln lassen"
   },
   "Ringing %1...": {
-    "Ringing %1...": "Rufe %1 an..."
+    "Ringing %1...": "Klingeln %1 ..."
   },
   "SMS": {
     "SMS": "SMS"
@@ -189,7 +189,7 @@
     "Send SMS": "SMS senden"
   },
   "Sending %1...": {
-    "Sending %1...": "Sende %1..."
+    "Sending %1...": "Senden von %1 ..."
   },
   "Share": {
     "Share": "Teilen"

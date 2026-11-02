@@ -3,19 +3,19 @@
     "Accent Color": "Akzentfarbe"
   },
   "Available in Detailed and Forecast view modes": {
-    "Available in Detailed and Forecast view modes": "Verfügbar in den Ansichtsmodi „Detailliert“ und „Vorhersage“"
+    "Available in Detailed and Forecast view modes": "Verfügbar in den Ansichtsmodi \"Detailliert“ und \"Vorhersage“"
   },
   "Background Opacity": {
     "Background Opacity": "Hintergrundopazität"
   },
   "Choose how the weather widget is displayed": {
-    "Choose how the weather widget is displayed": "Wählen Sie aus, wie das Wetter-Widget angezeigt werden soll"
+    "Choose how the weather widget is displayed": "Wählen Sie, wie das Wetter-Widget angezeigt wird"
   },
   "Compact": {
     "Compact": "Kompakt"
   },
   "Custom": {
-    "Custom": "Individuell"
+    "Custom": "Benutzerdefiniert"
   },
   "Custom Color": {
     "Custom Color": "Benutzerdefinierte Farbe"
@@ -36,7 +36,7 @@
     "Forecast Days": "Vorhersagetage"
   },
   "Hourly Forecast Count": {
-    "Hourly Forecast Count": "Anzahl der stündlichen Vorhersagen"
+    "Hourly Forecast Count": "Anzahl stündlicher Vorhersagen"
   },
   "Humidity": {
     "Humidity": "Feuchtigkeit"
@@ -57,34 +57,34 @@
     "Secondary": "Sekundär"
   },
   "Show Feels Like Temperature": {
-    "Show Feels Like Temperature": "Gefühlte Temperatur anzeigen"
+    "Show Feels Like Temperature": "Gefühlte Temperatur zeigen"
   },
   "Show Forecast": {
-    "Show Forecast": "Vorhersage anzeigen"
+    "Show Forecast": "Vorhersage zeigen"
   },
   "Show Hourly Forecast": {
-    "Show Hourly Forecast": "Stündliche Vorhersage anzeigen"
+    "Show Hourly Forecast": "Stündliche Vorhersage zeigen"
   },
   "Show Humidity": {
-    "Show Humidity": "Luftfeuchtigkeit anzeigen"
+    "Show Humidity": "Luftfeuchtigkeit zeigen"
   },
   "Show Location": {
-    "Show Location": "Standort anzeigen"
+    "Show Location": "Standort zeigen"
   },
   "Show Precipitation Probability": {
-    "Show Precipitation Probability": "Niederschlagswahrscheinlichkeit anzeigen"
+    "Show Precipitation Probability": "Niederschlagswahrscheinlichkeit zeigen"
   },
   "Show Pressure": {
-    "Show Pressure": "Luftdruck anzeigen"
+    "Show Pressure": "Druck zeigen"
   },
   "Show Sunrise/Sunset": {
-    "Show Sunrise/Sunset": "Sonnenaufgang/-untergang anzeigen"
+    "Show Sunrise/Sunset": "Sonnenaufgang/-untergang zeigen"
   },
   "Show Weather Condition": {
-    "Show Weather Condition": "Wetterlage anzeigen"
+    "Show Weather Condition": "Wetterlage zeigen"
   },
   "Show Wind Speed": {
-    "Show Wind Speed": "Windgeschwindigkeit anzeigen"
+    "Show Wind Speed": "Windgeschwindigkeit zeigen"
   },
   "Standard": {
     "Standard": "Standard"
