@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "Активиране"
+  },
+  "Always Active": {
+    "Always Active": "Винаги активно"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Копирано в буфера за обмен"
+  },
+  "Copy": {
+    "Copy": "Копиране"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "Източници на клавишни комбинации"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "Настройки за търсене на клавишни комбинации"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "Клавишните комбинации се показват до обичайните резултати от търсенето"
+  },
+  "Pin": {
+    "Pin": "Закачане"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "Търсене по клавишна комбинация, описание или име на действие.\n\nДействието по подразбиране копира комбинацията в буфера за обмен.\nЩракнете с десен бутон или стрелка надясно за закачане на често използвани комбинации."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "Търсене на клавишни комбинации от композитора и приложенията"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "Изберете поне един доставчик"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "Изберете кои доставчици на комбинации да се включат"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "Задействащ префикс"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "Въведете този префикс за търсене на клавишни комбинации"
+  },
+  "Unpin": {
+    "Unpin": "Откачане"
+  },
+  "Usage Tips": {
+    "Usage Tips": "Съвети за употреба"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "Използване на задействащ префикс за активиране"
+  }
+}

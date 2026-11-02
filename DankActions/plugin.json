@@ -4,7 +4,7 @@
     "description": "Execute custom commands with dynamic output display and configurable icons",
     "version": "1.0.5",
     "license": "MIT",
-    "author": "Avenge Media",
+    "author": "Dux Labs",
     "icon": "terminal",
     "firstParty": true,
     "component": "./DankActionsWidget.qml",
@@ -12,5 +12,6 @@
     "permissions": [
         "settings_read",
         "settings_write"
-    ]
+    ],
+    "requires_dms": ">=2.0.0"
 }

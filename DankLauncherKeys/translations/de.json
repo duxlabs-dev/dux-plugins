@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "Aktivierung"
+  },
+  "Always Active": {
+    "Always Active": "Immer aktiv"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "In Zwischenablage kopiert"
+  },
+  "Copy": {
+    "Copy": "Kopieren"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "Tastenkombinationsquellen"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "Sucheinstellungen für Tastenkombinationen"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "Tastenkombinationen werden neben regulären Suchergebnissen angezeigt"
+  },
+  "Pin": {
+    "Pin": "Anheften"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "Suchen Sie nach Tastenkombination, Beschreibung oder Aktionsname.\n\nDie Standardaktion kopiert die Tastenkombination in die Zwischenablage.\nRechtsklick oder Rechts-Pfeil drücken, um häufig verwendete Tastenkombinationen anzuheften – diese erscheinen oben, wenn nicht gesucht wird."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "Tastenkombinationen von Ihrem Compositor und Anwendungen suchen"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "Wählen Sie mindestens einen Anbieter aus"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "Wählen Sie aus, welche Tastenkombinationsanbieter einbezogen werden sollen"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "Auslöser-Präfix"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "Geben Sie dieses Präfix ein, um nach Tastenkombinationen zu suchen"
+  },
+  "Unpin": {
+    "Unpin": "Anheften aufheben"
+  },
+  "Usage Tips": {
+    "Usage Tips": "Tipps zur Verwendung"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "Auslöser-Präfix zum Aktivieren verwenden"
+  }
+}

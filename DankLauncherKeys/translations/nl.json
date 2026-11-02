@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "Activering"
+  },
+  "Always Active": {
+    "Always Active": "Altijd actief"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Gekopieerd naar klembord"
+  },
+  "Copy": {
+    "Copy": "Kopiëren"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "Sneltoetsbronnen"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "Zoekinstellingen sneltoetsen"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "Sneltoetsen getoond naast gewone zoekresultaten"
+  },
+  "Pin": {
+    "Pin": "Vastmaken"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "Zoek op toetsencombinatie, beschrijving of actienaam.\n\nDe standaardactie kopieert de sneltoets naar het klembord.\nKlik met rechts of druk op Pijl-rechts om veelgebruikte sneltoetsen vast te pinnen - ze verschijnen bovenaan als je niet zoekt."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "Zoek sneltoetsen van je compositor en applicaties"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "Selecteer ten minste één provider"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "Selecteer welke sneltoetsproviders moeten worden opgenomen"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "Trigger-voorvoegsel"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "Typ dit voorvoegsel om sneltoetsen te zoeken"
+  },
+  "Unpin": {
+    "Unpin": "Losmaken"
+  },
+  "Usage Tips": {
+    "Usage Tips": "Gebruikstips"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "Gebruik trigger-voorvoegsel om te activeren"
+  }
+}

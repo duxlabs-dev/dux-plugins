@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "強調色"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "可於詳細和預報檢視模式中顯示"
+  },
+  "Background Opacity": {
+    "Background Opacity": "背景不透明度"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "選擇天氣小工具的顯示方式"
+  },
+  "Compact": {
+    "Compact": "精簡"
+  },
+  "Custom": {
+    "Custom": "自訂"
+  },
+  "Custom Color": {
+    "Custom Color": "自訂顏色"
+  },
+  "Detailed": {
+    "Detailed": "詳細"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "顯示每小時天氣預報"
+  },
+  "Feels": {
+    "Feels": "體感"
+  },
+  "Forecast": {
+    "Forecast": "預報"
+  },
+  "Forecast Days": {
+    "Forecast Days": "預報天數"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "每小時預報數量"
+  },
+  "Humidity": {
+    "Humidity": "濕度"
+  },
+  "No Weather Data": {
+    "No Weather Data": "無天氣資料"
+  },
+  "Precip": {
+    "Precip": "降水"
+  },
+  "Pressure": {
+    "Pressure": "氣壓"
+  },
+  "Primary": {
+    "Primary": "主要"
+  },
+  "Secondary": {
+    "Secondary": "次要"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "顯示體感溫度"
+  },
+  "Show Forecast": {
+    "Show Forecast": "顯示預報"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "顯示每小時預報"
+  },
+  "Show Humidity": {
+    "Show Humidity": "顯示濕度"
+  },
+  "Show Location": {
+    "Show Location": "顯示位置"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "顯示降雨機率"
+  },
+  "Show Pressure": {
+    "Show Pressure": "顯示氣壓"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "顯示日出/日落"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "顯示天氣狀況"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "顯示風速"
+  },
+  "Standard": {
+    "Standard": "標準"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "當強調色設為自訂時使用"
+  },
+  "View Mode": {
+    "View Mode": "檢視模式"
+  },
+  "Wind": {
+    "Wind": "風速"
+  }
+}

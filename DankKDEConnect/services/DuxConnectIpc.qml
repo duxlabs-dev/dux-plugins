@@ -5,20 +5,20 @@ import Quickshell
 import Quickshell.Io
 import qs.Common
 
-// Canonical DankConnect IPC client. Targets daemon apiVersion 1.
+// Canonical Dux Connect IPC client. Targets daemon apiVersion 1.
 Item {
     id: root
 
-    // dankgo omits zero-valued response IDs, so the subscription handshake
+    // dux-go omits zero-valued response IDs, so the subscription handshake
     // must use a non-zero ID that can be matched in the response.
     readonly property int subscriptionRequestId: 1
 
     property string socketPath: {
-        const override = Quickshell.env("DANKCONNECT_SOCKET");
+        const override = Quickshell.env("DUX_CONNECT_SOCKET");
         if (override && override.length > 0)
             return override;
         const runtimeDir = Quickshell.env("XDG_RUNTIME_DIR");
-        return runtimeDir ? runtimeDir + "/dankconnect.sock" : "";
+        return runtimeDir ? runtimeDir + "/dux-connect.sock" : "";
     }
 
     readonly property bool connected: requestSocket.linkUp && ready
@@ -62,7 +62,7 @@ Item {
         capabilities = message.capabilities.slice();
         ready = apiVersion === 1;
         if (!ready) {
-            lastError = "Unsupported DankConnect API version " + apiVersion;
+            lastError = "Unsupported Dux Connect API version " + apiVersion;
             return;
         }
         lastError = "";
@@ -191,7 +191,7 @@ Item {
             return;
         if (_isHello(message)) {
             if (Number(message.apiVersion) !== 1) {
-                lastError = "Unsupported DankConnect subscription API version " + message.apiVersion;
+                lastError = "Unsupported Dux Connect subscription API version " + message.apiVersion;
                 return;
             }
             subscriptionSocket.send({
@@ -216,7 +216,7 @@ Item {
         eventReceived(topic, message.data);
     }
 
-    DankSocket {
+    DuxSocket {
         id: requestSocket
 
         path: root.socketPath
@@ -241,7 +241,7 @@ Item {
         }
     }
 
-    DankSocket {
+    DuxSocket {
         id: subscriptionSocket
 
         path: root.socketPath
@@ -269,7 +269,7 @@ Item {
                 root.launchPending = false;
                 return;
             }
-            Quickshell.execDetached(["sh", "-c", "if command -v dankconnect >/dev/null 2>&1; then exec dankconnect daemon; elif command -v flatpak >/dev/null 2>&1 && flatpak info com.danklinux.dankconnect >/dev/null 2>&1; then exec flatpak run --command=dankconnect com.danklinux.dankconnect daemon; fi"]);
+            Quickshell.execDetached(["sh", "-c", "if command -v dux-connect >/dev/null 2>&1; then exec dux-connect daemon; elif command -v flatpak >/dev/null 2>&1 && flatpak info dev.duxlabs.connect >/dev/null 2>&1; then exec flatpak run --command=dux-connect dev.duxlabs.connect daemon; fi"]);
             launchResetTimer.restart();
         }
     }

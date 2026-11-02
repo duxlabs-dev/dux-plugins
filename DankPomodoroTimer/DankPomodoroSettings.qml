@@ -4,6 +4,7 @@ import qs.Common
 import qs.Services
 import qs.Widgets
 import qs.Modules.Plugins
+import qs.DCommon.Widgets
 
 PluginSettings {
     id: root
@@ -63,9 +64,18 @@ PluginSettings {
             StringSetting {
                 settingKey: "longBreakDuration"
                 label: "Long Break (minutes)"
-                description: "Break after 4 pomodoros"
+                description: "Length of the long break"
                 placeholder: "15"
                 defaultValue: "15"
+            }
+
+            SliderSetting {
+                settingKey: "longBreakFrequency"
+                label: "Long Break Frequency"
+                description: "Start a long break after this many pomodoros"
+                defaultValue: 4
+                minimum: 1
+                maximum: 12
             }
         }
     }
@@ -109,6 +119,20 @@ PluginSettings {
                 description: "Automatically enable Do Not Disturb mode during work sessions"
                 defaultValue: false
             }
+
+            ToggleSetting {
+                settingKey: "showBarText"
+                label: "Show Timer Text in Bar"
+                description: "Show the remaining time next to the timer icon"
+                defaultValue: true
+            }
+
+            ToggleSetting {
+                settingKey: "playCompletionSound"
+                label: "Play Completion Sound"
+                description: "Play a sound when a work session or break ends"
+                defaultValue: true
+            }
         }
     }
 
@@ -127,7 +151,7 @@ PluginSettings {
             Row {
                 spacing: Theme.spacingM
 
-                DankIcon {
+                DIcon {
                     name: "info"
                     size: Theme.iconSize
                     color: Theme.primary
@@ -144,7 +168,7 @@ PluginSettings {
             }
 
             StyledText {
-                text: "The Pomodoro Technique uses 25-minute focused work sessions followed by short breaks. After 4 pomodoros, take a longer break to recharge.\n\n• Work: 25 minutes of focused work\n• Short Break: 5 minute rest\n• Long Break: 15 minutes after 4 pomodoros\n\nNotifications will alert you when each session completes."
+                text: "The Pomodoro Technique uses 25-minute focused work sessions followed by short breaks. After a configurable number of pomodoros, take a longer break to recharge.\n\n• Work: 25 minutes of focused work\n• Short Break: 5 minute rest\n• Long Break: 15 minute rest at the configured frequency\n\nNotifications will alert you when each session completes."
                 font.pixelSize: Theme.fontSizeSmall
                 color: Theme.surfaceVariantText
                 wrapMode: Text.WordWrap

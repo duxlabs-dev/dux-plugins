@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "Прийняти"
+  },
+  "Audio Output": {
+    "Audio Output": "Аудіовихід"
+  },
+  "Battery": {
+    "Battery": "Батарея"
+  },
+  "Browse Files": {
+    "Browse Files": "Переглянути файли"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "Дані буфера надіслано"
+  },
+  "Device paired": {
+    "Device paired": "Пристрій зв'язано"
+  },
+  "Device unpaired": {
+    "Device unpaired": "Пристрій від'єднано"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": "Введіть URI або текст для поширення"
+  },
+  "Excellent": {
+    "Excellent": "Відмінно"
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "Не вдалося прийняти сполучення"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "Не вдалося переглянути пристрій"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "Не вдалося запустити SMS-програму"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "Не вдалося відхилити сполучення"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "Не вдалося викликати пристрій (дзвінок)"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": "Не вдалося надіслати SMS"
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "Не вдалося надіслати вміст буфера обміну"
+  },
+  "Failed to send file": {
+    "Failed to send file": "Не вдалося надіслати файл"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "Не вдалося надіслати пінг"
+  },
+  "Failed to share": {
+    "Failed to share": "Не вдалося поширити"
+  },
+  "Fair": {
+    "Fair": "Задовільно"
+  },
+  "File": {
+    "File": "Файл"
+  },
+  "File received from %1": {
+    "File received from %1": "Файл отримано від %1"
+  },
+  "Forward 10s": {
+    "Forward 10s": "Перемотати вперед на 10 с."
+  },
+  "Good": {
+    "Good": "Добре"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "Переконайтеся, що KDE Connect або Valent запущено на ваших інших пристроях"
+  },
+  "Media Player": {
+    "Media Player": "Медіаплеєр"
+  },
+  "Message": {
+    "Message": "Повідомлення"
+  },
+  "Network Type": {
+    "Network Type": "Тип мережі"
+  },
+  "Next": {
+    "Next": "Далі"
+  },
+  "No Signal": {
+    "No Signal": "Немає сигналу"
+  },
+  "No devices": {
+    "No devices": "Пристроїв немає"
+  },
+  "No devices found": {
+    "No devices found": "Пристроїв не знайдено"
+  },
+  "No images found": {
+    "No images found": "Зображень не знайдено"
+  },
+  "Not paired": {
+    "Not paired": "Не сполучено"
+  },
+  "Notifications": {
+    "Notifications": "Сповіщення"
+  },
+  "Offline": {
+    "Offline": "Офлайн"
+  },
+  "Open App": {
+    "Open App": "Відкрити програму"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "Відкриття SMS-програми"
+  },
+  "Opening file browser": {
+    "Opening file browser": "Відкриття файлового браузера"
+  },
+  "Pairing failed": {
+    "Pairing failed": "Не вдалося створити пару"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": "Запит на сполучення від %1"
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "Запит на сполучення надіслано"
+  },
+  "Pairing requested": {
+    "Pairing requested": "Запитано сполучення"
+  },
+  "Pairing...": {
+    "Pairing...": "Сполучення..."
+  },
+  "Pause": {
+    "Pause": "Призупинити"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "Підключення телефону недоступне"
+  },
+  "Phone number": {
+    "Phone number": "Номер телефону"
+  },
+  "Ping": {
+    "Ping": "Пінг"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": "Пінг надіслано до %1"
+  },
+  "Play": {
+    "Play": "Відтворити"
+  },
+  "Previous": {
+    "Previous": "Попередній"
+  },
+  "Recent Images": {
+    "Recent Images": "Нещодавні зображення"
+  },
+  "Reject": {
+    "Reject": "Відхилити"
+  },
+  "Request Pairing": {
+    "Request Pairing": "Запитати сполучення"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": "Перемотати назад 10 с"
+  },
+  "Ring": {
+    "Ring": "Дзвінок"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": "Виклик %1..."
+  },
+  "SMS": {
+    "SMS": "SMS"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": "SMS успішно надіслано"
+  },
+  "Select File to Send": {
+    "Select File to Send": "Оберіть файл для надсилання"
+  },
+  "Send": {
+    "Send": "Надіслати"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "Надіслати вміст буфера обміну"
+  },
+  "Send SMS": {
+    "Send SMS": "Надіслати SMS"
+  },
+  "Sending %1...": {
+    "Sending %1...": "Надсилання %1..."
+  },
+  "Share": {
+    "Share": "Поширити"
+  },
+  "Shared": {
+    "Shared": "Спільний"
+  },
+  "Signal Strength": {
+    "Signal Strength": "Рівень сигналу"
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "Запустіть KDE Connect або Valent, щоб використовувати цей плагін"
+  },
+  "Text": {
+    "Text": "Текст"
+  },
+  "URI": {
+    "URI": "URI"
+  },
+  "Unavailable": {
+    "Unavailable": "Недоступно"
+  },
+  "Unknown": {
+    "Unknown": "Невідомо"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "Невідомий виконавець"
+  },
+  "Unpair": {
+    "Unpair": "Розірвати пару"
+  },
+  "Unpair failed": {
+    "Unpair failed": "Помилка розірвання пари"
+  },
+  "Verification": {
+    "Verification": "Верифікація"
+  },
+  "Weak": {
+    "Weak": "Слабкий"
+  },
+  "device": {
+    "device": "пристрій"
+  }
+}

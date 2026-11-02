@@ -1,6 +1,7 @@
 import QtQuick
 import qs.Common
 import qs.Widgets
+import qs.DCommon.Widgets
 
 StyledRect {
     id: root
@@ -19,7 +20,7 @@ StyledRect {
             anchors.horizontalCenter: parent.horizontalCenter
             spacing: Theme.spacingS
 
-            DankIcon {
+            DIcon {
                 name: "error"
                 size: Theme.iconSize
                 color: Theme.error
@@ -27,7 +28,7 @@ StyledRect {
             }
 
             StyledText {
-                text: I18n.tr("Phone Connect Not Available", "Phone Connect unavailable error title")
+                text: I18n.trFor("dankKDEConnect", "Phone Connect Not Available", "Phone Connect unavailable error title")
                 font.pixelSize: Theme.fontSizeMedium
                 font.weight: Font.Medium
                 color: Theme.error
@@ -36,7 +37,7 @@ StyledRect {
         }
 
         StyledText {
-            text: I18n.tr("Start DankConnect, KDE Connect, or Valent to use this plugin", "Phone Connect daemon hint")
+            text: I18n.trFor("dankKDEConnect", "Start Dux Connect, KDE Connect, or Valent to use this plugin", "Phone Connect daemon hint")
             font.pixelSize: Theme.fontSizeSmall
             color: Theme.error
             opacity: 0.8

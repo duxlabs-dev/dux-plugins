@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "Kích hoạt"
+  },
+  "Always Active": {
+    "Always Active": "Luôn hoạt động"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Đã sao chép vào bảng nhớ tạm"
+  },
+  "Copy": {
+    "Copy": "Sao chép"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "Nguồn phím tắt"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "Cài đặt tìm kiếm phím tắt"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "Các phím tắt được hiển thị bên cạnh kết quả tìm kiếm thông thường"
+  },
+  "Pin": {
+    "Pin": "Ghim"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "Tìm kiếm theo tổ hợp phím, mô tả hoặc tên hành động.\n\nHành động mặc định sẽ sao chép phím tắt vào bảng nhớ tạm.\nNhấp chuột phải hoặc nhấn Mũi tên Phải để ghim các phím tắt thường dùng - chúng sẽ xuất hiện ở trên cùng khi không tìm kiếm."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "Tìm kiếm phím tắt bàn phím từ compositor và các ứng dụng của bạn"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "Chọn ít nhất một nhà cung cấp"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "Chọn các nhà cung cấp phím tắt nào để bao gồm"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "Tiền tố kích hoạt"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "Nhập tiền tố này để tìm kiếm phím tắt"
+  },
+  "Unpin": {
+    "Unpin": "Bỏ ghim"
+  },
+  "Usage Tips": {
+    "Usage Tips": "Mẹo sử dụng"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "Sử dụng tiền tố kích hoạt để kích hoạt"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "Aktywacja"
+  },
+  "Always Active": {
+    "Always Active": "Zawsze aktywny"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Skopiowano do schowka"
+  },
+  "Copy": {
+    "Copy": "Kopiuj"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "Źródła "
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "Ustawienia wyszukiwania skrótów klawiszowych"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": ""
+  },
+  "Pin": {
+    "Pin": "Przypnij"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": ""
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": ""
+  },
+  "Select at least one provider": {
+    "Select at least one provider": ""
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": ""
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "Prefix Wyzwalacza"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": ""
+  },
+  "Unpin": {
+    "Unpin": "Odepnij"
+  },
+  "Usage Tips": {
+    "Usage Tips": ""
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": ""
+  }
+}

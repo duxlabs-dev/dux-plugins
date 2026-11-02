@@ -8,6 +8,7 @@ import QtQuick.Effects
 import QtQuick.Shapes
 import qs.Modules.Plugins
 import Quickshell.Services.Mpris
+import qs.DCommon.Widgets
 
 // Self-contained CC detail content — reads device from PhoneConnectService directly
 // so it works in the CC panel where the plugin instance has no pluginService/pluginData.
@@ -52,10 +53,10 @@ Item {
     function sendClipboardToDeviceId(deviceId) {
         PhoneConnectService.sendClipboard(deviceId, function (response) {
             if (response.error) {
-                ToastService.showError(I18n.tr("Failed to send clipboard", "Phone Connect error"), response.error);
+                ToastService.showError(I18n.trFor("dankKDEConnect", "Failed to send clipboard", "Phone Connect error"), response.error);
                 return;
             }
-            ToastService.showInfo(I18n.tr("Clipboard sent", "Phone Connect clipboard action"));
+            ToastService.showInfo(I18n.trFor("dankKDEConnect", "Clipboard sent", "Phone Connect clipboard action"));
         });
     }
 
@@ -177,7 +178,7 @@ Item {
                     radius: 21
                     color: Theme.withAlpha(Theme.primary, 0.2)
 
-                    DankIcon {
+                    DIcon {
                         name: PhoneConnectService.getDeviceIcon(root.activeDevice) || "smartphone"
                         size: 22
                         color: Theme.primary
@@ -286,14 +287,14 @@ Item {
                             }
                         }
 
-                        DankRipple {
+                        DRipple {
                             id: detailSwitcherRipple
                             anchors.fill: parent
                             cornerRadius: root.switcherVisible ? width / 2 : (PhoneConnectService.deviceIds.length > 1 ? 12 : Theme.cornerRadius)
                             rippleColor: Theme.secondary
                         }
 
-                        DankIcon {
+                        DIcon {
                             name: "swap_horiz"
                             size: 20
                             color: Theme.secondary
@@ -380,14 +381,14 @@ Item {
                             }
                         }
 
-                        DankRipple {
+                        DRipple {
                             id: detailRefreshRipple
                             anchors.fill: parent
                             cornerRadius: PhoneConnectService.isRefreshing ? width / 2 : (PhoneConnectService.deviceIds.length > 1 ? 12 : Theme.cornerRadius)
                             rippleColor: Theme.primary
                         }
 
-                        DankIcon {
+                        DIcon {
                             name: "refresh"
                             size: 20
                             color: Theme.primary
@@ -404,7 +405,7 @@ Item {
                             }
                         }
 
-                        DankSpinner {
+                        DSpinner {
                             anchors.centerIn: parent
                             size: 18
                             color: Theme.primary
@@ -610,7 +611,7 @@ Item {
                                     iconName: "phone_in_talk"
                                     iconColor: Theme.primary
                                     buttonSize: 32
-                                    tooltipText: I18n.tr("Ring", "KDE Connect ring tooltip")
+                                    tooltipText: I18n.trFor("dankKDEConnect", "Ring", "KDE Connect ring tooltip")
                                     onClicked: {
                                         if (!enabled)
                                             return;
@@ -632,7 +633,7 @@ Item {
                                     iconName: "notifications_active"
                                     iconColor: Theme.primary
                                     buttonSize: 32
-                                    tooltipText: I18n.tr("Ping", "KDE Connect ping tooltip")
+                                    tooltipText: I18n.trFor("dankKDEConnect", "Ping", "KDE Connect ping tooltip")
                                     onClicked: {
                                         if (!enabled)
                                             return;
@@ -653,7 +654,7 @@ Item {
                                     iconName: "folder"
                                     iconColor: Theme.primary
                                     buttonSize: 32
-                                    tooltipText: I18n.tr("Browse Files", "KDE Connect browse tooltip")
+                                    tooltipText: I18n.trFor("dankKDEConnect", "Browse Files", "KDE Connect browse tooltip")
                                     onClicked: {
                                         if (!enabled)
                                             return;
@@ -676,7 +677,7 @@ Item {
                                     iconName: "content_paste"
                                     iconColor: Theme.primary
                                     buttonSize: 32
-                                    tooltipText: I18n.tr("Send Clipboard", "KDE Connect send clipboard tooltip")
+                                    tooltipText: I18n.trFor("dankKDEConnect", "Send Clipboard", "KDE Connect send clipboard tooltip")
                                     onClicked: {
                                         if (!enabled)
                                             return;
@@ -695,7 +696,7 @@ Item {
                                     iconName: "share"
                                     iconColor: root.shareDeviceId === root.activeDeviceId ? Theme.secondary : Theme.primary
                                     buttonSize: 32
-                                    tooltipText: I18n.tr("Share", "KDE Connect share tooltip")
+                                    tooltipText: I18n.trFor("dankKDEConnect", "Share", "KDE Connect share tooltip")
                                     onClicked: {
                                         if (!enabled)
                                             return;
@@ -715,7 +716,7 @@ Item {
                                     iconName: "sms"
                                     iconColor: root.smsDeviceId === root.activeDeviceId ? Theme.secondary : Theme.primary
                                     buttonSize: 32
-                                    tooltipText: I18n.tr("SMS", "KDE Connect SMS tooltip")
+                                    tooltipText: I18n.trFor("dankKDEConnect", "SMS", "KDE Connect SMS tooltip")
                                     onClicked: {
                                         if (!enabled)
                                             return;
@@ -737,28 +738,28 @@ Item {
                         InfoRow {
                             visible: root.activeDevice && PhoneConnectService.hasPlugin(root.activeDeviceId, "battery") && (root.activeDevice?.batteryCharge ?? -1) >= 0
                             icon: PhoneConnectService.getBatteryIcon(root.activeDevice)
-                            label: I18n.tr("Battery", "KDE Connect battery label")
-                            value: (root.activeDevice?.batteryCharge ?? -1) >= 0 ? (root.activeDevice.batteryCharge + "%") : I18n.tr("Unknown", "Status")
+                            label: I18n.trFor("dankKDEConnect", "Battery", "KDE Connect battery label")
+                            value: (root.activeDevice?.batteryCharge ?? -1) >= 0 ? (root.activeDevice.batteryCharge + "%") : I18n.trFor("dankKDEConnect", "Unknown", "Status")
                             valueColor: root.activeDevice?.batteryCharging ? Theme.primary : Theme.surfaceText
                         }
 
                         InfoRow {
                             visible: root.activeDevice && PhoneConnectService.hasPlugin(root.activeDeviceId, "connectivity_report") && (root.activeDevice?.networkStrength ?? -1) >= 0
                             icon: PhoneConnectService.getNetworkIcon(root.activeDevice) || "signal_cellular_null"
-                            label: I18n.tr("Signal Strength", "KDE Connect signal strength label")
-                            value: I18n.tr(PhoneConnectService.getNetworkStrengthLabel(root.activeDevice), "Network signal strength status")
+                            label: I18n.trFor("dankKDEConnect", "Signal Strength", "KDE Connect signal strength label")
+                            value: PhoneConnectService.getNetworkStrengthLabel(root.activeDevice)
                         }
 
                         InfoRow {
                             visible: root.activeDevice && PhoneConnectService.hasPlugin(root.activeDeviceId, "connectivity_report") && root.activeDevice?.networkType
                             icon: PhoneConnectService.getNetworkTypeIcon(root.activeDevice)
-                            label: I18n.tr("Network Type", "KDE Connect network type label")
+                            label: I18n.trFor("dankKDEConnect", "Network Type", "KDE Connect network type label")
                             value: PhoneConnectService.getNetworkTypeLabel(root.activeDevice)
                         }
 
                         InfoRow {
                             icon: "sms"
-                            label: I18n.tr("Notifications", "KDE Connect notifications label")
+                            label: I18n.trFor("dankKDEConnect", "Notifications", "KDE Connect notifications label")
                             value: root.activeDevice?.notificationCount ?? 0
                         }
                     }
@@ -796,20 +797,20 @@ Item {
             onSendSms: function (phoneNumber, message) {
                 PhoneConnectService.sendSms(root.effectiveDeviceId, phoneNumber, message, [], function (response) {
                     if (response.error) {
-                        ToastService.showError(I18n.tr("Failed to send SMS", "Phone Connect error"), response.error);
+                        ToastService.showError(I18n.trFor("dankKDEConnect", "Failed to send SMS", "Phone Connect error"), response.error);
                         return;
                     }
-                    ToastService.showInfo(I18n.tr("SMS sent successfully", "Phone Connect SMS action"));
+                    ToastService.showInfo(I18n.trFor("dankKDEConnect", "SMS sent successfully", "Phone Connect SMS action"));
                 });
                 root.smsDeviceId = "";
             }
             onLaunchApp: {
                 PhoneConnectService.launchSmsApp(root.effectiveDeviceId, function (response) {
                     if (response.error) {
-                        ToastService.showError(I18n.tr("Failed to launch SMS app", "Phone Connect error"), response.error);
+                        ToastService.showError(I18n.trFor("dankKDEConnect", "Failed to launch SMS app", "Phone Connect error"), response.error);
                         return;
                     }
-                    ToastService.showInfo(I18n.tr("Opening SMS app", "Phone Connect SMS action") + "...");
+                    ToastService.showInfo(I18n.trFor("dankKDEConnect", "Opening SMS app", "Phone Connect SMS action") + "...");
                 });
                 root.smsDeviceId = "";
             }
@@ -860,14 +861,14 @@ Item {
                     spacing: Theme.spacingXS
                     width: parent.width
 
-                    DankIcon {
+                    DIcon {
                         name: "image"
                         size: 16
                         color: Theme.surfaceText
                     }
 
                     StyledText {
-                        text: I18n.tr("Recent Images", "Recent Images title")
+                        text: I18n.trFor("dankKDEConnect", "Recent Images", "Recent Images title")
                         font.pixelSize: Theme.fontSizeSmall
                         font.weight: Font.Bold
                         color: Theme.surfaceText
@@ -1148,7 +1149,7 @@ Item {
                                 }
                             }
 
-                            DankRipple {
+                            DRipple {
                                 id: imageRipple
                                 anchors.fill: parent
                                 cornerRadius: imageItem.tlr
@@ -1190,14 +1191,14 @@ Item {
                                     border.color: Theme.withAlpha(Theme.outline, 0.2)
                                 }
 
-                                DankRipple {
+                                DRipple {
                                     id: sendRipple
                                     anchors.fill: sendBtnBg
                                     cornerRadius: sendBtnBg.radius
                                     rippleColor: Theme.primary
                                 }
 
-                                DankIcon {
+                                DIcon {
                                     name: "send"
                                     size: 14
                                     anchors.centerIn: parent
@@ -1278,7 +1279,7 @@ Item {
                             return "";
                         }
 
-                        DankIcon {
+                        DIcon {
                             anchors.centerIn: parent
                             name: "music_note"
                             size: 16
@@ -1315,7 +1316,7 @@ Item {
                             if (root.pluginRoot.phoneMprisPlayer && root.pluginRoot.phoneMprisPlayer.identity) {
                                 return root.pluginRoot.phoneMprisPlayer.identity.split(" - ")[0];
                             }
-                            return root.activeDevice?.mediaPlayer || I18n.tr("Media Player");
+                            return root.activeDevice?.mediaPlayer || I18n.trFor("dankKDEConnect", "Media Player");
                         }
                         font.pixelSize: Theme.fontSizeSmall
                         font.weight: Font.DemiBold
@@ -1328,7 +1329,7 @@ Item {
                         iconName: "speaker"
                         iconColor: Theme.surfaceText
                         buttonSize: 24
-                        tooltipText: I18n.tr("Audio Output")
+                        tooltipText: I18n.trFor("dankKDEConnect", "Audio Output")
                     }
                 }
 
@@ -1348,7 +1349,7 @@ Item {
 
                         property string activeArtUrl: root.pluginRoot.phoneMprisPlayer ? TrackArtService.getArtworkUrl(root.pluginRoot.phoneMprisPlayer) : ""
 
-                        DankCircularImage {
+                        DCircularImage {
                             id: albumArt
                             anchors.fill: parent
                             imageSource: smallThumbnailContainer.activeArtUrl
@@ -1356,7 +1357,7 @@ Item {
                             visible: smallThumbnailContainer.activeArtUrl !== ""
                         }
 
-                        DankIcon {
+                        DIcon {
                             anchors.centerIn: parent
                             name: "music_note"
                             size: 32
@@ -1385,13 +1386,13 @@ Item {
                                     let album = root.pluginRoot.phoneMprisPlayer.trackAlbum || "";
                                     if (artist && album)
                                         return artist + " — " + album;
-                                    return artist || album || I18n.tr("Unknown Artist");
+                                    return artist || album || I18n.trFor("dankKDEConnect", "Unknown Artist");
                                 } else {
                                     let artist = root.activeDevice?.mediaArtist || "";
                                     let album = root.activeDevice?.mediaAlbum || "";
                                     if (artist && album)
                                         return artist + " — " + album;
-                                    return artist || album || I18n.tr("Unknown Artist");
+                                    return artist || album || I18n.trFor("dankKDEConnect", "Unknown Artist");
                                 }
                             }
                             font.pixelSize: Theme.fontSizeSmall
@@ -1407,7 +1408,7 @@ Item {
                         backgroundColor: Theme.withAlpha(Theme.primary, 0.1)
                         buttonSize: 48
                         iconSize: 28
-                        tooltipText: iconName === "pause" ? I18n.tr("Pause", "Media pause tooltip") : I18n.tr("Play", "Media play tooltip")
+                        tooltipText: iconName === "pause" ? I18n.trFor("dankKDEConnect", "Pause", "Media pause tooltip") : I18n.trFor("dankKDEConnect", "Play", "Media play tooltip")
                         onClicked: {
                             if (root.pluginRoot.phoneMprisPlayer) {
                                 if (root.pluginRoot.phoneMprisPlayer.playbackState === MprisPlaybackState.Playing) {
@@ -1430,7 +1431,7 @@ Item {
                         iconName: "skip_previous"
                         iconColor: Theme.surfaceText
                         buttonSize: 28
-                        tooltipText: I18n.tr("Previous", "Media previous tooltip")
+                        tooltipText: I18n.trFor("dankKDEConnect", "Previous", "Media previous tooltip")
                         onClicked: root.pluginRoot.phoneMprisPlayer ? root.pluginRoot.phoneMprisPlayer.previous() : PhoneConnectService.mprisAction(root.activeDeviceId, "previous", function () {})
                     }
 
@@ -1438,7 +1439,7 @@ Item {
                         iconName: "replay_10"
                         iconColor: Theme.surfaceText
                         buttonSize: 28
-                        tooltipText: I18n.tr("Rewind 10s", "Media rewind tooltip")
+                        tooltipText: I18n.trFor("dankKDEConnect", "Rewind 10s", "Media rewind tooltip")
                         onClicked: {
                             if (root.pluginRoot.phoneMprisPlayer && root.pluginRoot.phoneMprisPlayer.canSeek) {
                                 root.pluginRoot.phoneMprisPlayer.position = Math.max(0, (root.pluginRoot.phoneMprisPlayer.position || 0) - 10);
@@ -1607,7 +1608,7 @@ Item {
                         iconName: "forward_10"
                         iconColor: Theme.surfaceText
                         buttonSize: 28
-                        tooltipText: I18n.tr("Forward 10s", "Media forward tooltip")
+                        tooltipText: I18n.trFor("dankKDEConnect", "Forward 10s", "Media forward tooltip")
                         onClicked: {
                             if (root.pluginRoot.phoneMprisPlayer && root.pluginRoot.phoneMprisPlayer.canSeek) {
                                 root.pluginRoot.phoneMprisPlayer.position = Math.min(root.pluginRoot.phoneMprisPlayer.length, (root.pluginRoot.phoneMprisPlayer.position || 0) + 10);
@@ -1619,7 +1620,7 @@ Item {
                         iconName: "skip_next"
                         iconColor: Theme.surfaceText
                         buttonSize: 28
-                        tooltipText: I18n.tr("Next", "Media next tooltip")
+                        tooltipText: I18n.trFor("dankKDEConnect", "Next", "Media next tooltip")
                         onClicked: root.pluginRoot.phoneMprisPlayer ? root.pluginRoot.phoneMprisPlayer.next() : PhoneConnectService.mprisAction(root.activeDeviceId, "next", function () {})
                     }
                 }

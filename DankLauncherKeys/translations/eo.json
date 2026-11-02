@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "Aktivigo"
+  },
+  "Always Active": {
+    "Always Active": "Ĉiam Aktiva"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Kopiita al tondujo"
+  },
+  "Copy": {
+    "Copy": "Kopii"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "Klavligilaj Fontoj"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "Klavoligiloj Serĉaj Agordoj"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "Klavoligiloj montrataj apud regulaj serĉrezultoj"
+  },
+  "Pin": {
+    "Pin": "Fiksi"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "Serĉu laŭ klavokombino, priskribo aŭ nomo de ago.\n\nDefaŭlta ago kopias la klavokumilon al la tondujo.\nDekstraklaku aŭ premu la dekstran sagoklavon por fiksi ofte uzatajn klavokumilojn - ili aperos supre kiam ne serĉado."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "Serĉu klavarajn mallongigojn el via kompostilo kaj aplikaĵoj"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "Elektu almenaŭ unu provizanton"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "Elektu kiujn provizantojn de klavoligiloj inkluzivi"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "Ellasila Prefikso"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "Tajpu ĉi tiun prefikson por serĉi klavkombinojn"
+  },
+  "Unpin": {
+    "Unpin": "Malfiksi"
+  },
+  "Usage Tips": {
+    "Usage Tips": "Konsiloj pri Uzado"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "Uzu ellasilprefikson por aktivigi"
+  }
+}

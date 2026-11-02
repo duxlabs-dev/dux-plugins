@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "Elfogadás"
+  },
+  "Audio Output": {
+    "Audio Output": "Hangkimenet"
+  },
+  "Battery": {
+    "Battery": "Akkumulátor"
+  },
+  "Browse Files": {
+    "Browse Files": "Fájlok böngészése"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "Vágólap elküldve"
+  },
+  "Device paired": {
+    "Device paired": "Eszköz párosítva"
+  },
+  "Device unpaired": {
+    "Device unpaired": "Eszköz párosítása megszüntetve"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": "Add meg a megosztani kívánt URI-t vagy szöveget"
+  },
+  "Excellent": {
+    "Excellent": "Kiváló"
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "Nem sikerült a párosítás elfogadása"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "Nem sikerült az eszköz tallózása"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "Nem sikerült az SMS-alkalmazás indítása"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "Nem sikerült a párosítás elutasítása"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "Nem sikerült az eszköz megcsöngetése"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": "Nem sikerült az SMS elküldése"
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "Nem sikerült a vágólap elküldése"
+  },
+  "Failed to send file": {
+    "Failed to send file": "Nem sikerült elküldeni a fájlt"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "Nem sikerült a ping küldése"
+  },
+  "Failed to share": {
+    "Failed to share": "Nem sikerült a megosztás"
+  },
+  "Fair": {
+    "Fair": "Közepes"
+  },
+  "File": {
+    "File": "Fájl"
+  },
+  "File received from %1": {
+    "File received from %1": "Fájl érkezett innen: %1"
+  },
+  "Forward 10s": {
+    "Forward 10s": "Előretekerés 10 másodperccel"
+  },
+  "Good": {
+    "Good": "Jó"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "Győződj meg róla, hogy a KDE Connect vagy a Valent fut a többi eszközön"
+  },
+  "Media Player": {
+    "Media Player": "Médialejátszó"
+  },
+  "Message": {
+    "Message": "Üzenet"
+  },
+  "Network Type": {
+    "Network Type": "Hálózati típus"
+  },
+  "Next": {
+    "Next": "Következő"
+  },
+  "No Signal": {
+    "No Signal": "Nincs jel"
+  },
+  "No devices": {
+    "No devices": "Nincsenek eszközök"
+  },
+  "No devices found": {
+    "No devices found": "Nem található eszköz"
+  },
+  "No images found": {
+    "No images found": "Nem találhatók képek"
+  },
+  "Not paired": {
+    "Not paired": "Nincs párosítva"
+  },
+  "Notifications": {
+    "Notifications": "Értesítések"
+  },
+  "Offline": {
+    "Offline": "Offline"
+  },
+  "Open App": {
+    "Open App": "Alkalmazás megnyitása"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "SMS-alkalmazás megnyitása"
+  },
+  "Opening file browser": {
+    "Opening file browser": "Fájlkezelő megnyitása"
+  },
+  "Pairing failed": {
+    "Pairing failed": "A párosítás sikertelen"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": "Párosítási kérelmet küldött: %1"
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "Párosítási kérelem elküldve"
+  },
+  "Pairing requested": {
+    "Pairing requested": "Párosítás kérve"
+  },
+  "Pairing...": {
+    "Pairing...": "Párosítás…"
+  },
+  "Pause": {
+    "Pause": "Szüneteltetés"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "A telefonos kapcsolat nem érhető el"
+  },
+  "Phone number": {
+    "Phone number": "Telefonszám"
+  },
+  "Ping": {
+    "Ping": "Ping"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": "Ping elküldve a következőnek: %1"
+  },
+  "Play": {
+    "Play": "Lejátszás"
+  },
+  "Previous": {
+    "Previous": "Előző"
+  },
+  "Recent Images": {
+    "Recent Images": "Legutóbbi képek"
+  },
+  "Reject": {
+    "Reject": "Elutasítás"
+  },
+  "Request Pairing": {
+    "Request Pairing": "Párosítás kérése"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": "Visszatekerés 10 másodperccel"
+  },
+  "Ring": {
+    "Ring": "Megcsörgetés"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": "%1 hívása…"
+  },
+  "SMS": {
+    "SMS": "SMS"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": "SMS sikeresen elküldve"
+  },
+  "Select File to Send": {
+    "Select File to Send": "Küldendő fájl kiválasztása"
+  },
+  "Send": {
+    "Send": "Küldés"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "Vágólap küldése"
+  },
+  "Send SMS": {
+    "Send SMS": "SMS küldése"
+  },
+  "Sending %1...": {
+    "Sending %1...": "%1 küldése…"
+  },
+  "Share": {
+    "Share": "Megosztás"
+  },
+  "Shared": {
+    "Shared": "Megosztva"
+  },
+  "Signal Strength": {
+    "Signal Strength": "Jelerősség"
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "Indítsd el a KDE Connectet vagy a Valentet a bővítmény használatához"
+  },
+  "Text": {
+    "Text": "Szöveg"
+  },
+  "URI": {
+    "URI": "URI"
+  },
+  "Unavailable": {
+    "Unavailable": "Nem érhető el"
+  },
+  "Unknown": {
+    "Unknown": "Ismeretlen"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "Ismeretlen előadó"
+  },
+  "Unpair": {
+    "Unpair": "Párosítás megszüntetése"
+  },
+  "Unpair failed": {
+    "Unpair failed": "A párosítás megszüntetése sikertelen"
+  },
+  "Verification": {
+    "Verification": "Ellenőrzés"
+  },
+  "Weak": {
+    "Weak": "Gyenge"
+  },
+  "device": {
+    "device": "eszköz"
+  }
+}

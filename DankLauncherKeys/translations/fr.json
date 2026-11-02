@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "Activation"
+  },
+  "Always Active": {
+    "Always Active": "Toujours actif"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Copié dans le presse-papiers"
+  },
+  "Copy": {
+    "Copy": "Copier"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "Sources des raccourcis clavier"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "Paramètres de recherche des raccourcis clavier"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "Afficher les raccourcis clavier dans les résultats de recherche"
+  },
+  "Pin": {
+    "Pin": "Épingler"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "Recherchez par combinaison de touches, description ou nom de l’action.\n\nL’action par défaut copie le raccourci dans le presse-papiers.\nCliquez droit ou appuyez sur la flèche droite pour épingler les raccourcis fréquents – ils apparaîtront en haut lorsqu’aucune recherche n’est effectuée."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "Rechercher les raccourcis clavier dans le compositeur et les applications"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "Sélectionner au moins un fournisseur"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "Sélectionner les fournisseurs de raccourcis à inclure"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "Préfixe du déclencheur"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "Tapez ce préfixe pour rechercher des raccourcis"
+  },
+  "Unpin": {
+    "Unpin": "Détacher"
+  },
+  "Usage Tips": {
+    "Usage Tips": "Conseils d’utilisation"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "Utiliser le préfixe de déclenchement pour activer"
+  }
+}

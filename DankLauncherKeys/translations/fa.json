@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "فعال‌سازی"
+  },
+  "Always Active": {
+    "Always Active": "همیشه فعال"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "در کلیپ‌بورد کپی شد"
+  },
+  "Copy": {
+    "Copy": "کپی"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "منابع نگاشت‌کلیدها"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "تنظیمات نگاشت‌کلیدهای جستجو"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "نگاشت‌کلیدها همراه نتایج عادی جستجو نمایش داده می‌شوند"
+  },
+  "Pin": {
+    "Pin": "سنجاق"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "با ترکیب کلید‌ها، توضیحات یا نام اقدام‌ جستجو کنید.\n\nاقدام پیش‌فرض نگاشت‌کلید را در کلیپ‌بورد کپی می‌کند.\nبرای سنجاق‌ کردن نگاشت‌کلید‌های پر استفاده راست‌کلیک کنید یا پیکان راست را فشار دهید - آن‌ها هنگام جستجو نکردن در بالای لیست ظاهر خواهند شد."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "میانبر‌های صفحه‌کلید از کامپازیتور یا برنامه‌هایتان را جستجو کنید"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "حداقل یک ارائه‌دهنده انتخاب کنید"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "انتخاب کنید که کدام ارائه دهنده نگاشت‌کلید‌ها include شود"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "پیشوند راه‌انداز"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "این پیشوند را برای جستجوی نگاشت‌کلیدها تایپ کنید"
+  },
+  "Unpin": {
+    "Unpin": "برداشتن سنجاق"
+  },
+  "Usage Tips": {
+    "Usage Tips": "راهنمای استفاده"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "از پیشوند راه‌انداز برای فعال‌کردن استفاده کن"
+  }
+}

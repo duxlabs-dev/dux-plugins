@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "Màu nhấn"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "Có sẵn trong chế độ xem Chi tiết và Dự báo"
+  },
+  "Background Opacity": {
+    "Background Opacity": "Độ mờ của nền"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "Chọn cách hiển thị tiện ích thời tiết"
+  },
+  "Compact": {
+    "Compact": "Thu gọn"
+  },
+  "Custom": {
+    "Custom": "Tuỳ chỉnh"
+  },
+  "Custom Color": {
+    "Custom Color": "Màu tùy chỉnh"
+  },
+  "Detailed": {
+    "Detailed": "Chi tiết"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "Hiển thị dự báo thời tiết theo giờ"
+  },
+  "Feels": {
+    "Feels": "Cảm giác"
+  },
+  "Forecast": {
+    "Forecast": "Dự báo"
+  },
+  "Forecast Days": {
+    "Forecast Days": "Số ngày dự báo"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "Số lượng dự báo hàng giờ"
+  },
+  "Humidity": {
+    "Humidity": "Độ ẩm"
+  },
+  "No Weather Data": {
+    "No Weather Data": "Không có dữ liệu thời tiết"
+  },
+  "Precip": {
+    "Precip": "Lượng kết tủa"
+  },
+  "Pressure": {
+    "Pressure": "Áp suất"
+  },
+  "Primary": {
+    "Primary": "Chính"
+  },
+  "Secondary": {
+    "Secondary": "Phụ"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "Hiển thị nhiệt độ cảm nhận"
+  },
+  "Show Forecast": {
+    "Show Forecast": "Hiển thị dự báo"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "Hiển thị dự báo hàng giờ"
+  },
+  "Show Humidity": {
+    "Show Humidity": "Hiển thị độ ẩm"
+  },
+  "Show Location": {
+    "Show Location": "Hiển thị vị trí"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "Hiển thị khả năng có mưa"
+  },
+  "Show Pressure": {
+    "Show Pressure": "Hiển thị áp suất"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "Hiển thị bình minh/hoàng hôn"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "Hiển thị điều kiện thời tiết"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "Hiển thị tốc độ gió"
+  },
+  "Standard": {
+    "Standard": "Tiêu chuẩn"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "Dùng khi màu nhấn được đặt là Tùy chỉnh"
+  },
+  "View Mode": {
+    "View Mode": "Chế độ xem"
+  },
+  "Wind": {
+    "Wind": "Gió"
+  }
+}

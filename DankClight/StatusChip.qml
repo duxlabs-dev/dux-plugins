@@ -1,6 +1,7 @@
 import QtQuick
 import qs.Common
 import qs.Widgets
+import qs.DCommon.Widgets
 
 StyledRect {
     id: chip
@@ -20,7 +21,7 @@ StyledRect {
         anchors.centerIn: parent
         spacing: 4
 
-        DankIcon {
+        DIcon {
             name: chip.icon
             size: 14
             color: chip.warning ? Theme.warning : chip.active ? Theme.primary : Theme.surfaceVariantText

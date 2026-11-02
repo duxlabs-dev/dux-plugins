@@ -1,6 +1,7 @@
 import QtQuick
 import qs.Common
 import qs.Widgets
+import qs.DCommon.Widgets
 
 Column {
     id: display
@@ -14,7 +15,7 @@ Column {
     Row {
         spacing: 4
 
-        DankIcon {
+        DIcon {
             name: display.icon
             size: 12
             color: Theme.surfaceVariantText

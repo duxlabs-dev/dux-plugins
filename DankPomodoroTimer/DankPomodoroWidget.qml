@@ -5,6 +5,7 @@ import qs.Common
 import qs.Services
 import qs.Widgets
 import qs.Modules.Plugins
+import qs.DCommon.Widgets
 
 PluginComponent {
     id: root
@@ -12,9 +13,15 @@ PluginComponent {
     property int workDuration: pluginData.workDuration || 25
     property int shortBreakDuration: pluginData.shortBreakDuration || 5
     property int longBreakDuration: pluginData.longBreakDuration || 15
+    property int longBreakFrequency: {
+        const configured = parseInt(pluginData.longBreakFrequency, 10)
+        return configured > 0 ? configured : 4
+    }
     property bool autoStartBreaks: pluginData.autoStartBreaks ?? false
     property bool autoStartPomodoros: pluginData.autoStartPomodoros ?? false
     property bool autoSetDND: pluginData.autoSetDND ?? false
+    property bool showBarText: pluginData.showBarText ?? true
+    property bool playCompletionSound: pluginData.playCompletionSound ?? true
     property var last7DaysData: []
     property string currentDateKey: ""
 
@@ -188,20 +195,26 @@ PluginComponent {
                 pluginService.savePluginState("dankPomodoroTimer", "completedPomodoros-" + dateKey, globalCompletedPomodoros.value);
                 loadLast7Days();
             }
-            const isLongBreak = globalCompletedPomodoros.value % 4 === 0;
+            const isLongBreak = globalCompletedPomodoros.value % root.longBreakFrequency === 0;
 
-            Quickshell.execDetached(["sh", "-c", "notify-send 'Pomodoro Complete' 'Time for a " + (isLongBreak ? "long" : "short") + " break!' -u normal"]);
-
+            // Stop DND before playing the completion sound so an automatically
+            // enabled work-session DND mode does not suppress the alert.
             if (root.autoSetDND) {
                 SessionData.setDoNotDisturb(false);
             }
+            if (root.playCompletionSound && SettingsData.soundsEnabled)
+                AudioService.playNormalNotificationSound();
+            Quickshell.execDetached(["dms", "notify", "--urgency", "normal", "Pomodoro Complete", "Time for a " + (isLongBreak ? "long" : "short") + " break!"]);
+
             if (isLongBreak) {
                 root.startLongBreak(root.autoStartBreaks);
             } else {
                 root.startShortBreak(root.autoStartBreaks);
             }
         } else {
-            Quickshell.execDetached(["sh", "-c", "notify-send 'Break Complete' 'Ready for another pomodoro?' -u normal"]);
+            if (root.playCompletionSound && SettingsData.soundsEnabled)
+                AudioService.playNormalNotificationSound();
+            Quickshell.execDetached(["dms", "notify", "--urgency", "normal", "Break Complete", "Ready for another pomodoro?"]);
             root.startWork(root.autoStartPomodoros);
         }
     }
@@ -267,7 +280,7 @@ PluginComponent {
     function formatTime(seconds, isVertical = false) {
         const mins = Math.floor(seconds / 60);
         const secs = seconds % 60;
-        return isVertical ? mins + "\n" + (secs < 10 ? "0" : "") + secs : mins + ":" + (secs < 10 ? "0" : "") + secs;
+        return isVertical ? String(mins).padStart(2, "0") + "\n" + String(secs).padStart(2, "0") : String(mins).padStart(2, "0") + ":" + String(secs).padStart(2, "0");
     }
 
     function getStateColor() {
@@ -330,41 +343,66 @@ PluginComponent {
     horizontalBarPill: Component {
         Row {
             spacing: Theme.spacingXS
+            anchors.verticalCenter: parent.verticalCenter
 
-            DankIcon {
+            DIcon {
                 name: root.getStateIcon()
-                size: Theme.iconSize - 6
+                size: Theme.barIconSize(root.barThickness, undefined, root.barConfig?.maximizeWidgetIcons, root.barConfig?.iconScale)
                 color: root.getStateColor()
                 anchors.verticalCenter: parent.verticalCenter
             }
 
-            StyledText {
+            NumericText {
                 text: root.formatTime(globalRemainingSeconds.value)
-                font.pixelSize: Theme.fontSizeSmall
+                font.features: ({ "tnum": 1 })
+                isMonospace: false
+                font.pixelSize: Theme.barTextSize(root.barThickness, root.barConfig?.fontScale, root.barConfig?.maximizeWidgetText)
                 font.weight: Font.Medium
-                color: Theme.surfaceVariantText
+                color: Theme.widgetTextColor
                 anchors.verticalCenter: parent.verticalCenter
+                visible: root.showBarText
             }
         }
     }
 
     verticalBarPill: Component {
         Column {
-            spacing: Theme.spacingXS
+            spacing: Theme.hairline(root.dpr)
+            anchors.horizontalCenter: parent.horizontalCenter
 
-            DankIcon {
+            DIcon {
                 name: root.getStateIcon()
-                size: Theme.iconSize - 6
+                size: Theme.barIconSize(root.barThickness, undefined, root.barConfig?.maximizeWidgetIcons, root.barConfig?.iconScale)
                 color: root.getStateColor()
                 anchors.horizontalCenter: parent.horizontalCenter
             }
 
-            StyledText {
-                text: root.formatTime(globalRemainingSeconds.value, true)
-                font.pixelSize: Theme.fontSizeSmall
-                font.weight: Font.Medium
-                color: Theme.surfaceVariantText
+            Column {
+                visible: root.showBarText
                 anchors.horizontalCenter: parent.horizontalCenter
+                spacing: 0
+
+                NumericText {
+                    text: String(Math.floor(globalRemainingSeconds.value / 60)).padStart(2, "0")
+                    font.features: ({ "tnum": 1 })
+                    isMonospace: false
+                    font.pixelSize: Theme.barTextSize(root.barThickness, root.barConfig?.fontScale, root.barConfig?.maximizeWidgetText)
+                    font.weight: Font.Medium
+                    color: Theme.widgetTextColor
+                    horizontalAlignment: Text.AlignHCenter
+                    anchors.horizontalCenter: parent.horizontalCenter
+                }
+
+                NumericText {
+                    text: String(globalRemainingSeconds.value % 60).padStart(2, "0")
+                    font.features: ({ "tnum": 1 })
+                    isMonospace: false
+                    font.pixelSize: Theme.barTextSize(root.barThickness, root.barConfig?.fontScale, root.barConfig?.maximizeWidgetText)
+                    font.weight: Font.Medium
+                    color: Theme.widgetTextColor
+                    horizontalAlignment: Text.AlignHCenter
+                    anchors.horizontalCenter: parent.horizontalCenter
+                }
             }
         }
     }
@@ -471,7 +509,7 @@ PluginComponent {
                         radius: 32
                         color: playArea.containsMouse ? Qt.rgba(root.getStateColor().r, root.getStateColor().g, root.getStateColor().b, 0.2) : "transparent"
 
-                        DankIcon {
+                        DIcon {
                             anchors.centerIn: parent
                             name: globalIsRunning.value ? "pause" : "play_arrow"
                             size: 32
@@ -493,7 +531,7 @@ PluginComponent {
                         radius: 32
                         color: resetArea.containsMouse ? Theme.surfaceContainerHighest : "transparent"
 
-                        DankIcon {
+                        DIcon {
                             anchors.centerIn: parent
                             name: "refresh"
                             size: 24
@@ -527,21 +565,21 @@ PluginComponent {
 
                         property real buttonWidth: (width - spacing * 2) / 3
 
-                        DankButton {
+                        DButton {
                             text: "Work"
                             iconName: "work"
                             width: quickActionsRow.buttonWidth
                             onClicked: root.startWork(false)
                         }
 
-                        DankButton {
+                        DButton {
                             text: "Short Break"
                             iconName: "coffee"
                             width: quickActionsRow.buttonWidth
                             onClicked: root.startShortBreak(false)
                         }
 
-                        DankButton {
+                        DButton {
                             text: "Long Break"
                             iconName: "weekend"
                             width: quickActionsRow.buttonWidth
@@ -565,7 +603,7 @@ PluginComponent {
                         Row {
                             spacing: Theme.spacingM
 
-                            DankIcon {
+                            DIcon {
                                 name: "check_circle"
                                 size: Theme.iconSize
                                 color: Theme.primary
@@ -581,7 +619,7 @@ PluginComponent {
                         }
 
                         StyledText {
-                            text: "Next long break after " + (4 - (globalCompletedPomodoros.value % 4)) + " more"
+                            text: "Next long break after " + (root.longBreakFrequency - (globalCompletedPomodoros.value % root.longBreakFrequency)) + " more"
                             font.pixelSize: Theme.fontSizeSmall
                             color: Theme.surfaceVariantText
                             leftPadding: Theme.iconSize + Theme.spacingM

@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "激活"
+  },
+  "Always Active": {
+    "Always Active": "始终激活"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "已复制到剪贴板"
+  },
+  "Copy": {
+    "Copy": "复制"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "快捷键绑定源"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "快捷键绑定搜索设置"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "快捷键绑定与常规搜索结果并列显示"
+  },
+  "Pin": {
+    "Pin": "固定"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "通过按键组合、描述或动作名称进行搜索。\n\n默认操作是将按键绑定复制到剪贴板。\n按下鼠标右键或键盘右键可以固定常用的快捷键——不搜索时它们会出现在顶部。"
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "从合成器与应用中搜索键盘快捷键"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "至少选择一个提供源"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "选择要引用的快捷键绑定提供者"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "触发前缀"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "键入此前缀以搜索快捷键绑定"
+  },
+  "Unpin": {
+    "Unpin": "解除固定"
+  },
+  "Usage Tips": {
+    "Usage Tips": "使用提示"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "使用触发前缀以激活"
+  }
+}

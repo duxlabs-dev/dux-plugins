@@ -45,7 +45,7 @@ Singleton {
     signal pairingRequestReceived(string deviceId, string verificationKey)
     signal shareReceived(string deviceId, string url)
 
-    DankConnectIpc {
+    DuxConnectIpc {
         id: ipc
     }
 
@@ -360,7 +360,7 @@ Singleton {
     }
 
     function launchSmsApp(deviceId, callback) {
-        Quickshell.execDetached(["sh", "-c", "if command -v dankconnect >/dev/null 2>&1; then exec dankconnect app; elif command -v flatpak >/dev/null 2>&1 && flatpak info com.danklinux.dankconnect >/dev/null 2>&1; then exec flatpak run --command=dankconnect com.danklinux.dankconnect app; fi"]);
+        Quickshell.execDetached(["sh", "-c", "if command -v dux-connect >/dev/null 2>&1; then exec dux-connect app; elif command -v flatpak >/dev/null 2>&1 && flatpak info dev.duxlabs.connect >/dev/null 2>&1; then exec flatpak run --command=dux-connect dev.duxlabs.connect app; fi"]);
         callback?.({
             "success": true
         });

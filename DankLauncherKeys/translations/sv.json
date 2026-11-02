@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "Aktivering"
+  },
+  "Always Active": {
+    "Always Active": "Alltid aktiv"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Kopierat till urklipp"
+  },
+  "Copy": {
+    "Copy": "Kopiera"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "Kortkommandokällor"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "Sökinställningar för kortkommandon"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "Kortkommandon visas bredvid vanliga sökresultat"
+  },
+  "Pin": {
+    "Pin": "Nål"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "Sök efter tangentkombination, beskrivning eller åtgärdsnamn.\n\nStandardåtgärden kopierar kortkommandot till urklipp.\nHögerklicka eller tryck på högerpil för att fästa kortkommandon – de visas överst när du inte söker."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "Sök kortkommandon från din kompositor och dina program"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "Välj minst en leverantör"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "Välj vilka kortkommandoleverantörer som ska inkluderas"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "Utlösarprefix"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "Skriv detta prefix för att söka kortkommandon"
+  },
+  "Unpin": {
+    "Unpin": "Ta bort fästning"
+  },
+  "Usage Tips": {
+    "Usage Tips": "Användartips"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "Använd utlösarprefix för att aktivera"
+  }
+}

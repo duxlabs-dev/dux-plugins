@@ -5,6 +5,7 @@ import qs.Services
 import qs.Widgets
 import qs.Modules.Plugins
 import "AnsiParser.js" as AnsiParser
+import qs.DCommon.Widgets
 
 PluginComponent {
     id: root
@@ -205,7 +206,7 @@ PluginComponent {
                 id: contentRow
                 spacing: Theme.spacingXS
 
-                DankIcon {
+                DIcon {
                     name: root.displayIcon
                     size: Theme.iconSize - 6
                     color: Theme.surfaceText
@@ -217,7 +218,7 @@ PluginComponent {
                     text: root.currentOutput || ""
                     textFormat: Text.RichText
                     wrapMode: Text.NoWrap
-                    font.pixelSize: Theme.fontSizeSmall
+                    font.pixelSize: Theme.barTextSize(root.barThickness, root.barConfig?.fontScale, root.barConfig?.maximizeWidgetText)
                     font.weight: Font.Medium
                     color: Theme.surfaceText
                     anchors.verticalCenter: parent.verticalCenter
@@ -247,7 +248,7 @@ PluginComponent {
                 id: contentColumn
                 spacing: Theme.spacingXS
 
-                DankIcon {
+                DIcon {
                     name: root.displayIcon
                     size: Theme.iconSize - 6
                     color: Theme.surfaceText
@@ -259,7 +260,7 @@ PluginComponent {
                     text: root.currentOutput || ""
                     textFormat: Text.RichText
                     wrapMode: Text.NoWrap
-                    font.pixelSize: Theme.fontSizeSmall
+                    font.pixelSize: Theme.barTextSize(root.barThickness, root.barConfig?.fontScale, root.barConfig?.maximizeWidgetText)
                     font.weight: Font.Medium
                     color: Theme.surfaceText
                     anchors.horizontalCenter: parent.horizontalCenter

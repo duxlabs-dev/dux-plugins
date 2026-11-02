@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "Akcenta Koloro"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "Havebla en Detala kaj Prognoza vidreĝimoj"
+  },
+  "Background Opacity": {
+    "Background Opacity": "Fonopakeco"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "Elektu kiel la vetera fenestraĵo estas montrata"
+  },
+  "Compact": {
+    "Compact": "Kompakta"
+  },
+  "Custom": {
+    "Custom": "Propra"
+  },
+  "Custom Color": {
+    "Custom Color": "Propra koloro"
+  },
+  "Detailed": {
+    "Detailed": "Detala"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "Montri horajn veterprognozojn"
+  },
+  "Feels": {
+    "Feels": "Sentoj"
+  },
+  "Forecast": {
+    "Forecast": "Prognozo"
+  },
+  "Forecast Days": {
+    "Forecast Days": "Prognozaj Tagoj"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "Hora prognoza kalkulo"
+  },
+  "Humidity": {
+    "Humidity": "Humideco"
+  },
+  "No Weather Data": {
+    "No Weather Data": "Neniuj Veteraj Datumoj"
+  },
+  "Precip": {
+    "Precip": "Precipitaĵo"
+  },
+  "Pressure": {
+    "Pressure": "Premo"
+  },
+  "Primary": {
+    "Primary": "Ĉefa"
+  },
+  "Secondary": {
+    "Secondary": "Duaranga"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "Spektaklo Sentas Kiel Temperaturo"
+  },
+  "Show Forecast": {
+    "Show Forecast": "Montri Prognozon"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "Montri Horan Prognozon"
+  },
+  "Show Humidity": {
+    "Show Humidity": "Montri Humidecon"
+  },
+  "Show Location": {
+    "Show Location": "Montri Lokon"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "Montri Precipitaĵo-Probablecon"
+  },
+  "Show Pressure": {
+    "Show Pressure": "Montri Premon"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "Montri Sunleviĝon/Sunsubiron"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "Montri Veterkondiĉon"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "Montri Ventrapidecon"
+  },
+  "Standard": {
+    "Standard": "Norma"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "Uzata kiam akcenta koloro estas agordita al Propra"
+  },
+  "View Mode": {
+    "View Mode": "Vidreĝimo"
+  },
+  "Wind": {
+    "Wind": "Vento"
+  }
+}

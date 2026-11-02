@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "Accentkleur"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "Beschikbaar in weergavemodi Gedetailleerd en Voorspelling"
+  },
+  "Background Opacity": {
+    "Background Opacity": "Achtergronddekking"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "Kies hoe de weer-widget wordt weergegeven"
+  },
+  "Compact": {
+    "Compact": "Compact"
+  },
+  "Custom": {
+    "Custom": "Aangepast"
+  },
+  "Custom Color": {
+    "Custom Color": "Aangepaste kleur"
+  },
+  "Detailed": {
+    "Detailed": "Gedetailleerd"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "Toon weersvoorspellingen per uur"
+  },
+  "Feels": {
+    "Feels": "Voelt als"
+  },
+  "Forecast": {
+    "Forecast": "Voorspelling"
+  },
+  "Forecast Days": {
+    "Forecast Days": "Dagen voorspelling"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "Aantal uren voorspelling"
+  },
+  "Humidity": {
+    "Humidity": "Luchtvochtigheid"
+  },
+  "No Weather Data": {
+    "No Weather Data": "Geen weergegevens"
+  },
+  "Precip": {
+    "Precip": "Neerslag"
+  },
+  "Pressure": {
+    "Pressure": "Luchtdruk"
+  },
+  "Primary": {
+    "Primary": "Primair"
+  },
+  "Secondary": {
+    "Secondary": "Secundair"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "Toon gevoelstemperatuur"
+  },
+  "Show Forecast": {
+    "Show Forecast": "Toon voorspelling"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "Toon voorspelling per uur"
+  },
+  "Show Humidity": {
+    "Show Humidity": "Toon luchtvochtigheid"
+  },
+  "Show Location": {
+    "Show Location": "Toon locatie"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "Toon neerslagkans"
+  },
+  "Show Pressure": {
+    "Show Pressure": "Toon luchtdruk"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "Toon zonsopgang/zonsondergang"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "Toon weersomstandigheid"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "Toon windsnelheid"
+  },
+  "Standard": {
+    "Standard": "Standaard"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "Gebruikt wanneer accentkleur is ingesteld op Aangepast"
+  },
+  "View Mode": {
+    "View Mode": "Weergavemodus"
+  },
+  "Wind": {
+    "Wind": "Wind"
+  }
+}

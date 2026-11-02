@@ -3,9 +3,10 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 import Quickshell
+import qs.Common
 import qs.Services
 import qs.Modules.Plugins
-// qs.Services also exports the native DMS DankConnectService, qualify local services
+// qs.Services also exports the native DMS DuxConnectService, qualify local services
 import "." as LocalServices
 
 Singleton {
@@ -15,7 +16,7 @@ Singleton {
         None,
         KDEConnect,
         Valent,
-        DankConnect
+        DuxConnect
     }
 
     property int preferredBackend: PhoneConnectService.Backend.KDEConnect
@@ -58,15 +59,15 @@ Singleton {
             return "KDE Connect";
         case PhoneConnectService.Backend.Valent:
             return "Valent";
-        case PhoneConnectService.Backend.DankConnect:
-            return "DankConnect";
+        case PhoneConnectService.Backend.DuxConnect:
+            return "Dux Connect";
         default:
             return "None";
         }
     }
 
     property var _backend: null
-    property bool _nameWatchSubscribed: false
+    property string _nameWatchSubscription: ""
 
     readonly property var _backendBusNames: ["org.kde.kdeconnect", "ca.andyholmes.Valent"]
 
@@ -79,21 +80,23 @@ Singleton {
     signal backendChanged
 
     Component.onCompleted: {
-        watchBusNames();
         updatePreferredBackend();
-        detectBackend();
+        if (DMSService.subscribeConnected)
+            resync();
+        else
+            detectBackend();
         updateDeviceTypeMap();
     }
 
     Connections {
         target: DMSService
         function onConnectionStateChanged() {
-            if (!DMSService.isConnected) {
-                root._nameWatchSubscribed = false;
-                return;
-            }
-            root.watchBusNames();
-            root.detectBackend();
+            if (!DMSService.isConnected)
+                root._nameWatchSubscription = "";
+        }
+
+        function onCapabilitiesReceived() {
+            root.resync();
         }
 
         function onDbusSignalReceived(subId, data) {
@@ -114,15 +117,23 @@ Singleton {
         }
     }
 
+    // Daemons before the match-ownership fix drop every dbus match when the shell re-dials its subscribe socket.
+    function resync() {
+        if (DMSService.capabilities.includes("dbus"))
+            watchBusNames();
+        detectBackend();
+    }
+
     function watchBusNames() {
-        if (_nameWatchSubscribed || !DMSService.isConnected)
-            return;
-        _nameWatchSubscribed = true;
-        DMSService.dbusSubscribe("session", "org.freedesktop.DBus", "/org/freedesktop/DBus", "org.freedesktop.DBus", "NameOwnerChanged", function(response) {
+        if (_nameWatchSubscription !== "")
+            DMSService.dbusUnsubscribe(_nameWatchSubscription);
+        _nameWatchSubscription = "";
+        DMSService.dbusSubscribe("session", "org.freedesktop.DBus", "/org/freedesktop/DBus", "org.freedesktop.DBus", "NameOwnerChanged", function (response) {
             if (response.error) {
                 console.warn("[PhoneConnect] NameOwnerChanged subscription failed:", response.error);
-                root._nameWatchSubscribed = false;
+                return;
             }
+            root._nameWatchSubscription = response.result.subscriptionId;
         });
     }
 
@@ -183,8 +194,8 @@ Singleton {
     }
 
     Connections {
-        target: LocalServices.DankConnectService
-        enabled: activeBackend === PhoneConnectService.Backend.DankConnect
+        target: LocalServices.DuxConnectService
+        enabled: activeBackend === PhoneConnectService.Backend.DuxConnect
 
         function onDevicesListChanged() {
             root.devicesListChanged();
@@ -207,7 +218,7 @@ Singleton {
     }
 
     Connections {
-        target: LocalServices.DankConnectService
+        target: LocalServices.DuxConnectService
 
         function onAvailableChanged() {
             root.detectBackend();
@@ -228,8 +239,9 @@ Singleton {
         case "Valent":
             preferredBackend = PhoneConnectService.Backend.Valent;
             break;
-        case "DankConnect":
-            preferredBackend = PhoneConnectService.Backend.DankConnect;
+        case "Dux Connect":
+        case "DankConnect": // value saved by pre-rebrand alpha builds
+            preferredBackend = PhoneConnectService.Backend.DuxConnect;
             break;
         default:
             preferredBackend = PhoneConnectService.Backend.KDEConnect;
@@ -247,8 +259,8 @@ Singleton {
         case PhoneConnectService.Backend.Valent:
             _backend = ValentService;
             break;
-        case PhoneConnectService.Backend.DankConnect:
-            _backend = LocalServices.DankConnectService;
+        case PhoneConnectService.Backend.DuxConnect:
+            _backend = LocalServices.DuxConnectService;
             break;
         default:
             _backend = null;
@@ -260,18 +272,18 @@ Singleton {
     function detectBackend() {
         _detectionGeneration++;
         const generation = _detectionGeneration;
-        const hasDankConnect = LocalServices.DankConnectService.available;
+        const hasDuxConnect = LocalServices.DuxConnectService.available;
 
-        if (preferredBackend === PhoneConnectService.Backend.DankConnect && !hasDankConnect)
-            LocalServices.DankConnectService.launch();
+        if (preferredBackend === PhoneConnectService.Backend.DuxConnect && !hasDuxConnect)
+            LocalServices.DuxConnectService.launch();
 
-        if (preferredBackend === PhoneConnectService.Backend.DankConnect && hasDankConnect) {
-            activateBackend(PhoneConnectService.Backend.DankConnect);
+        if (preferredBackend === PhoneConnectService.Backend.DuxConnect && hasDuxConnect) {
+            activateBackend(PhoneConnectService.Backend.DuxConnect);
             return;
         }
 
-        if (!DMSService.isConnected) {
-            activateBackend(hasDankConnect ? PhoneConnectService.Backend.DankConnect : PhoneConnectService.Backend.None);
+        if (!DMSService.isConnected || !DMSService.capabilities.includes("dbus")) {
+            activateBackend(hasDuxConnect ? PhoneConnectService.Backend.DuxConnect : PhoneConnectService.Backend.None);
             return;
         }
 
@@ -282,43 +294,43 @@ Singleton {
             const names = response.error ? [] : (response.result?.names || []);
             const hasKDE = names.includes("org.kde.kdeconnect");
             const hasValent = names.includes("ca.andyholmes.Valent");
-            if (!hasKDE || !names.includes("org.dankconnect")) {
+            if (!hasKDE || !names.includes("dev.duxlabs.connect.daemon")) {
                 root._selectDetected(hasKDE, hasValent);
                 return;
             }
-            // org.kde.kdeconnect may be dankconnect's compatibility facade;
+            // org.kde.kdeconnect may be dux-connect's compatibility facade;
             // matching bus-name owners means the same daemon, and the native
             // socket backend is the richer surface for it.
             DMSService.dbusCall("session", "org.freedesktop.DBus", "/org/freedesktop/DBus", "org.freedesktop.DBus", "GetNameOwner", ["org.kde.kdeconnect"], function (kdeOwner) {
                 if (generation !== root._detectionGeneration)
                     return;
-                DMSService.dbusCall("session", "org.freedesktop.DBus", "/org/freedesktop/DBus", "org.freedesktop.DBus", "GetNameOwner", ["org.dankconnect"], function (dankOwner) {
+                DMSService.dbusCall("session", "org.freedesktop.DBus", "/org/freedesktop/DBus", "org.freedesktop.DBus", "GetNameOwner", ["dev.duxlabs.connect.daemon"], function (duxOwner) {
                     if (generation !== root._detectionGeneration)
                         return;
                     const kde = kdeOwner.result?.values?.[0] || "";
-                    const dank = dankOwner.result?.values?.[0] || "";
-                    root._selectDetected(!kde || kde !== dank, hasValent);
+                    const dux = duxOwner.result?.values?.[0] || "";
+                    root._selectDetected(!kde || kde !== dux, hasValent);
                 });
             });
         });
     }
 
     function _selectDetected(hasKDE, hasValent) {
-        const hasDank = LocalServices.DankConnectService.available;
+        const hasDux = LocalServices.DuxConnectService.available;
         let newBackend = PhoneConnectService.Backend.None;
 
         if (preferredBackend === PhoneConnectService.Backend.KDEConnect && hasKDE) {
             newBackend = PhoneConnectService.Backend.KDEConnect;
         } else if (preferredBackend === PhoneConnectService.Backend.Valent && hasValent) {
             newBackend = PhoneConnectService.Backend.Valent;
-        } else if (preferredBackend === PhoneConnectService.Backend.DankConnect && hasDank) {
-            newBackend = PhoneConnectService.Backend.DankConnect;
+        } else if (preferredBackend === PhoneConnectService.Backend.DuxConnect && hasDux) {
+            newBackend = PhoneConnectService.Backend.DuxConnect;
         } else if (hasKDE) {
             newBackend = PhoneConnectService.Backend.KDEConnect;
         } else if (hasValent) {
             newBackend = PhoneConnectService.Backend.Valent;
-        } else if (hasDank) {
-            newBackend = PhoneConnectService.Backend.DankConnect;
+        } else if (hasDux) {
+            newBackend = PhoneConnectService.Backend.DuxConnect;
         }
 
         activateBackend(newBackend);
@@ -744,17 +756,17 @@ Singleton {
 
     function getNetworkStrengthLabel(device) {
         if (!device || device.networkStrength === undefined || device.networkStrength < 0)
-            return "Unknown";
+            return I18n.trFor("dankKDEConnect", "Unknown", "network signal strength");
         const strength = device.networkStrength;
         if (strength >= 4)
-            return "Excellent";
+            return I18n.trFor("dankKDEConnect", "Excellent", "network signal strength");
         if (strength === 3)
-            return "Good";
+            return I18n.trFor("dankKDEConnect", "Good", "network signal strength");
         if (strength === 2)
-            return "Fair";
+            return I18n.trFor("dankKDEConnect", "Fair", "network signal strength");
         if (strength === 1)
-            return "Weak";
-        return "No Signal";
+            return I18n.trFor("dankKDEConnect", "Weak", "network signal strength");
+        return I18n.trFor("dankKDEConnect", "No Signal", "network signal strength");
     }
 
     function getNetworkTypeIcon(device) {

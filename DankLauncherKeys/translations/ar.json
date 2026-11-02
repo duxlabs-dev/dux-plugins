@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "التنشيط"
+  },
+  "Always Active": {
+    "Always Active": "نشط دائماً"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "تم النسخ إلى الحافظة"
+  },
+  "Copy": {
+    "Copy": "نسخ"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "مصادر اختصارات المفاتيح"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "إعدادات بحث اختصارات المفاتيح"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "اختصارات المفاتيح تظهر بجانب نتائج البحث العادية"
+  },
+  "Pin": {
+    "Pin": "تثبيت"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "البحث عن طريق اختصار المفاتيح، أو الوصف، أو اسم الإجراء. الإجراء الافتراضي ينسخ اختصار المفاتيح إلى الحافظة. اضغط بزر الفأرة الأيمن أو اضغط على السهم الأيمن لتثبيت اختصارات المفاتيح المستخدمة بشكل متكرر - ستظهر في الأعلى عند عدم البحث."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "البحث عن اختصارات لوحة المفاتيح من مدير النوافذ والتطبيقات الخاصة بك"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "اختر مزوداً واحداً على الأقل"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "اختر مزودي اختصارات المفاتيح المراد تضمينهم"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "بادئة المشغل"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "اكتب هذه البادئة للبحث عن اختصارات المفاتيح"
+  },
+  "Unpin": {
+    "Unpin": "إلغاء التثبيت"
+  },
+  "Usage Tips": {
+    "Usage Tips": "نصائح الاستخدام"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "استخدم بادئة المشغل للتفعيل"
+  }
+}

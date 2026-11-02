@@ -4,14 +4,14 @@
     "description": "Search and browse keyboard shortcuts from your compositor and applications",
     "version": "1.0.4",
     "license": "MIT",
-    "author": "Avenge Media",
+    "author": "Dux Labs",
     "icon": "keyboard",
     "type": "launcher",
     "trigger": "\\",
     "firstParty": true,
     "component": "./DankLauncherKeys.qml",
     "settings": "./DankLauncherKeysSettings.qml",
-    "requires_dms": ">=1.2.0",
+    "requires_dms": ">=2.0.0",
     "permissions": [
         "settings_read",
         "settings_write"

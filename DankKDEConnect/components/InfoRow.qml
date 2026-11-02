@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import qs.Common
 import qs.Widgets
+import qs.DCommon.Widgets
 
 RowLayout {
     id: root
@@ -14,7 +15,7 @@ RowLayout {
     spacing: Theme.spacingM
     width: parent.width
 
-    DankIcon {
+    DIcon {
         name: root.icon
         size: 28
         color: Theme.primary

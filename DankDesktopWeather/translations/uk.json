@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "Акцентний колір"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "Доступно в режимах перегляду «Детально» та «Прогноз»"
+  },
+  "Background Opacity": {
+    "Background Opacity": "Прозорість фону"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "Оберіть, як відображати віджет погоди"
+  },
+  "Compact": {
+    "Compact": "Компактний"
+  },
+  "Custom": {
+    "Custom": "Власний"
+  },
+  "Custom Color": {
+    "Custom Color": "Власний колір"
+  },
+  "Detailed": {
+    "Detailed": "Детально"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "Відображати погодинний прогноз погоди"
+  },
+  "Feels": {
+    "Feels": "Відчувається як"
+  },
+  "Forecast": {
+    "Forecast": "Прогноз"
+  },
+  "Forecast Days": {
+    "Forecast Days": "Дні прогнозу"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "Кількість годин у прогнозі"
+  },
+  "Humidity": {
+    "Humidity": "Вологість"
+  },
+  "No Weather Data": {
+    "No Weather Data": "Даних про погоду немає"
+  },
+  "Precip": {
+    "Precip": "Опади"
+  },
+  "Pressure": {
+    "Pressure": "Тиск"
+  },
+  "Primary": {
+    "Primary": "Основний"
+  },
+  "Secondary": {
+    "Secondary": "Другорядний"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "Показувати температуру «відчувається як»"
+  },
+  "Show Forecast": {
+    "Show Forecast": "Показувати прогноз"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "Показувати погодинний прогноз"
+  },
+  "Show Humidity": {
+    "Show Humidity": "Показувати вологість"
+  },
+  "Show Location": {
+    "Show Location": "Показувати місцезнаходження"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "Показувати ймовірність опадів"
+  },
+  "Show Pressure": {
+    "Show Pressure": "Показувати тиск"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "Показувати схід/захід сонця"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "Показувати стан погоди"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "Показувати швидкість вітру"
+  },
+  "Standard": {
+    "Standard": "Стандарт"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "Використовується, коли встановлено власний акцентний колір"
+  },
+  "View Mode": {
+    "View Mode": "Режим перегляду"
+  },
+  "Wind": {
+    "Wind": "Вітер"
+  }
+}

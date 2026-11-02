@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "Acceptera"
+  },
+  "Audio Output": {
+    "Audio Output": "Ljudutgång"
+  },
+  "Battery": {
+    "Battery": "Batteri"
+  },
+  "Browse Files": {
+    "Browse Files": "Bläddra bland filer"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "Urklipp skickat"
+  },
+  "Device paired": {
+    "Device paired": "Enheten parkopplad"
+  },
+  "Device unpaired": {
+    "Device unpaired": "Enhet bortkopplad"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": ""
+  },
+  "Excellent": {
+    "Excellent": ""
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "Misslyckades med att acceptera parkoppling"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "Misslyckades med att bläddra på enhet"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "Misslyckades med att starta SMS-app"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "Misslyckades med att avvisa parkoppling"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "Misslyckades med att ringa enheten"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": ""
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "Misslyckades med att skicka urklipp"
+  },
+  "Failed to send file": {
+    "Failed to send file": "Misslyckades med att skicka fil"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "Misslyckades med att skicka ping"
+  },
+  "Failed to share": {
+    "Failed to share": "Misslyckades med att dela"
+  },
+  "Fair": {
+    "Fair": ""
+  },
+  "File": {
+    "File": "Fil"
+  },
+  "File received from %1": {
+    "File received from %1": ""
+  },
+  "Forward 10s": {
+    "Forward 10s": ""
+  },
+  "Good": {
+    "Good": "Bra"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "Se till att KDE Connect eller Valent körs på dina andra enheter"
+  },
+  "Media Player": {
+    "Media Player": "Mediespelare"
+  },
+  "Message": {
+    "Message": "Meddelande"
+  },
+  "Network Type": {
+    "Network Type": ""
+  },
+  "Next": {
+    "Next": "Nästa"
+  },
+  "No Signal": {
+    "No Signal": ""
+  },
+  "No devices": {
+    "No devices": "Inga enheter"
+  },
+  "No devices found": {
+    "No devices found": "Inga enheter hittades"
+  },
+  "No images found": {
+    "No images found": ""
+  },
+  "Not paired": {
+    "Not paired": "Inte parkopplad"
+  },
+  "Notifications": {
+    "Notifications": "Notiser"
+  },
+  "Offline": {
+    "Offline": "Offline"
+  },
+  "Open App": {
+    "Open App": "Öppna app"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "Öppnar SMS-app"
+  },
+  "Opening file browser": {
+    "Opening file browser": "Öppnar filbläddraren"
+  },
+  "Pairing failed": {
+    "Pairing failed": "Parkoppling misslyckades"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": ""
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "Parkopplingsförfrågan skickad"
+  },
+  "Pairing requested": {
+    "Pairing requested": "Parkoppling begärd"
+  },
+  "Pairing...": {
+    "Pairing...": "Parkopplar..."
+  },
+  "Pause": {
+    "Pause": "Pausa"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "Phone Connect är inte tillgängligt"
+  },
+  "Phone number": {
+    "Phone number": "Telefonnummer"
+  },
+  "Ping": {
+    "Ping": "Ping"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": ""
+  },
+  "Play": {
+    "Play": ""
+  },
+  "Previous": {
+    "Previous": ""
+  },
+  "Recent Images": {
+    "Recent Images": ""
+  },
+  "Reject": {
+    "Reject": "Avvisa"
+  },
+  "Request Pairing": {
+    "Request Pairing": "Begär parkoppling"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": ""
+  },
+  "Ring": {
+    "Ring": "Ring"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": ""
+  },
+  "SMS": {
+    "SMS": "SMS"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": ""
+  },
+  "Select File to Send": {
+    "Select File to Send": "Välj fil att skicka"
+  },
+  "Send": {
+    "Send": "Skicka"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "Skicka urklipp"
+  },
+  "Send SMS": {
+    "Send SMS": "Skicka SMS"
+  },
+  "Sending %1...": {
+    "Sending %1...": ""
+  },
+  "Share": {
+    "Share": "Dela"
+  },
+  "Shared": {
+    "Shared": "Delat"
+  },
+  "Signal Strength": {
+    "Signal Strength": ""
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "Starta KDE Connect eller Valent för att använda detta tillägg"
+  },
+  "Text": {
+    "Text": "Text"
+  },
+  "URI": {
+    "URI": ""
+  },
+  "Unavailable": {
+    "Unavailable": "Otillgänglig"
+  },
+  "Unknown": {
+    "Unknown": "Okänd"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "Okänd artist"
+  },
+  "Unpair": {
+    "Unpair": "Ta bort parkoppling"
+  },
+  "Unpair failed": {
+    "Unpair failed": "Bortkoppling misslyckades"
+  },
+  "Verification": {
+    "Verification": "Verifiering"
+  },
+  "Weak": {
+    "Weak": ""
+  },
+  "device": {
+    "device": "enhet"
+  }
+}

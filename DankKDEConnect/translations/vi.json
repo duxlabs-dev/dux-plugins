@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "Chấp nhận"
+  },
+  "Audio Output": {
+    "Audio Output": "Đầu ra âm thanh"
+  },
+  "Battery": {
+    "Battery": "Pin"
+  },
+  "Browse Files": {
+    "Browse Files": "Duyệt tệp"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "Đã gửi nội dung bảng nhớ tạm"
+  },
+  "Device paired": {
+    "Device paired": "Đã ghép nối thiết bị"
+  },
+  "Device unpaired": {
+    "Device unpaired": "Đã hủy ghép đôi thiết bị"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": "Nhập URI hoặc văn bản để chia sẻ"
+  },
+  "Excellent": {
+    "Excellent": ""
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "Không thể chấp nhận ghép đôi"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "Duyệt thiết bị thất bại"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "Khởi chạy ứng dụng SMS thất bại"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "Từ chối ghép đôi thất bại"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "Đổ chuông thiết bị thất bại"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": "Không thể gửi SMS"
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "Gửi bảng nhớ tạm thất bại"
+  },
+  "Failed to send file": {
+    "Failed to send file": "Gửi tệp thất bại"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "Gửi ping thất bại"
+  },
+  "Failed to share": {
+    "Failed to share": "Chia sẻ thất bại"
+  },
+  "Fair": {
+    "Fair": ""
+  },
+  "File": {
+    "File": "Tệp"
+  },
+  "File received from %1": {
+    "File received from %1": "Tệp nhận được từ %1"
+  },
+  "Forward 10s": {
+    "Forward 10s": "Tua Nhanh 10 giây"
+  },
+  "Good": {
+    "Good": "Tốt"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "Đảm bảo KDE Connect hoặc Valent đang chạy trên các thiết bị khác của bạn"
+  },
+  "Media Player": {
+    "Media Player": "Trình phát phương tiện"
+  },
+  "Message": {
+    "Message": "Tin nhắn"
+  },
+  "Network Type": {
+    "Network Type": "Loại Mạng"
+  },
+  "Next": {
+    "Next": "Tiếp theo"
+  },
+  "No Signal": {
+    "No Signal": ""
+  },
+  "No devices": {
+    "No devices": "Không có thiết bị"
+  },
+  "No devices found": {
+    "No devices found": "Không tìm thấy thiết bị nào"
+  },
+  "No images found": {
+    "No images found": "Không tìm thấy hình ảnh"
+  },
+  "Not paired": {
+    "Not paired": "Chưa ghép đôi"
+  },
+  "Notifications": {
+    "Notifications": "Thông báo"
+  },
+  "Offline": {
+    "Offline": "Ngoại tuyến"
+  },
+  "Open App": {
+    "Open App": "Mở ứng dụng"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "Đang mở ứng dụng SMS"
+  },
+  "Opening file browser": {
+    "Opening file browser": "Đang mở trình duyệt tệp"
+  },
+  "Pairing failed": {
+    "Pairing failed": "Ghép nối không thành công"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": "Yêu cầu ghép nối từ %1"
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "Yêu cầu ghép đôi đã được gửi"
+  },
+  "Pairing requested": {
+    "Pairing requested": "Đã yêu cầu ghép đôi"
+  },
+  "Pairing...": {
+    "Pairing...": "Đang ghép đôi..."
+  },
+  "Pause": {
+    "Pause": "Tạm dừng"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "Kết nối điện thoại không khả dụng"
+  },
+  "Phone number": {
+    "Phone number": "Số điện thoại"
+  },
+  "Ping": {
+    "Ping": "Ping"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": "Ping được gửi đến %1"
+  },
+  "Play": {
+    "Play": "Phát"
+  },
+  "Previous": {
+    "Previous": "Trước"
+  },
+  "Recent Images": {
+    "Recent Images": "Hình ảnh Gần đây"
+  },
+  "Reject": {
+    "Reject": "Từ chối"
+  },
+  "Request Pairing": {
+    "Request Pairing": "Yêu cầu ghép đôi"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": "Tua Lại 10 giây"
+  },
+  "Ring": {
+    "Ring": "Đổ chuông"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": "Đang gọi %1..."
+  },
+  "SMS": {
+    "SMS": "SMS"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": "SMS đã gửi thành công"
+  },
+  "Select File to Send": {
+    "Select File to Send": "Chọn tệp để gửi"
+  },
+  "Send": {
+    "Send": "Gửi"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "Gửi bảng nhớ tạm"
+  },
+  "Send SMS": {
+    "Send SMS": "Gửi SMS"
+  },
+  "Sending %1...": {
+    "Sending %1...": "Đang gửi %1..."
+  },
+  "Share": {
+    "Share": "Chia sẻ"
+  },
+  "Shared": {
+    "Shared": "Đã chia sẻ"
+  },
+  "Signal Strength": {
+    "Signal Strength": "Cường độ Tín hiệu"
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "Khởi động KDE Connect hoặc Valent để sử dụng plugin này"
+  },
+  "Text": {
+    "Text": "Văn bản"
+  },
+  "URI": {
+    "URI": "URI"
+  },
+  "Unavailable": {
+    "Unavailable": "Không khả dụng"
+  },
+  "Unknown": {
+    "Unknown": "Không xác định"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "Nghệ sĩ không xác định"
+  },
+  "Unpair": {
+    "Unpair": "Hủy ghép đôi"
+  },
+  "Unpair failed": {
+    "Unpair failed": "Hủy ghép đôi thất bại"
+  },
+  "Verification": {
+    "Verification": "Xác thực"
+  },
+  "Weak": {
+    "Weak": ""
+  },
+  "device": {
+    "device": "thiết bị"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "אישור"
+  },
+  "Audio Output": {
+    "Audio Output": "פלט לשמע"
+  },
+  "Battery": {
+    "Battery": "סוללה"
+  },
+  "Browse Files": {
+    "Browse Files": "עיין/י בקבצים"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "לוח ההעתקה נשלח"
+  },
+  "Device paired": {
+    "Device paired": "ההתקן צומד"
+  },
+  "Device unpaired": {
+    "Device unpaired": "הצמדת ההתקן בוטלה"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": "הזן/י URI או טקסט לשיתוף"
+  },
+  "Excellent": {
+    "Excellent": "מצוין"
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "אישור הצימוד נכשל"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "הניסיון לעיין בהתקן נכשל"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "הפעלת אפליקציית הSMS נכשלה"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "דחיית ההצמדה נכשלה"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "שליחת הצלצול להתקן נכשלה"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": "שליחת הSMS נכשלה"
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "שליחת לוח ההעתקה נכשלה"
+  },
+  "Failed to send file": {
+    "Failed to send file": "שליחת הקובץ נכשלה"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "הניסיון לשלוח פינג נכשל"
+  },
+  "Failed to share": {
+    "Failed to share": "השיתוף נכשל"
+  },
+  "Fair": {
+    "Fair": "סביר"
+  },
+  "File": {
+    "File": "קובץ"
+  },
+  "File received from %1": {
+    "File received from %1": "התקבל קובץ מ%1"
+  },
+  "Forward 10s": {
+    "Forward 10s": "קדימה 10 שניות"
+  },
+  "Good": {
+    "Good": "טוב"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "ודא/י שKDE Connect או Valent פועל על ההתקנים האחרים שלך"
+  },
+  "Media Player": {
+    "Media Player": "נגן מדיה"
+  },
+  "Message": {
+    "Message": "הודעה"
+  },
+  "Network Type": {
+    "Network Type": "סוג רשת"
+  },
+  "Next": {
+    "Next": "הבא"
+  },
+  "No Signal": {
+    "No Signal": "אין קליטה"
+  },
+  "No devices": {
+    "No devices": "אין התקנים"
+  },
+  "No devices found": {
+    "No devices found": "לא נמצאו התקנים"
+  },
+  "No images found": {
+    "No images found": "לא נמצאו תמונות"
+  },
+  "Not paired": {
+    "Not paired": "לא מוצמד"
+  },
+  "Notifications": {
+    "Notifications": "התראות"
+  },
+  "Offline": {
+    "Offline": "לא מקוון"
+  },
+  "Open App": {
+    "Open App": "פתח/י אפליקציה"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "פותח את אפליקציית הSMS"
+  },
+  "Opening file browser": {
+    "Opening file browser": "פותח דפדפן קבצים"
+  },
+  "Pairing failed": {
+    "Pairing failed": "הצימוד נכשל"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": "בקשת צימוד מ%1"
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "בקשת צימוד נשלחה"
+  },
+  "Pairing requested": {
+    "Pairing requested": "התבקש צימוד"
+  },
+  "Pairing...": {
+    "Pairing...": "מתבצע צימוד..."
+  },
+  "Pause": {
+    "Pause": "השהיה"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "Phone Connect לא זמין"
+  },
+  "Phone number": {
+    "Phone number": "מספר טלפון"
+  },
+  "Ping": {
+    "Ping": "פינג"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": "פינג נשלח אל %1"
+  },
+  "Play": {
+    "Play": "נגן"
+  },
+  "Previous": {
+    "Previous": "הקודם"
+  },
+  "Recent Images": {
+    "Recent Images": "תמונות אחרונות"
+  },
+  "Reject": {
+    "Reject": "דחה/י"
+  },
+  "Request Pairing": {
+    "Request Pairing": "בקש/י צימוד"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": "אחורה 10 שניות"
+  },
+  "Ring": {
+    "Ring": "צלצל/י"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": "מצלצל ב%1..."
+  },
+  "SMS": {
+    "SMS": "SMS"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": "הSMS נשלח בהצלחה"
+  },
+  "Select File to Send": {
+    "Select File to Send": "בחר/י קובץ לשליחה"
+  },
+  "Send": {
+    "Send": "שלח/י"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "שלח/י לוח ההעתקה"
+  },
+  "Send SMS": {
+    "Send SMS": "שלח/י SMS"
+  },
+  "Sending %1...": {
+    "Sending %1...": "שולח %1..."
+  },
+  "Share": {
+    "Share": "שתף/י"
+  },
+  "Shared": {
+    "Shared": "שותף"
+  },
+  "Signal Strength": {
+    "Signal Strength": "עוצמת קליטה"
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "הפעל/י KDE Connect או Valent כדי להשתמש בתוסף זה"
+  },
+  "Text": {
+    "Text": "טקסט"
+  },
+  "URI": {
+    "URI": "URI"
+  },
+  "Unavailable": {
+    "Unavailable": "לא זמין"
+  },
+  "Unknown": {
+    "Unknown": "לא ידוע"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "אמן לא ידוע"
+  },
+  "Unpair": {
+    "Unpair": "בטל/י צימוד"
+  },
+  "Unpair failed": {
+    "Unpair failed": "ביטול הצימוד נכשל"
+  },
+  "Verification": {
+    "Verification": "אימות"
+  },
+  "Weak": {
+    "Weak": "חלש"
+  },
+  "device": {
+    "device": "התקן"
+  }
+}

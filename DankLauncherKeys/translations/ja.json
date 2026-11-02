@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "有効化"
+  },
+  "Always Active": {
+    "Always Active": "常にアクティブ"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "クリップボードにコピーしました"
+  },
+  "Copy": {
+    "Copy": "コピー"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "キーバインドソース"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "キーバインド検索設定"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "通常の検索結果と一緒にキーバインドを表示"
+  },
+  "Pin": {
+    "Pin": "ピン留め"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "キーの組み合わせ、説明、またはアクション名で検索します。\n\n既定の操作ではキーバインドをクリップボードにコピーします。\nよく使うキーバインドは右クリックまたは右矢印キーでピン留めできます。検索していないときに上部に表示されます。"
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "コンポジターとアプリケーションのキーボードショートカットを検索"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "少なくとも1つのプロバイダーを選択"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "含めるキーバインドプロバイダーを選択"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "トリガープレフィックス"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "キーバインドを検索するにはこの接頭辞を入力"
+  },
+  "Unpin": {
+    "Unpin": "固定解除"
+  },
+  "Usage Tips": {
+    "Usage Tips": "使用のヒント"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "有効化にはトリガープレフィックスを使う"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "Hangsúlyszín"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "Részletes és Előrejelzés nézetmódokban érhető el"
+  },
+  "Background Opacity": {
+    "Background Opacity": "Háttér átlátszatlansága"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "Az időjárási widget megjelenítési módjának kiválasztása"
+  },
+  "Compact": {
+    "Compact": "Kompakt"
+  },
+  "Custom": {
+    "Custom": "Egyéni"
+  },
+  "Custom Color": {
+    "Custom Color": "Egyéni szín"
+  },
+  "Detailed": {
+    "Detailed": "Részletes"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "Óránkénti időjárás-előrejelzés megjelenítése"
+  },
+  "Feels": {
+    "Feels": "Hőérzet"
+  },
+  "Forecast": {
+    "Forecast": "Előrejelzés"
+  },
+  "Forecast Days": {
+    "Forecast Days": "Előrejelzési napok"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "Óránkénti előrejelzések száma"
+  },
+  "Humidity": {
+    "Humidity": "Páratartalom"
+  },
+  "No Weather Data": {
+    "No Weather Data": "Nincsenek időjárási adatok"
+  },
+  "Precip": {
+    "Precip": "Csapadék"
+  },
+  "Pressure": {
+    "Pressure": "Légnyomás"
+  },
+  "Primary": {
+    "Primary": "Elsődleges"
+  },
+  "Secondary": {
+    "Secondary": "Másodlagos"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "Hőérzet megjelenítése"
+  },
+  "Show Forecast": {
+    "Show Forecast": "Előrejelzés megjelenítése"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "Óránkénti előrejelzés megjelenítése"
+  },
+  "Show Humidity": {
+    "Show Humidity": "Páratartalom megjelenítése"
+  },
+  "Show Location": {
+    "Show Location": "Hely megjelenítése"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "Csapadékvalószínűség megjelenítése"
+  },
+  "Show Pressure": {
+    "Show Pressure": "Légnyomás megjelenítése"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "Napkelte/Napnyugta megjelenítése"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "Időjárási körülmények megjelenítése"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "Szélsebesség megjelenítése"
+  },
+  "Standard": {
+    "Standard": "Standard"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "Akkor használatos, ha a kiemelőszín „Egyéni”-re van állítva"
+  },
+  "View Mode": {
+    "View Mode": "Nézetmód"
+  },
+  "Wind": {
+    "Wind": "Szél"
+  }
+}

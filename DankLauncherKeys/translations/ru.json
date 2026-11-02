@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "Активация"
+  },
+  "Always Active": {
+    "Always Active": "Всегда активно"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Скопировано в буфер обмена"
+  },
+  "Copy": {
+    "Copy": "Копировать"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "Источники комбинаций клавиш"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "Настройки поиска комбинаций клавиш"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "Комбинации клавиш показываются вместе с обычными результатами поиска"
+  },
+  "Pin": {
+    "Pin": "Закрепить"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "Поиск по комбинации клавиш, описанию или имени действия.\n\nДействие по умолчанию копирует комбинацию клавиш в буфер обмена.\nЩёлкните ПКМ или нажмите стрелку вправо для закрепления часто используемых комбинаций клавиш — они будут отображаться вверху при отсутствии поиска."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "Поиск горячих клавиш из вашего композитора и приложений"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "Выбрать хотя бы одного провайдера"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "Выбрать, какие источники комбинаций клавиш включать"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "Префикс триггера"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "Введите этот префикс для поиска комбинацию клавишs"
+  },
+  "Unpin": {
+    "Unpin": "Открепить"
+  },
+  "Usage Tips": {
+    "Usage Tips": "Советы по использованию"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "Использовать префикс триггера для активации"
+  }
+}

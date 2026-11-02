@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "啟用"
+  },
+  "Always Active": {
+    "Always Active": "總是啟用"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "複製到剪貼簿"
+  },
+  "Copy": {
+    "Copy": "複製"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "快捷鍵來源"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "快捷鍵搜尋設定"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "快捷鍵與一般搜尋結果一同顯示"
+  },
+  "Pin": {
+    "Pin": "釘選"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "按組合鍵、描述或動作名稱搜尋。\n\n預設動作將綁定鍵複製到剪貼簿。\n右鍵點擊或按右箭頭以釘選常用綁定鍵 — 搜尋時它們將出現在頂部。"
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "搜尋合成器與應用程式的鍵盤快捷鍵"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "請至少選擇一個提供者"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "選擇要包含哪些快捷鍵提供者"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "觸發前綴"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "輸入此前綴以搜尋快捷鍵"
+  },
+  "Unpin": {
+    "Unpin": "取消釘選"
+  },
+  "Usage Tips": {
+    "Usage Tips": "使用提示"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "使用觸發前綴啟用"
+  }
+}

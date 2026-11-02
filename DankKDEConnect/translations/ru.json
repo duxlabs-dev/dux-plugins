@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "Принять"
+  },
+  "Audio Output": {
+    "Audio Output": "Аудио Выход"
+  },
+  "Battery": {
+    "Battery": "Батарея"
+  },
+  "Browse Files": {
+    "Browse Files": "Обзор файлов"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "Буфер обмена отправлен"
+  },
+  "Device paired": {
+    "Device paired": "Устройство сопряжено"
+  },
+  "Device unpaired": {
+    "Device unpaired": "Сопряжение устройства отменено"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": "Введите URI или текст для отправки"
+  },
+  "Excellent": {
+    "Excellent": ""
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "Не удалось принять сопряжение"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "Не удалось просмотреть устройство"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "Не удалось запустить SMS-приложение"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "Не удалось отклонить сопряжение"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "Не удалось вызвать устройство"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": "Не удалось отправить SMS"
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "Не удалось отправить буфер обмена"
+  },
+  "Failed to send file": {
+    "Failed to send file": "Не удалось отправить файл"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "Не удалось отправить ping"
+  },
+  "Failed to share": {
+    "Failed to share": "Не удалось поделиться"
+  },
+  "Fair": {
+    "Fair": ""
+  },
+  "File": {
+    "File": "Файл"
+  },
+  "File received from %1": {
+    "File received from %1": "Получен файл от %1"
+  },
+  "Forward 10s": {
+    "Forward 10s": "Вперёд на 10 сек"
+  },
+  "Good": {
+    "Good": "Хорошо"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "Убедитесь, что KDE Connect или Valent запущены на других устройствах"
+  },
+  "Media Player": {
+    "Media Player": "Медиаплеер"
+  },
+  "Message": {
+    "Message": "Сообщение"
+  },
+  "Network Type": {
+    "Network Type": "Тип сети"
+  },
+  "Next": {
+    "Next": "Далее"
+  },
+  "No Signal": {
+    "No Signal": ""
+  },
+  "No devices": {
+    "No devices": "Нет устройств"
+  },
+  "No devices found": {
+    "No devices found": "Устройства не найдены"
+  },
+  "No images found": {
+    "No images found": "Изображения не найдены"
+  },
+  "Not paired": {
+    "Not paired": "Не сопряжено"
+  },
+  "Notifications": {
+    "Notifications": "Уведомления"
+  },
+  "Offline": {
+    "Offline": "Оффлайн"
+  },
+  "Open App": {
+    "Open App": "Открыть приложение"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "Открытие SMS-приложения"
+  },
+  "Opening file browser": {
+    "Opening file browser": "Открытие файлового менеджера"
+  },
+  "Pairing failed": {
+    "Pairing failed": "Сопряжение не удалось"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": "Запрос на сопряжение от %1"
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "Запрос сопряжения отправлен"
+  },
+  "Pairing requested": {
+    "Pairing requested": "Запрос сопряжения отправлен"
+  },
+  "Pairing...": {
+    "Pairing...": "Сопряжение..."
+  },
+  "Pause": {
+    "Pause": "Пауза"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "Phone Connect недоступен"
+  },
+  "Phone number": {
+    "Phone number": "Номер телефона"
+  },
+  "Ping": {
+    "Ping": "Ping"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": "Пинг отправлен на %1"
+  },
+  "Play": {
+    "Play": "Воспроизведение"
+  },
+  "Previous": {
+    "Previous": "Назад"
+  },
+  "Recent Images": {
+    "Recent Images": "Недавние изображения"
+  },
+  "Reject": {
+    "Reject": "Отклонить"
+  },
+  "Request Pairing": {
+    "Request Pairing": "Запрос сопряжения"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": "Назад на 10 сек"
+  },
+  "Ring": {
+    "Ring": "Вызов"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": "Звонок на %1..."
+  },
+  "SMS": {
+    "SMS": "SMS"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": "SMS успешно отправлено"
+  },
+  "Select File to Send": {
+    "Select File to Send": "Выбрать файл для отправки"
+  },
+  "Send": {
+    "Send": "Отправить"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "Отправить буфер обмена"
+  },
+  "Send SMS": {
+    "Send SMS": "Отправить SMS"
+  },
+  "Sending %1...": {
+    "Sending %1...": "Отправка %1..."
+  },
+  "Share": {
+    "Share": "Поделиться"
+  },
+  "Shared": {
+    "Shared": "Отправлено"
+  },
+  "Signal Strength": {
+    "Signal Strength": "Уровень сигнала"
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "Запустите KDE Connect или Valent для использования этого плагина"
+  },
+  "Text": {
+    "Text": "Текст"
+  },
+  "URI": {
+    "URI": "URI"
+  },
+  "Unavailable": {
+    "Unavailable": "Недоступно"
+  },
+  "Unknown": {
+    "Unknown": "Неизвестный"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "Неизвестный исполнитель"
+  },
+  "Unpair": {
+    "Unpair": "Отменить сопряжение"
+  },
+  "Unpair failed": {
+    "Unpair failed": "Отмена сопряжения не удалась"
+  },
+  "Verification": {
+    "Verification": "Проверка"
+  },
+  "Weak": {
+    "Weak": ""
+  },
+  "device": {
+    "device": "устройство"
+  }
+}

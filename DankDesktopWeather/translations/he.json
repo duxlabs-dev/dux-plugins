@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "צבע הדגשה"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "זמין כתצוגה מפורטת או תצוגה של התחזית"
+  },
+  "Background Opacity": {
+    "Background Opacity": "שקיפות רקע"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "בחר/י כיצד ווידג׳ט מזג האוויר מוצג"
+  },
+  "Compact": {
+    "Compact": "קומפקטי"
+  },
+  "Custom": {
+    "Custom": "מותאם אישית"
+  },
+  "Custom Color": {
+    "Custom Color": "צבע מותאם אישית"
+  },
+  "Detailed": {
+    "Detailed": "תצוגה מפורטת"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "הצג/י תחזיות מזג אוויר שעתיות"
+  },
+  "Feels": {
+    "Feels": "מרגיש כמו"
+  },
+  "Forecast": {
+    "Forecast": "תחזית"
+  },
+  "Forecast Days": {
+    "Forecast Days": "ימי תחזית"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "מספר תחזיות שעתיות"
+  },
+  "Humidity": {
+    "Humidity": "לחות"
+  },
+  "No Weather Data": {
+    "No Weather Data": "אין נתוני מזג אוויר"
+  },
+  "Precip": {
+    "Precip": "משקעים"
+  },
+  "Pressure": {
+    "Pressure": "לחץ"
+  },
+  "Primary": {
+    "Primary": "ראשי"
+  },
+  "Secondary": {
+    "Secondary": "משני"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "הצגת הטמפרטורה המורגשת (\"מרגיש כמו\")"
+  },
+  "Show Forecast": {
+    "Show Forecast": "הצג/י תחזית"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "הצג/י תחזית שעתית"
+  },
+  "Show Humidity": {
+    "Show Humidity": "הצג/י לחות"
+  },
+  "Show Location": {
+    "Show Location": "הצגת מיקום"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "הצג/י סיכוי למשקעים"
+  },
+  "Show Pressure": {
+    "Show Pressure": "הצג/י לחץ"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "הצג/י זריחה/שקיעה"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "הצגת תנאי מזג האוויר"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "הצג/י מהירות רוח"
+  },
+  "Standard": {
+    "Standard": "רגיל"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "צבע שיעשה בו שימוש כאשר צבע ההדגשה מוגדר למותאם אישית"
+  },
+  "View Mode": {
+    "View Mode": "מצב תצוגה"
+  },
+  "Wind": {
+    "Wind": "רוח"
+  }
+}

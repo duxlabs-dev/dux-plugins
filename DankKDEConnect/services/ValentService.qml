@@ -30,7 +30,7 @@ Singleton {
     property string announcedName: ""
     property string selfId: ""
 
-    property bool _subscribed: false
+    property var _signalSubscriptions: []
     property bool _dbusFinished: false
 
     Timer {
@@ -75,23 +75,22 @@ Singleton {
     readonly property int pairedCount: pairedDevices.length
 
     Component.onCompleted: {
-        if (DMSService.isConnected) {
-            checkAvailability();
-            subscribeToSignals();
-        }
+        if (DMSService.subscribeConnected)
+            resync();
     }
 
     Connections {
         target: DMSService
         function onConnectionStateChanged() {
-            if (!DMSService.isConnected) {
-                available = false;
-                initialized = false;
-                _subscribed = false;
+            if (DMSService.isConnected)
                 return;
-            }
-            checkAvailability();
-            subscribeToSignals();
+            available = false;
+            initialized = false;
+            _signalSubscriptions = [];
+        }
+
+        function onCapabilitiesReceived() {
+            resync();
         }
 
         function onDbusSignalReceived(subId, data) {
@@ -99,24 +98,35 @@ Singleton {
         }
     }
 
-    function subscribeToSignals() {
-        if (_subscribed)
+    // Daemons before the match-ownership fix drop every dbus match when the shell re-dials its subscribe socket,
+    // and signals sent during the re-dial are lost on every version.
+    function resync() {
+        if (!DMSService.capabilities.includes("dbus"))
             return;
-        _subscribed = true;
-        DMSService.dbusSubscribe("session", service, "", "", "", function(response) {
-            if (response.error) {
-                console.warn("[Valent] Subscription failed:", response.error);
-                _subscribed = false;
-            }
-        });
-        DMSService.dbusSubscribe("session", service, "", propertiesInterface, "PropertiesChanged", function(response) {
-            if (response.error)
-                console.warn("[Valent] Properties subscription failed:", response.error);
-        });
+        subscribeToSignals();
+        checkAvailability();
+        if (initialized)
+            refreshDevices();
+    }
+
+    function rememberSubscription(response) {
+        if (response.error) {
+            console.warn("[Valent] Subscription failed:", response.error);
+            return;
+        }
+        _signalSubscriptions = _signalSubscriptions.concat([response.result.subscriptionId]);
+    }
+
+    function subscribeToSignals() {
+        for (const id of _signalSubscriptions)
+            DMSService.dbusUnsubscribe(id);
+        _signalSubscriptions = [];
+        DMSService.dbusSubscribe("session", service, "", "", "", rememberSubscription);
+        DMSService.dbusSubscribe("session", service, "", propertiesInterface, "PropertiesChanged", rememberSubscription);
     }
 
     function checkAvailability() {
-        DMSService.dbusListNames("session", function(response) {
+        DMSService.dbusListNames("session", function (response) {
             if (response.error) {
                 available = false;
                 return;
@@ -138,7 +148,7 @@ Singleton {
     }
 
     function activateService() {
-        DMSService.dbusCall("session", "org.freedesktop.DBus", "/org/freedesktop/DBus", "org.freedesktop.DBus", "StartServiceByName", [service, 0], function(response) {
+        DMSService.dbusCall("session", "org.freedesktop.DBus", "/org/freedesktop/DBus", "org.freedesktop.DBus", "StartServiceByName", [service, 0], function (response) {
             if (response.error) {
                 console.warn("[Valent] Failed to start service:", response.error);
                 return;
@@ -149,7 +159,7 @@ Singleton {
     function openValentWindow() {
         DMSService.dbusCall("session", service, managerPath, "org.gtk.Actions", "Activate", ["window", ["main"],
             {}
-        ], function(response) {
+        ], function (response) {
             if (response.error)
                 console.warn("[Valent] Failed to open window:", response.error);
         });
@@ -181,7 +191,9 @@ Singleton {
                 const path = data.body?.[0];
                 const id = extractDeviceIdFromPath(path);
                 if (id) {
-                    deviceIds = deviceIds.filter(function(d) { return d !== id; });
+                    deviceIds = deviceIds.filter(function (d) {
+                        return d !== id;
+                    });
                     delete devices[id];
                     devices = Object.assign({}, devices);
                     deviceRemoved(id);
@@ -266,7 +278,7 @@ Singleton {
         _dbusFinished = false;
         refreshMinTimer.start();
 
-        DMSService.dbusCall("session", service, managerPath, objectManagerInterface, "GetManagedObjects", [], function(response) {
+        DMSService.dbusCall("session", service, managerPath, objectManagerInterface, "GetManagedObjects", [], function (response) {
             root._dbusFinished = true;
             if (!refreshMinTimer.running) {
                 root.isRefreshing = false;
@@ -305,7 +317,7 @@ Singleton {
     function fetchDeviceInfo(deviceId) {
         const devicePath = getDevicePath(deviceId);
 
-        DMSService.dbusGetAllProperties("session", service, devicePath, deviceInterface, function(response) {
+        DMSService.dbusGetAllProperties("session", service, devicePath, deviceInterface, function (response) {
             if (response.error)
                 return;
             parseDeviceProperties(deviceId, response.result || {});
@@ -341,17 +353,7 @@ Singleton {
         const newStatusIconName = iconName || "smartphone-symbolic";
         const newSupportedPlugins = oldDev.supportedPlugins || [];
 
-        const changed = !devices[deviceId] ||
-                        oldDev.id !== deviceId ||
-                        oldDev.name !== newName ||
-                        oldDev.type !== newType ||
-                        oldDev.isReachable !== newIsReachable ||
-                        oldDev.isPaired !== newIsPaired ||
-                        oldDev.isPairRequested !== newIsPairRequested ||
-                        oldDev.isPairRequestedByPeer !== newIsPairRequestedByPeer ||
-                        oldDev.statusIconName !== newStatusIconName ||
-                        JSON.stringify(oldDev.supportedPlugins) !== JSON.stringify(newSupportedPlugins) ||
-                        oldDev._state !== state;
+        const changed = !devices[deviceId] || oldDev.id !== deviceId || oldDev.name !== newName || oldDev.type !== newType || oldDev.isReachable !== newIsReachable || oldDev.isPaired !== newIsPaired || oldDev.isPairRequested !== newIsPairRequested || oldDev.isPairRequestedByPeer !== newIsPairRequestedByPeer || oldDev.statusIconName !== newStatusIconName || JSON.stringify(oldDev.supportedPlugins) !== JSON.stringify(newSupportedPlugins) || oldDev._state !== state;
 
         if (changed) {
             const dev = Object.assign({}, oldDev);
@@ -406,7 +408,7 @@ Singleton {
     function fetchDeviceActions(deviceId) {
         const devicePath = getDevicePath(deviceId);
 
-        DMSService.dbusCall("session", service, devicePath, actionsInterface, "DescribeAll", [], function(response) {
+        DMSService.dbusCall("session", service, devicePath, actionsInterface, "DescribeAll", [], function (response) {
             if (response.error)
                 return;
 
@@ -488,7 +490,7 @@ Singleton {
     function fetchBatteryState(deviceId) {
         const devicePath = getDevicePath(deviceId);
 
-        DMSService.dbusCall("session", service, devicePath, actionsInterface, "Describe", ["battery.state"], function(response) {
+        DMSService.dbusCall("session", service, devicePath, actionsInterface, "Describe", ["battery.state"], function (response) {
             if (response.error)
                 return;
 
@@ -525,7 +527,7 @@ Singleton {
     function fetchConnectivityState(deviceId) {
         const devicePath = getDevicePath(deviceId);
 
-        DMSService.dbusCall("session", service, devicePath, actionsInterface, "Describe", ["connectivity_report.state"], function(response) {
+        DMSService.dbusCall("session", service, devicePath, actionsInterface, "Describe", ["connectivity_report.state"], function (response) {
             if (response.error)
                 return;
 
@@ -583,7 +585,7 @@ Singleton {
 
         DMSService.dbusCall("session", service, devicePath, actionsInterface, "Activate", [actionName, params,
             {}
-        ], function(response) {
+        ], function (response) {
             if (callback)
                 callback(response);
         });
@@ -613,7 +615,7 @@ Singleton {
         const devicePath = getDevicePath(deviceId);
         DMSService.dbusCall("session", service, devicePath, actionsInterface, "Activate", ["pair", [],
             {}
-        ], function(response) {
+        ], function (response) {
             if (callback)
                 callback(response);
         });
@@ -623,7 +625,7 @@ Singleton {
         const devicePath = getDevicePath(deviceId);
         DMSService.dbusCall("session", service, devicePath, actionsInterface, "Activate", ["pair", [],
             {}
-        ], function(response) {
+        ], function (response) {
             if (callback)
                 callback(response);
             refreshDevices();
@@ -634,7 +636,7 @@ Singleton {
         const devicePath = getDevicePath(deviceId);
         DMSService.dbusCall("session", service, devicePath, actionsInterface, "Activate", ["unpair", [],
             {}
-        ], function(response) {
+        ], function (response) {
             if (callback)
                 callback(response);
             refreshDevices();
@@ -645,7 +647,7 @@ Singleton {
         const devicePath = getDevicePath(deviceId);
         DMSService.dbusCall("session", service, devicePath, actionsInterface, "Activate", ["unpair", [],
             {}
-        ], function(response) {
+        ], function (response) {
             if (callback)
                 callback(response);
             refreshDevices();
@@ -654,7 +656,7 @@ Singleton {
 
     function setLocked(deviceId, locked, callback) {
         const devicePath = getDevicePath(deviceId);
-        DMSService.dbusCall("session", service, devicePath, actionsInterface, "SetState", ["lock.state", locked], function(response) {
+        DMSService.dbusCall("session", service, devicePath, actionsInterface, "SetState", ["lock.state", locked], function (response) {
             if (callback)
                 callback(response);
         });
@@ -697,14 +699,14 @@ Singleton {
     }
 
     function mountAndWait(deviceId, callback) {
-        activateAction(deviceId, "sftp.browse", undefined, function(response) {
+        activateAction(deviceId, "sftp.browse", undefined, function (response) {
             if (callback)
                 callback(!response.error);
         });
     }
 
     function startBrowsing(deviceId, callback) {
-        Proc.runCommand(null, ["sh", "-c", "ls -d /run/user/$(id -u)/gvfs/sftp:* 2>/dev/null | head -1"], function(stdout, exitCode) {
+        Proc.runCommand(null, ["sh", "-c", "ls -d /run/user/$(id -u)/gvfs/sftp:* 2>/dev/null | head -1"], function (stdout, exitCode) {
             const mountPath = stdout.trim();
             if (mountPath) {
                 const storagePath = mountPath + "/storage/emulated/0";
@@ -713,7 +715,7 @@ Singleton {
                     callback({});
                 return;
             }
-            activateAction(deviceId, "sftp.browse", undefined, function(response) {
+            activateAction(deviceId, "sftp.browse", undefined, function (response) {
                 if (response.error) {
                     if (callback)
                         callback(response);
@@ -733,7 +735,7 @@ Singleton {
             return;
         }
 
-        Proc.runCommand(null, ["sh", "-c", "ls -d /run/user/$(id -u)/gvfs/sftp:* 2>/dev/null | head -1"], function(stdout, exitCode) {
+        Proc.runCommand(null, ["sh", "-c", "ls -d /run/user/$(id -u)/gvfs/sftp:* 2>/dev/null | head -1"], function (stdout, exitCode) {
             const mountPath = stdout.trim();
             if (mountPath) {
                 const storagePath = mountPath + "/storage/emulated/0";
@@ -742,7 +744,9 @@ Singleton {
                     callback({});
                 return;
             }
-            Qt.callLater(function() { _waitForSftpMount(deviceId, callback, attempt + 1); });
+            Qt.callLater(function () {
+                _waitForSftpMount(deviceId, callback, attempt + 1);
+            });
         }, attempt === 0 ? 0 : 300);
     }
 
@@ -751,14 +755,14 @@ Singleton {
     }
 
     function getSftpMountPoint(deviceId, callback) {
-        Proc.runCommand(null, ["sh", "-c", "ls -d /run/user/$(id -u)/gvfs/sftp:* 2>/dev/null | head -1"], function(stdout, exitCode) {
+        Proc.runCommand(null, ["sh", "-c", "ls -d /run/user/$(id -u)/gvfs/sftp:* 2>/dev/null | head -1"], function (stdout, exitCode) {
             if (callback)
                 callback(stdout.trim() || "");
         }, 0);
     }
 
     function isSftpMounted(deviceId, callback) {
-        Proc.runCommand(null, ["sh", "-c", "ls -d /run/user/$(id -u)/gvfs/sftp:* 2>/dev/null | head -1"], function(stdout, exitCode) {
+        Proc.runCommand(null, ["sh", "-c", "ls -d /run/user/$(id -u)/gvfs/sftp:* 2>/dev/null | head -1"], function (stdout, exitCode) {
             if (callback)
                 callback(!!stdout.trim());
         }, 0);
@@ -779,7 +783,7 @@ Singleton {
     }
 
     function launchSmsApp(deviceId, callback) {
-        Proc.runCommand(null, ["gapplication", "action", "ca.andyholmes.Valent", "messages-window"], function(stdout, exitCode) {
+        Proc.runCommand(null, ["gapplication", "action", "ca.andyholmes.Valent", "messages-window"], function (stdout, exitCode) {
             if (callback)
                 callback(exitCode === 0 ? {} : {
                     error: "Failed to launch"

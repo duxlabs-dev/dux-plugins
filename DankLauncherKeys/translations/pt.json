@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "Ativação"
+  },
+  "Always Active": {
+    "Always Active": "Sempre Ativo"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Copiado para a área de transferência"
+  },
+  "Copy": {
+    "Copy": "Copiar"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "Fontes de Combinações de Teclas"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "Configurações de Pesquisa de Combinações de Teclas"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "Combinações de teclas mostradas junto com resultados de pesquisa regulares"
+  },
+  "Pin": {
+    "Pin": "Fixar"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "Buscar por combinação de teclas, descrição ou nome de ação.\n\nA ação padrão copia o atalho para a área de transferência.\nClique com o botão direito ou pressione Seta para a Direita para fixar atalhos usados com frequência - eles aparecerão no topo quando não estiver pesquisando."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "Pesquisar atalhos de teclado do seu compositor e aplicativos"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "Selecione pelo menos um provedor"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "Selecionar quais provedores de combinações de teclas incluir"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "Prefixo de Gatilho"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "Digite este prefixo para pesquisar combinações de teclas"
+  },
+  "Unpin": {
+    "Unpin": "Desafixar"
+  },
+  "Usage Tips": {
+    "Usage Tips": "Dicas de Uso"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "Usar prefixo de gatilho para ativar"
+  }
+}

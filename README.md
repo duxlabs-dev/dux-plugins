@@ -1,6 +1,6 @@
-# DankMaterialShell plugins
+# Dux Shell plugins
 
-A collection of first-party, officially maintained plugins for [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell)
+A collection of first-party, officially maintained plugins for [Dux Shell](https://github.com/duxlabs-dev/dux-shell)
 
 ## Plugins
 

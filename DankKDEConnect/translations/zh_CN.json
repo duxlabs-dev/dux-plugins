@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "接受"
+  },
+  "Audio Output": {
+    "Audio Output": "音频输出"
+  },
+  "Battery": {
+    "Battery": "电池"
+  },
+  "Browse Files": {
+    "Browse Files": "浏览文件"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "已发送剪贴板"
+  },
+  "Device paired": {
+    "Device paired": "设备已配对"
+  },
+  "Device unpaired": {
+    "Device unpaired": "设备已取消配对"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": "输入 URI 或文本以分享"
+  },
+  "Excellent": {
+    "Excellent": "极佳"
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "接受配对失败"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "浏览设备失败"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "启动短信应用失败"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "拒绝配对失败"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "响铃设备失败"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": "发送短信失败"
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "发送剪贴板失败"
+  },
+  "Failed to send file": {
+    "Failed to send file": "发送文件失败"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "发送 Ping 失败"
+  },
+  "Failed to share": {
+    "Failed to share": "共享失败"
+  },
+  "Fair": {
+    "Fair": ""
+  },
+  "File": {
+    "File": "文件"
+  },
+  "File received from %1": {
+    "File received from %1": "已从 %1 收到文件"
+  },
+  "Forward 10s": {
+    "Forward 10s": "快进 10 秒"
+  },
+  "Good": {
+    "Good": "良好"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "确保 KDE Connect 或 Valent 正在您的其他设备上运行"
+  },
+  "Media Player": {
+    "Media Player": "媒体播放器"
+  },
+  "Message": {
+    "Message": "消息"
+  },
+  "Network Type": {
+    "Network Type": "网络类型"
+  },
+  "Next": {
+    "Next": "下一个"
+  },
+  "No Signal": {
+    "No Signal": "无信号"
+  },
+  "No devices": {
+    "No devices": "无设备"
+  },
+  "No devices found": {
+    "No devices found": "未找到设备"
+  },
+  "No images found": {
+    "No images found": "未找到图片"
+  },
+  "Not paired": {
+    "Not paired": "未配对"
+  },
+  "Notifications": {
+    "Notifications": "通知"
+  },
+  "Offline": {
+    "Offline": "离线"
+  },
+  "Open App": {
+    "Open App": "打开应用"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "正在打开短信应用"
+  },
+  "Opening file browser": {
+    "Opening file browser": "正在打开文件浏览器"
+  },
+  "Pairing failed": {
+    "Pairing failed": "配对失败"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": "来自 %1 的配对请求"
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "配对请求已发送"
+  },
+  "Pairing requested": {
+    "Pairing requested": "配对已请求"
+  },
+  "Pairing...": {
+    "Pairing...": "配对中..."
+  },
+  "Pause": {
+    "Pause": "暂停"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "手机连接不可用"
+  },
+  "Phone number": {
+    "Phone number": "电话号码"
+  },
+  "Ping": {
+    "Ping": "Ping"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": "已向 %1 发送 Ping"
+  },
+  "Play": {
+    "Play": "播放"
+  },
+  "Previous": {
+    "Previous": "上一个"
+  },
+  "Recent Images": {
+    "Recent Images": "最近使用的图片"
+  },
+  "Reject": {
+    "Reject": "拒绝"
+  },
+  "Request Pairing": {
+    "Request Pairing": "请求配对"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": "快退 10 秒"
+  },
+  "Ring": {
+    "Ring": "响铃"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": "正在呼叫 %1..."
+  },
+  "SMS": {
+    "SMS": "短信"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": "短信发送成功"
+  },
+  "Select File to Send": {
+    "Select File to Send": "选择要发送的文件"
+  },
+  "Send": {
+    "Send": "发送"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "发送剪贴板"
+  },
+  "Send SMS": {
+    "Send SMS": "发送短信"
+  },
+  "Sending %1...": {
+    "Sending %1...": "正在发送 %1..."
+  },
+  "Share": {
+    "Share": "共享"
+  },
+  "Shared": {
+    "Shared": "已共享"
+  },
+  "Signal Strength": {
+    "Signal Strength": "信号强度"
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "启动 KDE Connect 或 Valent 以使用此插件"
+  },
+  "Text": {
+    "Text": "文本"
+  },
+  "URI": {
+    "URI": "URI"
+  },
+  "Unavailable": {
+    "Unavailable": "不可用"
+  },
+  "Unknown": {
+    "Unknown": "未知"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "未知艺术家"
+  },
+  "Unpair": {
+    "Unpair": "取消配对"
+  },
+  "Unpair failed": {
+    "Unpair failed": "取消配对失败"
+  },
+  "Verification": {
+    "Verification": "验证"
+  },
+  "Weak": {
+    "Weak": "弱"
+  },
+  "device": {
+    "device": "设备"
+  }
+}

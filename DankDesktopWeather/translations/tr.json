@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": ""
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": ""
+  },
+  "Background Opacity": {
+    "Background Opacity": "Arkaplan Opaklığı"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": ""
+  },
+  "Compact": {
+    "Compact": ""
+  },
+  "Custom": {
+    "Custom": "Özel"
+  },
+  "Custom Color": {
+    "Custom Color": ""
+  },
+  "Detailed": {
+    "Detailed": ""
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": ""
+  },
+  "Feels": {
+    "Feels": ""
+  },
+  "Forecast": {
+    "Forecast": ""
+  },
+  "Forecast Days": {
+    "Forecast Days": ""
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": ""
+  },
+  "Humidity": {
+    "Humidity": "Nem"
+  },
+  "No Weather Data": {
+    "No Weather Data": ""
+  },
+  "Precip": {
+    "Precip": ""
+  },
+  "Pressure": {
+    "Pressure": "Basınç"
+  },
+  "Primary": {
+    "Primary": "Birincil"
+  },
+  "Secondary": {
+    "Secondary": "İkincil"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": ""
+  },
+  "Show Forecast": {
+    "Show Forecast": ""
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": ""
+  },
+  "Show Humidity": {
+    "Show Humidity": ""
+  },
+  "Show Location": {
+    "Show Location": ""
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": ""
+  },
+  "Show Pressure": {
+    "Show Pressure": ""
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": ""
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": ""
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": ""
+  },
+  "Standard": {
+    "Standard": ""
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": ""
+  },
+  "View Mode": {
+    "View Mode": ""
+  },
+  "Wind": {
+    "Wind": "Rüzgar"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "Accepteren"
+  },
+  "Audio Output": {
+    "Audio Output": "Audio-uitvoer"
+  },
+  "Battery": {
+    "Battery": "Accu"
+  },
+  "Browse Files": {
+    "Browse Files": "Bestanden doorbladeren"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "Klembord verzonden"
+  },
+  "Device paired": {
+    "Device paired": "Apparaat gekoppeld"
+  },
+  "Device unpaired": {
+    "Device unpaired": "Apparaat ontkoppeld"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": "Voer URI of tekst in om te delen"
+  },
+  "Excellent": {
+    "Excellent": "Uitstekend"
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "Accepteren van koppeling mislukt"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "Bladeren op apparaat mislukt"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "Starten van sms-app mislukt"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "Weigeren van koppeling mislukt"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "Laten overgaan van apparaat mislukt"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": "Verzenden van sms mislukt"
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "Verzenden van klembord mislukt"
+  },
+  "Failed to send file": {
+    "Failed to send file": "Verzenden van bestand mislukt"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "Verzenden van ping mislukt"
+  },
+  "Failed to share": {
+    "Failed to share": "Delen mislukt"
+  },
+  "Fair": {
+    "Fair": "Redelijk"
+  },
+  "File": {
+    "File": "Bestand"
+  },
+  "File received from %1": {
+    "File received from %1": "Bestand ontvangen van %1"
+  },
+  "Forward 10s": {
+    "Forward 10s": "10s vooruit"
+  },
+  "Good": {
+    "Good": "Goed"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "Zorg ervoor dat KDE Connect of Valent actief is op je andere apparaten"
+  },
+  "Media Player": {
+    "Media Player": "Mediaspeler"
+  },
+  "Message": {
+    "Message": "Bericht"
+  },
+  "Network Type": {
+    "Network Type": "Netwerktype"
+  },
+  "Next": {
+    "Next": "Volgende"
+  },
+  "No Signal": {
+    "No Signal": "Geen signaal"
+  },
+  "No devices": {
+    "No devices": "Geen apparaten"
+  },
+  "No devices found": {
+    "No devices found": "Geen apparaten gevonden"
+  },
+  "No images found": {
+    "No images found": "Geen afbeeldingen gevonden"
+  },
+  "Not paired": {
+    "Not paired": "Niet gekoppeld"
+  },
+  "Notifications": {
+    "Notifications": "Meldingen"
+  },
+  "Offline": {
+    "Offline": "Offline"
+  },
+  "Open App": {
+    "Open App": "App openen"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "Sms-app openen"
+  },
+  "Opening file browser": {
+    "Opening file browser": "Bestandsbeheer openen"
+  },
+  "Pairing failed": {
+    "Pairing failed": "Koppelen mislukt"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": "Koppelingsverzoek van %1"
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "Koppelingsverzoek verzonden"
+  },
+  "Pairing requested": {
+    "Pairing requested": "Koppeling aangevraagd"
+  },
+  "Pairing...": {
+    "Pairing...": "Koppelen..."
+  },
+  "Pause": {
+    "Pause": "Pauzeren"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "Phone Connect niet beschikbaar"
+  },
+  "Phone number": {
+    "Phone number": "Telefoonnummer"
+  },
+  "Ping": {
+    "Ping": "Pingen"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": "Ping verzonden naar %1"
+  },
+  "Play": {
+    "Play": "Afspelen"
+  },
+  "Previous": {
+    "Previous": "Vorige"
+  },
+  "Recent Images": {
+    "Recent Images": "Recente afbeeldingen"
+  },
+  "Reject": {
+    "Reject": "Weigeren"
+  },
+  "Request Pairing": {
+    "Request Pairing": "Koppeling aanvragen"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": "10s terug"
+  },
+  "Ring": {
+    "Ring": "Laten overgaan"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": "%1 laten overgaan..."
+  },
+  "SMS": {
+    "SMS": "Sms"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": "Sms succesvol verzonden"
+  },
+  "Select File to Send": {
+    "Select File to Send": "Selecteer bestand om te verzenden"
+  },
+  "Send": {
+    "Send": "Verzenden"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "Klembord verzenden"
+  },
+  "Send SMS": {
+    "Send SMS": "Sms verzenden"
+  },
+  "Sending %1...": {
+    "Sending %1...": "Verzenden van %1..."
+  },
+  "Share": {
+    "Share": "Delen"
+  },
+  "Shared": {
+    "Shared": "Gedeeld"
+  },
+  "Signal Strength": {
+    "Signal Strength": "Signaalsterkte"
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "Start KDE Connect of Valent om deze plug-in te gebruiken"
+  },
+  "Text": {
+    "Text": "Tekst"
+  },
+  "URI": {
+    "URI": "URI"
+  },
+  "Unavailable": {
+    "Unavailable": "Niet beschikbaar"
+  },
+  "Unknown": {
+    "Unknown": "Onbekend"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "Onbekende artiest"
+  },
+  "Unpair": {
+    "Unpair": "Ontkoppelen"
+  },
+  "Unpair failed": {
+    "Unpair failed": "Ontkoppelen mislukt"
+  },
+  "Verification": {
+    "Verification": "Verificatie"
+  },
+  "Weak": {
+    "Weak": "Zwak"
+  },
+  "device": {
+    "device": "apparaat"
+  }
+}

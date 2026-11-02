@@ -1,6 +1,7 @@
 import QtQuick
 import qs.Common
 import qs.Widgets
+import qs.DCommon.Widgets
 
 Item {
     id: root
@@ -27,7 +28,7 @@ Item {
         color: root.backgroundColor
     }
 
-    DankIcon {
+    DIcon {
         anchors.centerIn: parent
         name: root.iconName
         size: root.iconSize
@@ -35,7 +36,7 @@ Item {
         opacity: root.enabled ? 1.0 : 0.4
     }
 
-    DankRipple {
+    DRipple {
         id: ripple
         anchors.fill: parent
         cornerRadius: bgRect.radius

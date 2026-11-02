@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "アクセントカラー"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "詳細表示と予報表示で利用可能"
+  },
+  "Background Opacity": {
+    "Background Opacity": "背景の透明度"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "天気ウィジェットの表示方法を選ぶ"
+  },
+  "Compact": {
+    "Compact": "コンパクト"
+  },
+  "Custom": {
+    "Custom": "カスタム"
+  },
+  "Custom Color": {
+    "Custom Color": "カスタムカラー"
+  },
+  "Detailed": {
+    "Detailed": "詳細"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "時間ごとの天気予報を表示"
+  },
+  "Feels": {
+    "Feels": "体感"
+  },
+  "Forecast": {
+    "Forecast": "予報"
+  },
+  "Forecast Days": {
+    "Forecast Days": "予報日数"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "時間別予報件数"
+  },
+  "Humidity": {
+    "Humidity": "湿度"
+  },
+  "No Weather Data": {
+    "No Weather Data": "天気データなし"
+  },
+  "Precip": {
+    "Precip": "降水"
+  },
+  "Pressure": {
+    "Pressure": "気圧"
+  },
+  "Primary": {
+    "Primary": "プライマリー"
+  },
+  "Secondary": {
+    "Secondary": "セカンダリー"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "体感温度を表示"
+  },
+  "Show Forecast": {
+    "Show Forecast": "予報を表示"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "時間ごとの予報を表示"
+  },
+  "Show Humidity": {
+    "Show Humidity": "湿度を表示"
+  },
+  "Show Location": {
+    "Show Location": "場所を表示"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "降水確率を表示"
+  },
+  "Show Pressure": {
+    "Show Pressure": "気圧を表示"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "日の出/日の入りを表示"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "天気の状態を表示"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "風速を表示"
+  },
+  "Standard": {
+    "Standard": "標準"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "アクセントカラーが Custom に設定されている場合に使用"
+  },
+  "View Mode": {
+    "View Mode": "表示モード"
+  },
+  "Wind": {
+    "Wind": "風"
+  }
+}

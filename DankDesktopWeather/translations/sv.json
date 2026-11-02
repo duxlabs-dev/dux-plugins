@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "Accentfärg"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "Tillgänglig i detaljerade och prognosvyer"
+  },
+  "Background Opacity": {
+    "Background Opacity": "Bakgrundsopacitet"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "Välj hur väderwidgeten visas"
+  },
+  "Compact": {
+    "Compact": "Kompakt"
+  },
+  "Custom": {
+    "Custom": "Anpassad"
+  },
+  "Custom Color": {
+    "Custom Color": "Anpassad färg"
+  },
+  "Detailed": {
+    "Detailed": "Detaljerad"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "Visa timvisa väderprognoser"
+  },
+  "Feels": {
+    "Feels": "Känns som"
+  },
+  "Forecast": {
+    "Forecast": "Prognos"
+  },
+  "Forecast Days": {
+    "Forecast Days": "Prognos­dagar"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "Antal timvisa prognoser"
+  },
+  "Humidity": {
+    "Humidity": "Luftfuktighet"
+  },
+  "No Weather Data": {
+    "No Weather Data": "Ingen väderdata"
+  },
+  "Precip": {
+    "Precip": "Nbd."
+  },
+  "Pressure": {
+    "Pressure": "Lufttryck"
+  },
+  "Primary": {
+    "Primary": "Primär"
+  },
+  "Secondary": {
+    "Secondary": "Sekundär"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "Visa känns som-temperatur"
+  },
+  "Show Forecast": {
+    "Show Forecast": "Visa prognos"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "Visa timvis prognos"
+  },
+  "Show Humidity": {
+    "Show Humidity": "Visa luftfuktighet"
+  },
+  "Show Location": {
+    "Show Location": "Visa plats"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "Visa nederbördssannolikhet"
+  },
+  "Show Pressure": {
+    "Show Pressure": "Visa lufttryck"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "Visa soluppgång/solnedgång"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "Visa väderförhållanden"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "Visa vindhastighet"
+  },
+  "Standard": {
+    "Standard": "Standard"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "Används när accentfärgen är inställd på Anpassad"
+  },
+  "View Mode": {
+    "View Mode": "Visningsläge"
+  },
+  "Wind": {
+    "Wind": "Vind"
+  }
+}

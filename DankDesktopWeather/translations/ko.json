@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "강조 색상"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "상세 및 일기예보 보기 모드에서 사용 가능"
+  },
+  "Background Opacity": {
+    "Background Opacity": "배경 불투명도"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "날씨 위젯이 표시되는 방식을 선택하세요"
+  },
+  "Compact": {
+    "Compact": "컴팩트"
+  },
+  "Custom": {
+    "Custom": "사용자 지정"
+  },
+  "Custom Color": {
+    "Custom Color": "사용자 지정 색상"
+  },
+  "Detailed": {
+    "Detailed": "자세히"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "시간별 날씨 예보 표시"
+  },
+  "Feels": {
+    "Feels": "체감 온도"
+  },
+  "Forecast": {
+    "Forecast": "일기예보"
+  },
+  "Forecast Days": {
+    "Forecast Days": "예보 일수"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "시간별 예보 수"
+  },
+  "Humidity": {
+    "Humidity": "습도"
+  },
+  "No Weather Data": {
+    "No Weather Data": "날씨 데이터 없음"
+  },
+  "Precip": {
+    "Precip": "강수"
+  },
+  "Pressure": {
+    "Pressure": "기압"
+  },
+  "Primary": {
+    "Primary": "기본"
+  },
+  "Secondary": {
+    "Secondary": "보조"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "체감 온도 표시"
+  },
+  "Show Forecast": {
+    "Show Forecast": "일기예보 표시"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "시간별 예보 표시"
+  },
+  "Show Humidity": {
+    "Show Humidity": "습도 표시"
+  },
+  "Show Location": {
+    "Show Location": "위치 표시"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "강수 확률 표시"
+  },
+  "Show Pressure": {
+    "Show Pressure": "기압 표시"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "일출/일몰 표시"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "날씨 상태 표시"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "풍속 표시"
+  },
+  "Standard": {
+    "Standard": "표준"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "강조 색상이 사용자 지정으로 설정된 경우 사용됨"
+  },
+  "View Mode": {
+    "View Mode": "보기 모드"
+  },
+  "Wind": {
+    "Wind": "바람"
+  }
+}

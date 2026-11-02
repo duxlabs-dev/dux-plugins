@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "لون التمييز"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "متاح في أوضاع العرض التفصيلي والتوقعات"
+  },
+  "Background Opacity": {
+    "Background Opacity": "عتامة الخلفية"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "اختر كيفية عرض أداة الطقس"
+  },
+  "Compact": {
+    "Compact": "مدمج"
+  },
+  "Custom": {
+    "Custom": "خيار مخصص"
+  },
+  "Custom Color": {
+    "Custom Color": "لون مخصص"
+  },
+  "Detailed": {
+    "Detailed": "مفصل"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "عرض توقعات الطقس بالساعة"
+  },
+  "Feels": {
+    "Feels": "درجة الحرارة المحسوسة"
+  },
+  "Forecast": {
+    "Forecast": "توقعات الطقس"
+  },
+  "Forecast Days": {
+    "Forecast Days": "أيام التوقعات"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "عدد توقعات الطقس بالساعة"
+  },
+  "Humidity": {
+    "Humidity": "الرطوبة"
+  },
+  "No Weather Data": {
+    "No Weather Data": "لا توجد بيانات طقس"
+  },
+  "Precip": {
+    "Precip": "هطول الأمطار"
+  },
+  "Pressure": {
+    "Pressure": "الضغط"
+  },
+  "Primary": {
+    "Primary": "رئيسي"
+  },
+  "Secondary": {
+    "Secondary": "ثانوي"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "عرض درجة الحرارة المحسوسة"
+  },
+  "Show Forecast": {
+    "Show Forecast": "عرض توقعات الطقس"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "عرض التوقعات بالساعة"
+  },
+  "Show Humidity": {
+    "Show Humidity": "عرض الرطوبة"
+  },
+  "Show Location": {
+    "Show Location": "عرض الموقع"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "عرض احتمالية هطول الأمطار"
+  },
+  "Show Pressure": {
+    "Show Pressure": "عرض الضغط الجوي"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "عرض شروق/غروب الشمس"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "عرض حالة الطقس"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "عرض سرعة الرياح"
+  },
+  "Standard": {
+    "Standard": "قياسي"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "يُستخدم عند ضبط لون التمييز على مخصص"
+  },
+  "View Mode": {
+    "View Mode": "وضع العرض"
+  },
+  "Wind": {
+    "Wind": "الرياح"
+  }
+}

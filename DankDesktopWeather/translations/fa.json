@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "رنگ تأکیدی"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "در حالت‌های نمایش با جزئیات و پیش‌بینی در دسترس است"
+  },
+  "Background Opacity": {
+    "Background Opacity": "شفافیت پس‌زمینه"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "انتخاب کنید که ابزارک آب و هوا چگونه نمایش داده شود"
+  },
+  "Compact": {
+    "Compact": "فشرده"
+  },
+  "Custom": {
+    "Custom": "سفارشی"
+  },
+  "Custom Color": {
+    "Custom Color": "رنگ سفارشی"
+  },
+  "Detailed": {
+    "Detailed": "با جزئیات"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "نمایش پیش‌بینی‌های ساعتی آب و هوا"
+  },
+  "Feels": {
+    "Feels": "دمای حسی"
+  },
+  "Forecast": {
+    "Forecast": "پیش‌بینی"
+  },
+  "Forecast Days": {
+    "Forecast Days": "پیش‌بینی روزها"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "تعداد پیش‌بینی‌های ساعتی"
+  },
+  "Humidity": {
+    "Humidity": "رطوبت"
+  },
+  "No Weather Data": {
+    "No Weather Data": "بدون داده آب و هوا"
+  },
+  "Precip": {
+    "Precip": "بارش"
+  },
+  "Pressure": {
+    "Pressure": "فشار"
+  },
+  "Primary": {
+    "Primary": "اصلی"
+  },
+  "Secondary": {
+    "Secondary": "ثانویه"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "نمایش دمای حسی"
+  },
+  "Show Forecast": {
+    "Show Forecast": "نمایش پیش‌بینی"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "نمایش پیش‌بینی‌های ساعتی"
+  },
+  "Show Humidity": {
+    "Show Humidity": "نمایش رطوبت"
+  },
+  "Show Location": {
+    "Show Location": "نمایش موقعیت مکانی"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "نمایش احتمال بارش"
+  },
+  "Show Pressure": {
+    "Show Pressure": "نمایش فشار"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "نمایش طلوع/غروب"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "نمایش شرایط آب و هوا"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "نمایش سرعت باد"
+  },
+  "Standard": {
+    "Standard": "استاندارد"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "وقتی رنگ تأکیدی سفارشی تنظیم شده استفاده می‌شود"
+  },
+  "View Mode": {
+    "View Mode": "حالت نمایش"
+  },
+  "Wind": {
+    "Wind": "باد"
+  }
+}

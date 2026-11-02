@@ -36,7 +36,7 @@ Singleton {
     property string announcedName: ""
     property string selfId: ""
 
-    property bool _subscribed: false
+    property var _signalSubscriptions: []
     property bool _dbusFinished: false
 
     Timer {
@@ -81,29 +81,28 @@ Singleton {
     readonly property int pairedCount: pairedDevices.length
 
     function hasPlugin(dev, pluginName) {
-        if (!dev || !dev.supportedPlugins) return false;
-        return dev.supportedPlugins.includes(pluginName) || 
-               dev.supportedPlugins.includes("kdeconnect_" + pluginName);
+        if (!dev || !dev.supportedPlugins)
+            return false;
+        return dev.supportedPlugins.includes(pluginName) || dev.supportedPlugins.includes("kdeconnect_" + pluginName);
     }
 
     Component.onCompleted: {
-        if (DMSService.isConnected) {
-            checkAvailability();
-            subscribeToSignals();
-        }
+        if (DMSService.subscribeConnected)
+            resync();
     }
 
     Connections {
         target: DMSService
         function onConnectionStateChanged() {
-            if (!DMSService.isConnected) {
-                available = false;
-                initialized = false;
-                _subscribed = false;
+            if (DMSService.isConnected)
                 return;
-            }
-            checkAvailability();
-            subscribeToSignals();
+            available = false;
+            initialized = false;
+            _signalSubscriptions = [];
+        }
+
+        function onCapabilitiesReceived() {
+            resync();
         }
 
         function onDbusSignalReceived(subId, data) {
@@ -111,25 +110,35 @@ Singleton {
         }
     }
 
-    function subscribeToSignals() {
-        if (_subscribed)
+    // Daemons before the match-ownership fix drop every dbus match when the shell re-dials its subscribe socket,
+    // and signals sent during the re-dial are lost on every version.
+    function resync() {
+        if (!DMSService.capabilities.includes("dbus"))
             return;
-        _subscribed = true;
-        DMSService.dbusSubscribe("session", service, "", "", "", function(response) {
-            if (response.error) {
-                console.warn("[KDEConnect] Subscription failed:", response.error);
-                _subscribed = false;
-            }
-        });
-        DMSService.dbusSubscribe("session", service, "", propertiesInterface, "PropertiesChanged", function(response) {
-            if (response.error) {
-                console.warn("[KDEConnect] Properties subscription failed:", response.error);
-            }
-        });
+        subscribeToSignals();
+        checkAvailability();
+        if (initialized)
+            refreshDevices();
+    }
+
+    function rememberSubscription(response) {
+        if (response.error) {
+            console.warn("[KDEConnect] Subscription failed:", response.error);
+            return;
+        }
+        _signalSubscriptions = _signalSubscriptions.concat([response.result.subscriptionId]);
+    }
+
+    function subscribeToSignals() {
+        for (const id of _signalSubscriptions)
+            DMSService.dbusUnsubscribe(id);
+        _signalSubscriptions = [];
+        DMSService.dbusSubscribe("session", service, "", "", "", rememberSubscription);
+        DMSService.dbusSubscribe("session", service, "", propertiesInterface, "PropertiesChanged", rememberSubscription);
     }
 
     function checkAvailability() {
-        DMSService.dbusListNames("session", function(response) {
+        DMSService.dbusListNames("session", function (response) {
             if (response.error) {
                 available = false;
                 return;
@@ -155,12 +164,12 @@ Singleton {
     }
 
     function fetchDaemonInfo() {
-        DMSService.dbusCall("session", service, daemonPath, daemonInterface, "selfId", [], function(response) {
+        DMSService.dbusCall("session", service, daemonPath, daemonInterface, "selfId", [], function (response) {
             if (!response.error)
                 selfId = response.result?.values?.[0] || "";
         });
 
-        DMSService.dbusCall("session", service, daemonPath, daemonInterface, "announcedName", [], function(response) {
+        DMSService.dbusCall("session", service, daemonPath, daemonInterface, "announcedName", [], function (response) {
             if (!response.error)
                 announcedName = response.result?.values?.[0] || "";
         });
@@ -184,7 +193,9 @@ Singleton {
         case "deviceRemoved":
             if (data.body?.[0]) {
                 const id = data.body[0];
-                deviceIds = deviceIds.filter(function(d) { return d !== id; });
+                deviceIds = deviceIds.filter(function (d) {
+                    return d !== id;
+                });
                 delete devices[id];
                 devices = Object.assign({}, devices);
                 deviceRemoved(id);
@@ -235,6 +246,7 @@ Singleton {
                 const id = extractDeviceIdFromPath(data.path);
                 if (!id)
                     break;
+                _notificationsExported[id] = true;
                 fetchNotificationsCount(id);
                 break;
             }
@@ -261,6 +273,7 @@ Singleton {
                     fetchConnectivityInfo(id);
                     break;
                 case notificationsInterface:
+                    _notificationsExported[id] = true;
                     fetchNotificationsCount(id);
                     break;
                 case deviceInterface:
@@ -299,7 +312,7 @@ Singleton {
         _dbusFinished = false;
         refreshMinTimer.start();
 
-        DMSService.dbusCall("session", service, daemonPath, daemonInterface, "devices", [false, false], function(response) {
+        DMSService.dbusCall("session", service, daemonPath, daemonInterface, "devices", [false, false], function (response) {
             root._dbusFinished = true;
             if (!refreshMinTimer.running) {
                 root.isRefreshing = false;
@@ -328,7 +341,7 @@ Singleton {
     function fetchDeviceInfo(deviceId) {
         const devicePath = daemonPath + "/devices/" + deviceId;
 
-        DMSService.dbusGetAllProperties("session", service, devicePath, deviceInterface, function(response) {
+        DMSService.dbusGetAllProperties("session", service, devicePath, deviceInterface, function (response) {
             if (response.error)
                 return;
             const props = response.result || {};
@@ -343,17 +356,7 @@ Singleton {
             const newSupportedPlugins = props.supportedPlugins || [];
             const newVerificationKey = props.verificationKey || "";
 
-            const changed = !devices[deviceId] ||
-                            oldDev.id !== deviceId ||
-                            oldDev.name !== newName ||
-                            oldDev.type !== newType ||
-                            oldDev.isReachable !== newIsReachable ||
-                            oldDev.isPaired !== newIsPaired ||
-                            oldDev.isPairRequested !== newIsPairRequested ||
-                            oldDev.isPairRequestedByPeer !== newIsPairRequestedByPeer ||
-                            oldDev.statusIconName !== newStatusIconName ||
-                            oldDev.verificationKey !== newVerificationKey ||
-                            JSON.stringify(oldDev.supportedPlugins) !== JSON.stringify(newSupportedPlugins);
+            const changed = !devices[deviceId] || oldDev.id !== deviceId || oldDev.name !== newName || oldDev.type !== newType || oldDev.isReachable !== newIsReachable || oldDev.isPaired !== newIsPaired || oldDev.isPairRequested !== newIsPairRequested || oldDev.isPairRequestedByPeer !== newIsPairRequestedByPeer || oldDev.statusIconName !== newStatusIconName || oldDev.verificationKey !== newVerificationKey || JSON.stringify(oldDev.supportedPlugins) !== JSON.stringify(newSupportedPlugins);
 
             if (changed) {
                 const dev = Object.assign({}, oldDev);
@@ -384,7 +387,7 @@ Singleton {
                 if (currentDev.isPaired && currentDev.isReachable) {
                     fetchBatteryInfo(deviceId);
                     fetchConnectivityInfo(deviceId);
-                    fetchNotificationsCount(deviceId);
+                    _probeNotificationsPath(deviceId);
                 }
             }
         });
@@ -396,7 +399,7 @@ Singleton {
             return;
         const path = daemonPath + "/devices/" + deviceId + "/battery";
 
-        DMSService.dbusGetAllProperties("session", service, path, batteryInterface, function(response) {
+        DMSService.dbusGetAllProperties("session", service, path, batteryInterface, function (response) {
             if (response.error)
                 return;
             const props = response.result || {};
@@ -425,7 +428,7 @@ Singleton {
             return;
         const path = daemonPath + "/devices/" + deviceId + "/connectivity_report";
 
-        DMSService.dbusGetAllProperties("session", service, path, connectivityInterface, function(response) {
+        DMSService.dbusGetAllProperties("session", service, path, connectivityInterface, function (response) {
             if (response.error)
                 return;
             const props = response.result || {};
@@ -448,13 +451,33 @@ Singleton {
         });
     }
 
+    property var _notificationsExported: ({})
+
+    function _probeNotificationsPath(deviceId) {
+        const dev = devices[deviceId];
+        if (!hasPlugin(dev, "notifications"))
+            return;
+        const path = daemonPath + "/devices/" + deviceId;
+        DMSService.dbusCall("session", service, path, "org.freedesktop.DBus.Introspectable", "Introspect", [], function (response) {
+            if (response.error)
+                return;
+            const xml = response.result?.values?.[0] ?? "";
+            _notificationsExported[deviceId] = xml.includes('name="notifications"');
+            if (_notificationsExported[deviceId])
+                fetchNotificationsCount(deviceId);
+        });
+    }
+
     function fetchNotificationsCount(deviceId) {
         const dev = devices[deviceId];
         if (!hasPlugin(dev, "notifications"))
             return;
+        // locally disabled plugins stay in supportedPlugins but export no object path (#3173)
+        if (_notificationsExported[deviceId] !== true)
+            return;
         const path = daemonPath + "/devices/" + deviceId + "/notifications";
 
-        DMSService.dbusCall("session", service, path, notificationsInterface, "activeNotifications", [], function(response) {
+        DMSService.dbusCall("session", service, path, notificationsInterface, "activeNotifications", [], function (response) {
             if (response.error)
                 return;
             const result = response.result?.values;
@@ -491,7 +514,7 @@ Singleton {
             return;
         const path = daemonPath + "/devices/" + deviceId + "/mprisremote";
 
-        DMSService.dbusGetAllProperties("session", service, path, mprisRemoteInterface, function(response) {
+        DMSService.dbusGetAllProperties("session", service, path, mprisRemoteInterface, function (response) {
             if (response.error)
                 return;
             const props = response.result || {};
@@ -512,7 +535,7 @@ Singleton {
                 } else if (nowPlaying.includes(" – ")) {
                     parts = nowPlaying.split(" – ");
                 }
-                
+
                 if (parts.length >= 2) {
                     artist = parts[0].trim();
                     title = parts.slice(1).join(" - ").trim();
@@ -524,11 +547,7 @@ Singleton {
             const newIsPlaying = props.isPlaying || props.IsPlaying || props.isplaying || (props.PlaybackStatus === "Playing") || false;
             const newPlayer = props.player || props.Player || (props.playerList && props.playerList.length > 0 ? props.playerList[0] : "") || "";
 
-            if (oldDev.mediaTitle === title &&
-                oldDev.mediaArtist === artist &&
-                oldDev.mediaAlbum === album &&
-                oldDev.mediaIsPlaying === newIsPlaying &&
-                oldDev.mediaPlayer === newPlayer) {
+            if (oldDev.mediaTitle === title && oldDev.mediaArtist === artist && oldDev.mediaAlbum === album && oldDev.mediaIsPlaying === newIsPlaying && oldDev.mediaPlayer === newPlayer) {
                 return;
             }
 
@@ -568,7 +587,7 @@ Singleton {
 
     function ringDevice(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/findmyphone";
-        DMSService.dbusCall("session", service, path, findMyPhoneInterface, "ring", [], function(response) {
+        DMSService.dbusCall("session", service, path, findMyPhoneInterface, "ring", [], function (response) {
             if (callback)
                 callback(response);
         });
@@ -576,7 +595,7 @@ Singleton {
 
     function shareUrl(deviceId, url, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/share";
-        DMSService.dbusCall("session", service, path, shareInterface, "shareUrl", [url], function(response) {
+        DMSService.dbusCall("session", service, path, shareInterface, "shareUrl", [url], function (response) {
             if (callback)
                 callback(response);
         });
@@ -584,7 +603,7 @@ Singleton {
 
     function shareText(deviceId, text, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/share";
-        DMSService.dbusCall("session", service, path, shareInterface, "shareText", [text], function(response) {
+        DMSService.dbusCall("session", service, path, shareInterface, "shareText", [text], function (response) {
             if (callback)
                 callback(response);
         });
@@ -592,7 +611,7 @@ Singleton {
 
     function sendClipboard(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/clipboard";
-        DMSService.dbusCall("session", service, path, clipboardInterface, "sendClipboard", [], function(response) {
+        DMSService.dbusCall("session", service, path, clipboardInterface, "sendClipboard", [], function (response) {
             if (callback)
                 callback(response);
         });
@@ -600,7 +619,7 @@ Singleton {
 
     function requestPairing(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId;
-        DMSService.dbusCall("session", service, path, deviceInterface, "requestPairing", [], function(response) {
+        DMSService.dbusCall("session", service, path, deviceInterface, "requestPairing", [], function (response) {
             if (callback)
                 callback(response);
         });
@@ -608,7 +627,7 @@ Singleton {
 
     function acceptPairing(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId;
-        DMSService.dbusCall("session", service, path, deviceInterface, "acceptPairing", [], function(response) {
+        DMSService.dbusCall("session", service, path, deviceInterface, "acceptPairing", [], function (response) {
             if (callback)
                 callback(response);
             refreshDevices();
@@ -617,7 +636,7 @@ Singleton {
 
     function cancelPairing(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId;
-        DMSService.dbusCall("session", service, path, deviceInterface, "cancelPairing", [], function(response) {
+        DMSService.dbusCall("session", service, path, deviceInterface, "cancelPairing", [], function (response) {
             if (callback)
                 callback(response);
             refreshDevices();
@@ -626,7 +645,7 @@ Singleton {
 
     function unpair(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId;
-        DMSService.dbusCall("session", service, path, deviceInterface, "unpair", [], function(response) {
+        DMSService.dbusCall("session", service, path, deviceInterface, "unpair", [], function (response) {
             if (callback)
                 callback(response);
             refreshDevices();
@@ -635,7 +654,7 @@ Singleton {
 
     function setLocked(deviceId, locked, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/lockdevice";
-        DMSService.dbusSetProperty("session", service, path, lockInterface, "isLocked", locked, function(response) {
+        DMSService.dbusSetProperty("session", service, path, lockInterface, "isLocked", locked, function (response) {
             if (callback)
                 callback(response);
         });
@@ -643,7 +662,7 @@ Singleton {
 
     function getRemoteCommands(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/remotecommands";
-        DMSService.dbusGetProperty("session", service, path, remoteCommandsInterface, "commands", function(response) {
+        DMSService.dbusGetProperty("session", service, path, remoteCommandsInterface, "commands", function (response) {
             if (response.error) {
                 if (callback)
                     callback([]);
@@ -662,7 +681,7 @@ Singleton {
 
     function triggerRemoteCommand(deviceId, commandKey, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/remotecommands";
-        DMSService.dbusCall("session", service, path, remoteCommandsInterface, "triggerCommand", [commandKey], function(response) {
+        DMSService.dbusCall("session", service, path, remoteCommandsInterface, "triggerCommand", [commandKey], function (response) {
             if (callback)
                 callback(response);
         });
@@ -670,7 +689,7 @@ Singleton {
 
     function getMprisPlayers(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/mprisremote";
-        DMSService.dbusGetProperty("session", service, path, mprisRemoteInterface, "playerList", function(response) {
+        DMSService.dbusGetProperty("session", service, path, mprisRemoteInterface, "playerList", function (response) {
             if (callback)
                 callback(response.error ? [] : (response.result || []));
         });
@@ -678,7 +697,7 @@ Singleton {
 
     function mprisAction(deviceId, action, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/mprisremote";
-        DMSService.dbusCall("session", service, path, mprisRemoteInterface, "sendAction", [action], function(response) {
+        DMSService.dbusCall("session", service, path, mprisRemoteInterface, "sendAction", [action], function (response) {
             if (callback)
                 callback(response);
         });
@@ -687,7 +706,7 @@ Singleton {
     function sendPing(deviceId, message, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/ping";
         const args = message ? [message] : [];
-        DMSService.dbusCall("session", service, path, pingInterface, "sendPing", args, function(response) {
+        DMSService.dbusCall("session", service, path, pingInterface, "sendPing", args, function (response) {
             if (callback)
                 callback(response);
         });
@@ -695,7 +714,7 @@ Singleton {
 
     function mountSftp(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/sftp";
-        DMSService.dbusCall("session", service, path, sftpInterface, "mount", [], function(response) {
+        DMSService.dbusCall("session", service, path, sftpInterface, "mount", [], function (response) {
             if (callback)
                 callback(response);
         });
@@ -703,7 +722,7 @@ Singleton {
 
     function unmountSftp(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/sftp";
-        DMSService.dbusCall("session", service, path, sftpInterface, "unmount", [], function(response) {
+        DMSService.dbusCall("session", service, path, sftpInterface, "unmount", [], function (response) {
             if (callback)
                 callback(response);
         });
@@ -711,7 +730,7 @@ Singleton {
 
     function mountAndWait(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/sftp";
-        DMSService.dbusCall("session", service, path, sftpInterface, "mountAndWait", [], function(response) {
+        DMSService.dbusCall("session", service, path, sftpInterface, "mountAndWait", [], function (response) {
             if (callback)
                 callback(response.error ? false : (response.result?.values?.[0] ?? false));
         });
@@ -719,20 +738,20 @@ Singleton {
 
     function startBrowsing(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/sftp";
-        DMSService.dbusCall("session", service, path, sftpInterface, "startBrowsing", [], function(response) {
+        DMSService.dbusCall("session", service, path, sftpInterface, "startBrowsing", [], function (response) {
             if (callback)
                 callback(response);
         });
     }
 
     function browseDevice(deviceId, callback) {
-        mountAndWait(deviceId, function(success) {
+        mountAndWait(deviceId, function (success) {
             if (!success) {
                 if (callback)
                     callback(false, "");
                 return;
             }
-            getSftpMountPoint(deviceId, function(mountPoint) {
+            getSftpMountPoint(deviceId, function (mountPoint) {
                 if (callback)
                     callback(!!mountPoint, mountPoint);
             });
@@ -741,7 +760,7 @@ Singleton {
 
     function getSftpMountPoint(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/sftp";
-        DMSService.dbusCall("session", service, path, sftpInterface, "mountPoint", [], function(response) {
+        DMSService.dbusCall("session", service, path, sftpInterface, "mountPoint", [], function (response) {
             if (callback)
                 callback(response.error ? "" : (response.result?.values?.[0] || ""));
         });
@@ -749,7 +768,7 @@ Singleton {
 
     function isSftpMounted(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/sftp";
-        DMSService.dbusCall("session", service, path, sftpInterface, "isMounted", [], function(response) {
+        DMSService.dbusCall("session", service, path, sftpInterface, "isMounted", [], function (response) {
             if (callback)
                 callback(response.error ? false : (response.result?.values?.[0] || false));
         });
@@ -757,7 +776,7 @@ Singleton {
 
     function requestPhoto(deviceId, savePath, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/photo";
-        DMSService.dbusCall("session", service, path, photoInterface, "requestPhoto", [savePath], function(response) {
+        DMSService.dbusCall("session", service, path, photoInterface, "requestPhoto", [savePath], function (response) {
             if (callback)
                 callback(response);
         });
@@ -767,7 +786,7 @@ Singleton {
         const path = daemonPath + "/devices/" + deviceId + "/sms";
         const addressList = Array.isArray(addresses) ? addresses : [addresses];
         const attachments = attachmentUrls || [];
-        DMSService.dbusCall("session", service, path, smsInterface, "sendSms", [addressList, message, attachments], function(response) {
+        DMSService.dbusCall("session", service, path, smsInterface, "sendSms", [addressList, message, attachments], function (response) {
             if (callback)
                 callback(response);
         });
@@ -775,7 +794,7 @@ Singleton {
 
     function launchSmsApp(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/sms";
-        DMSService.dbusCall("session", service, path, smsInterface, "launchApp", [], function(response) {
+        DMSService.dbusCall("session", service, path, smsInterface, "launchApp", [], function (response) {
             if (callback)
                 callback(response);
         });
@@ -783,7 +802,7 @@ Singleton {
 
     function getConversations(deviceId, callback) {
         const path = daemonPath + "/devices/" + deviceId + "/sms";
-        DMSService.dbusCall("session", service, path, smsInterface, "conversations", [], function(response) {
+        DMSService.dbusCall("session", service, path, smsInterface, "conversations", [], function (response) {
             if (callback)
                 callback(response.error ? [] : (response.result?.values?.[0] || []));
         });

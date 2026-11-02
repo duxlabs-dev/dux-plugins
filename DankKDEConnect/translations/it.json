@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "Accetta"
+  },
+  "Audio Output": {
+    "Audio Output": "Uscita audio"
+  },
+  "Battery": {
+    "Battery": "Batteria"
+  },
+  "Browse Files": {
+    "Browse Files": "Sfoglia file"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "Appunti inviati"
+  },
+  "Device paired": {
+    "Device paired": "Dispositivo associato"
+  },
+  "Device unpaired": {
+    "Device unpaired": "Dispositivo dissociato"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": "Inserisci URI o testo da condividere"
+  },
+  "Excellent": {
+    "Excellent": "Ottimo"
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "Impossibile accettare l'associazione"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "Impossibile esplorare il dispositivo"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "Impossibile avviare l'app SMS"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "Impossibile rifiutare l'associazione"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "Impossibile far squillare il dispositivo"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": "Impossibile inviare l'SMS"
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "Impossibile inviare gli appunti"
+  },
+  "Failed to send file": {
+    "Failed to send file": "Impossibile inviare il file"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "Impossibile inviare il ping"
+  },
+  "Failed to share": {
+    "Failed to share": "Impossibile condividere"
+  },
+  "Fair": {
+    "Fair": "Discreto"
+  },
+  "File": {
+    "File": "File"
+  },
+  "File received from %1": {
+    "File received from %1": "File ricevuto da %1"
+  },
+  "Forward 10s": {
+    "Forward 10s": "Avanti di 10s"
+  },
+  "Good": {
+    "Good": "Buona"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "Assicurati che KDE Connect o Valent sia in esecuzione sui tuoi altri dispositivi"
+  },
+  "Media Player": {
+    "Media Player": "Lettore multimediale"
+  },
+  "Message": {
+    "Message": "Messaggio"
+  },
+  "Network Type": {
+    "Network Type": "Tipo di rete"
+  },
+  "Next": {
+    "Next": "Avanti"
+  },
+  "No Signal": {
+    "No Signal": "Nessun segnale"
+  },
+  "No devices": {
+    "No devices": "Nessun dispositivo"
+  },
+  "No devices found": {
+    "No devices found": "Nessun dispositivo trovato"
+  },
+  "No images found": {
+    "No images found": "Nessuna immagine trovata"
+  },
+  "Not paired": {
+    "Not paired": "Non associato"
+  },
+  "Notifications": {
+    "Notifications": "Notifiche"
+  },
+  "Offline": {
+    "Offline": "Offline"
+  },
+  "Open App": {
+    "Open App": "Apri l'app"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "Apertura dell'app SMS"
+  },
+  "Opening file browser": {
+    "Opening file browser": "Apertura del gestore file"
+  },
+  "Pairing failed": {
+    "Pairing failed": "Impossibile associare"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": "Richiesta di associazione da %1"
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "Richiesta di associazione inviata"
+  },
+  "Pairing requested": {
+    "Pairing requested": "Associazione richiesta"
+  },
+  "Pairing...": {
+    "Pairing...": "Associazione in corso..."
+  },
+  "Pause": {
+    "Pause": "Pausa"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "Phone Connect non disponibile"
+  },
+  "Phone number": {
+    "Phone number": "Numero di telefono"
+  },
+  "Ping": {
+    "Ping": "Ping"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": "Ping inviato a %1"
+  },
+  "Play": {
+    "Play": "Riproduci"
+  },
+  "Previous": {
+    "Previous": "Precedente"
+  },
+  "Recent Images": {
+    "Recent Images": "Immagini recenti"
+  },
+  "Reject": {
+    "Reject": "Rifiuta"
+  },
+  "Request Pairing": {
+    "Request Pairing": "Richiedi associazione"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": "Indietro di 10s"
+  },
+  "Ring": {
+    "Ring": "Fai squillare"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": "Squillo di %1 in corso..."
+  },
+  "SMS": {
+    "SMS": "SMS"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": "SMS inviato correttamente"
+  },
+  "Select File to Send": {
+    "Select File to Send": "Seleziona file da inviare"
+  },
+  "Send": {
+    "Send": "Invia"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "Invia appunti"
+  },
+  "Send SMS": {
+    "Send SMS": "Invia SMS"
+  },
+  "Sending %1...": {
+    "Sending %1...": "Invio di %1 in corso..."
+  },
+  "Share": {
+    "Share": "Condividi"
+  },
+  "Shared": {
+    "Shared": "Condiviso"
+  },
+  "Signal Strength": {
+    "Signal Strength": "Intensità del segnale"
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "Avvia KDE Connect o Valent per usare questo plugin"
+  },
+  "Text": {
+    "Text": "Testo"
+  },
+  "URI": {
+    "URI": "URI"
+  },
+  "Unavailable": {
+    "Unavailable": "Non disponibile"
+  },
+  "Unknown": {
+    "Unknown": "Sconosciuto"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "Artista sconosciuto"
+  },
+  "Unpair": {
+    "Unpair": "Dissocia"
+  },
+  "Unpair failed": {
+    "Unpair failed": "Impossibile dissociare"
+  },
+  "Verification": {
+    "Verification": "Verifica"
+  },
+  "Weak": {
+    "Weak": "Debole"
+  },
+  "device": {
+    "device": "dispositivo"
+  }
+}

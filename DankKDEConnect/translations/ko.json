@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "수락"
+  },
+  "Audio Output": {
+    "Audio Output": "오디오 출력"
+  },
+  "Battery": {
+    "Battery": "배터리"
+  },
+  "Browse Files": {
+    "Browse Files": "파일 찾아보기"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "클립보드 전송됨"
+  },
+  "Device paired": {
+    "Device paired": "기기 페어링됨"
+  },
+  "Device unpaired": {
+    "Device unpaired": "기기 페어링 해제됨"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": "공유할 URI 또는 텍스트 입력"
+  },
+  "Excellent": {
+    "Excellent": ""
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "페어링 수락 실패"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "기기 찾아보기 실패"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "SMS 앱 실행 실패"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "페어링 거부 실패"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "기기 소리 울리기 실패"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": "SMS 전송 실패"
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "클립보드 전송 실패"
+  },
+  "Failed to send file": {
+    "Failed to send file": "파일 전송 실패"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "핑 전송 실패"
+  },
+  "Failed to share": {
+    "Failed to share": "공유 실패"
+  },
+  "Fair": {
+    "Fair": ""
+  },
+  "File": {
+    "File": "파일"
+  },
+  "File received from %1": {
+    "File received from %1": ""
+  },
+  "Forward 10s": {
+    "Forward 10s": "10초 앞으로"
+  },
+  "Good": {
+    "Good": "좋음"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "다른 기기에서 KDE Connect 또는 Valent가 실행 중인지 확인하세요"
+  },
+  "Media Player": {
+    "Media Player": "미디어 플레이어"
+  },
+  "Message": {
+    "Message": "메시지"
+  },
+  "Network Type": {
+    "Network Type": "네트워크 유형"
+  },
+  "Next": {
+    "Next": "다음"
+  },
+  "No Signal": {
+    "No Signal": ""
+  },
+  "No devices": {
+    "No devices": "기기 없음"
+  },
+  "No devices found": {
+    "No devices found": "기기를 찾을 수 없음"
+  },
+  "No images found": {
+    "No images found": "이미지를 찾을 수 없음"
+  },
+  "Not paired": {
+    "Not paired": "페어링되지 않음"
+  },
+  "Notifications": {
+    "Notifications": "알림"
+  },
+  "Offline": {
+    "Offline": "오프라인"
+  },
+  "Open App": {
+    "Open App": "앱 열기"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "SMS 앱 여는 중"
+  },
+  "Opening file browser": {
+    "Opening file browser": "파일 브라우저 여는 중"
+  },
+  "Pairing failed": {
+    "Pairing failed": "페어링 실패"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": ""
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "페어링 요청 보냄"
+  },
+  "Pairing requested": {
+    "Pairing requested": "페어링 요청됨"
+  },
+  "Pairing...": {
+    "Pairing...": "페어링 중..."
+  },
+  "Pause": {
+    "Pause": "일시 중지"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "휴대폰 연결을 사용할 수 없음"
+  },
+  "Phone number": {
+    "Phone number": "전화번호"
+  },
+  "Ping": {
+    "Ping": "핑"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": ""
+  },
+  "Play": {
+    "Play": "재생"
+  },
+  "Previous": {
+    "Previous": "이전"
+  },
+  "Recent Images": {
+    "Recent Images": "최근 이미지"
+  },
+  "Reject": {
+    "Reject": "거절"
+  },
+  "Request Pairing": {
+    "Request Pairing": "페어링 요청"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": "10초 되감기"
+  },
+  "Ring": {
+    "Ring": "벨 울리기"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": ""
+  },
+  "SMS": {
+    "SMS": "SMS"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": "SMS가 성공적으로 전송됨"
+  },
+  "Select File to Send": {
+    "Select File to Send": "보낼 파일 선택"
+  },
+  "Send": {
+    "Send": "보내기"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "클립보드 보내기"
+  },
+  "Send SMS": {
+    "Send SMS": "SMS 보내기"
+  },
+  "Sending %1...": {
+    "Sending %1...": ""
+  },
+  "Share": {
+    "Share": "공유"
+  },
+  "Shared": {
+    "Shared": "공유됨"
+  },
+  "Signal Strength": {
+    "Signal Strength": "신호 강도"
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "이 플러그인을 사용하려면 KDE Connect 또는 Valent 시작"
+  },
+  "Text": {
+    "Text": "텍스트"
+  },
+  "URI": {
+    "URI": "URI"
+  },
+  "Unavailable": {
+    "Unavailable": "사용할 수 없음"
+  },
+  "Unknown": {
+    "Unknown": "알 수 없음"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "알 수 없는 아티스트"
+  },
+  "Unpair": {
+    "Unpair": "페어링 해제"
+  },
+  "Unpair failed": {
+    "Unpair failed": "페어링 해제 실패"
+  },
+  "Verification": {
+    "Verification": "확인"
+  },
+  "Weak": {
+    "Weak": ""
+  },
+  "device": {
+    "device": "기기"
+  }
+}

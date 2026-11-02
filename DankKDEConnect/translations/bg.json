@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "Приемане"
+  },
+  "Audio Output": {
+    "Audio Output": "Аудиоизход"
+  },
+  "Battery": {
+    "Battery": "Батерия"
+  },
+  "Browse Files": {
+    "Browse Files": "Преглед на файлове"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "Буферът за обмен е изпратен"
+  },
+  "Device paired": {
+    "Device paired": "Устройството е сдвоено"
+  },
+  "Device unpaired": {
+    "Device unpaired": "Устройството е раздвоено"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": "Въведете адрес (URI) или текст за споделяне"
+  },
+  "Excellent": {
+    "Excellent": ""
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "Неуспешно приемане на сдвояването"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "Неуспешен достъп до устройството"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "Неуспешно стартиране на приложението за SMS"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "Неуспешно отхвърляне на сдвояването"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "Неуспешно позвъняване на устройството"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": "Неуспешно изпращане на SMS"
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "Неуспешно изпращане на буфера за обмен"
+  },
+  "Failed to send file": {
+    "Failed to send file": "Неуспешно изпращане на файла"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "Неуспешно изпращане на ping"
+  },
+  "Failed to share": {
+    "Failed to share": "Неуспешно споделяне"
+  },
+  "Fair": {
+    "Fair": ""
+  },
+  "File": {
+    "File": "Файл"
+  },
+  "File received from %1": {
+    "File received from %1": "Получен файл от %1"
+  },
+  "Forward 10s": {
+    "Forward 10s": "Напред 10 сек"
+  },
+  "Good": {
+    "Good": "Добро"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "Уверете се, че KDE Connect или Valent работи на другите ви устройства"
+  },
+  "Media Player": {
+    "Media Player": "Мултимедиен плейър"
+  },
+  "Message": {
+    "Message": "Съобщение"
+  },
+  "Network Type": {
+    "Network Type": "Тип мрежа"
+  },
+  "Next": {
+    "Next": "Напред"
+  },
+  "No Signal": {
+    "No Signal": ""
+  },
+  "No devices": {
+    "No devices": "Няма устройства"
+  },
+  "No devices found": {
+    "No devices found": "Не са намерени устройства"
+  },
+  "No images found": {
+    "No images found": "Не са намерени изображения"
+  },
+  "Not paired": {
+    "Not paired": "Не е сдвоено"
+  },
+  "Notifications": {
+    "Notifications": "Известия"
+  },
+  "Offline": {
+    "Offline": "Офлайн"
+  },
+  "Open App": {
+    "Open App": "Отваряне на приложението"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "Отваряне на приложението за SMS"
+  },
+  "Opening file browser": {
+    "Opening file browser": "Отваряне на файловия мениджър"
+  },
+  "Pairing failed": {
+    "Pairing failed": "Сдвояването е неуспешно"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": "Заявка за сдвояване от %1"
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "Заявката за сдвояване е изпратена"
+  },
+  "Pairing requested": {
+    "Pairing requested": "Заявено е сдвояване"
+  },
+  "Pairing...": {
+    "Pairing...": "Сдвояване..."
+  },
+  "Pause": {
+    "Pause": "Пауза"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "Връзката с телефон не е налична"
+  },
+  "Phone number": {
+    "Phone number": "Телефонен номер"
+  },
+  "Ping": {
+    "Ping": "Ping"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": "Ping беше изпратен до %1"
+  },
+  "Play": {
+    "Play": "Възпроизвеждане"
+  },
+  "Previous": {
+    "Previous": "Предишно"
+  },
+  "Recent Images": {
+    "Recent Images": "Скорошни изображения"
+  },
+  "Reject": {
+    "Reject": "Отхвърляне"
+  },
+  "Request Pairing": {
+    "Request Pairing": "Заявка за сдвояване"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": "Назад 10 сек"
+  },
+  "Ring": {
+    "Ring": "Позвъняване"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": "Позвъняване на %1..."
+  },
+  "SMS": {
+    "SMS": "SMS"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": "SMS е изпратен успешно"
+  },
+  "Select File to Send": {
+    "Select File to Send": "Избор на файл за изпращане"
+  },
+  "Send": {
+    "Send": "Изпращане"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "Изпращане на буфера за обмен"
+  },
+  "Send SMS": {
+    "Send SMS": "Изпращане на SMS"
+  },
+  "Sending %1...": {
+    "Sending %1...": "Изпращане на %1..."
+  },
+  "Share": {
+    "Share": "Споделяне"
+  },
+  "Shared": {
+    "Shared": "Споделено"
+  },
+  "Signal Strength": {
+    "Signal Strength": "Сила на сигнала"
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "Стартирайте KDE Connect или Valent, за да използвате тази приставка"
+  },
+  "Text": {
+    "Text": "Текст"
+  },
+  "URI": {
+    "URI": "URI"
+  },
+  "Unavailable": {
+    "Unavailable": "Недостъпно"
+  },
+  "Unknown": {
+    "Unknown": "Неизвестно"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "Неизвестен изпълнител"
+  },
+  "Unpair": {
+    "Unpair": "Раздвояване"
+  },
+  "Unpair failed": {
+    "Unpair failed": "Неуспешно раздвояване"
+  },
+  "Verification": {
+    "Verification": "Проверка"
+  },
+  "Weak": {
+    "Weak": ""
+  },
+  "device": {
+    "device": "устройство"
+  }
+}

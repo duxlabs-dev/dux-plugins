@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "Акцентен цвят"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "Налично в подробен режим и режим на прогноза"
+  },
+  "Background Opacity": {
+    "Background Opacity": "Непрозрачност на фона"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "Изберете как да се показва уиджетът за времето"
+  },
+  "Compact": {
+    "Compact": "Компактен"
+  },
+  "Custom": {
+    "Custom": "Персонализирано"
+  },
+  "Custom Color": {
+    "Custom Color": "Персонализиран цвят"
+  },
+  "Detailed": {
+    "Detailed": "Подробно"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "Показване на почасова прогноза за времето"
+  },
+  "Feels": {
+    "Feels": "Усещане"
+  },
+  "Forecast": {
+    "Forecast": "Прогноза"
+  },
+  "Forecast Days": {
+    "Forecast Days": "Дни в прогнозата"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "Брой часове в прогнозата"
+  },
+  "Humidity": {
+    "Humidity": "Влажност"
+  },
+  "No Weather Data": {
+    "No Weather Data": "Няма данни за времето"
+  },
+  "Precip": {
+    "Precip": "Валежи"
+  },
+  "Pressure": {
+    "Pressure": "Атмосферно налягане"
+  },
+  "Primary": {
+    "Primary": "Основен"
+  },
+  "Secondary": {
+    "Secondary": "Вторичен"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "Показване на усещаната температура"
+  },
+  "Show Forecast": {
+    "Show Forecast": "Показване на прогноза"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "Показване на почасова прогноза"
+  },
+  "Show Humidity": {
+    "Show Humidity": "Показване на влажността"
+  },
+  "Show Location": {
+    "Show Location": "Показване на местоположението"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "Показване на вероятността за валежи"
+  },
+  "Show Pressure": {
+    "Show Pressure": "Показване на налягането"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "Показване на изгрев/залез"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "Показване на метеорологичните условия"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "Показване на скоростта на вятъра"
+  },
+  "Standard": {
+    "Standard": "Стандартно"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "Използва се, когато акцентният цвят е зададен като Персонализиран"
+  },
+  "View Mode": {
+    "View Mode": "Режим на преглед"
+  },
+  "Wind": {
+    "Wind": "Вятър"
+  }
+}

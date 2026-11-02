@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "Activación"
+  },
+  "Always Active": {
+    "Always Active": "Siempre activo"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Copiado al portapapeles"
+  },
+  "Copy": {
+    "Copy": "Copiar"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "Fuentes de atajos de teclado"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "Configuración de búsqueda de atajos de teclado"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "Atajos de teclado mostrados junto a resultados de búsqueda normales"
+  },
+  "Pin": {
+    "Pin": "Fijar"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "Busca por combinación de teclas, descripción o nombre de acción.\n\nLa acción predeterminada copia el atajo de teclado al portapapeles.\nHaz clic derecho o presiona la flecha derecha para fijar los atajos más usados - aparecerán arriba cuando no estés buscando."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "Buscar atajos de teclado de tu compositor y aplicaciones"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "Seleccione al menos un proveedor"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "Seleccionar qué proveedores de atajos incluir"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "Prefijo de disparador"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "Escribe este prefijo para buscar atajos de teclado"
+  },
+  "Unpin": {
+    "Unpin": "Desfijar"
+  },
+  "Usage Tips": {
+    "Usage Tips": "Consejos de uso"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "Usar prefijo de disparador para activar"
+  }
+}

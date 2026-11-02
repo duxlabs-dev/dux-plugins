@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "활성화"
+  },
+  "Always Active": {
+    "Always Active": "항상 활성"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "클립보드에 복사됨"
+  },
+  "Copy": {
+    "Copy": "복사"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "단축키 소스"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "단축키 검색 설정"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "일반 검색 결과와 함께 표시되는 단축키"
+  },
+  "Pin": {
+    "Pin": "고정"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "키 조합, 설명 또는 작업 이름으로 검색합니다.\n\n기본 작업은 단축키를 클립보드에 복사합니다.\n마우스 오른쪽 버튼을 클릭하거나 오른쪽 화살표를 눌러 자주 사용하는 단축키를 고정합니다 - 검색하지 않을 때 맨 위에 나타납니다."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "컴포지터 및 애플리케이션에서 키보드 바로 가기 검색"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "하나 이상의 공급자 선택"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "포함할 단축키 제공자 선택"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "트리거 접두사"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "단축키를 검색하려면 이 접두사 입력"
+  },
+  "Unpin": {
+    "Unpin": "고정 해제"
+  },
+  "Usage Tips": {
+    "Usage Tips": "사용 팁"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "활성화하려면 트리거 접두사 사용"
+  }
+}

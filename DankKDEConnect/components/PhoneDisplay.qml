@@ -1,6 +1,7 @@
 import QtQuick
 import qs.Common
 import qs.Widgets
+import qs.DCommon.Widgets
 
 Item {
     id: root
@@ -116,7 +117,7 @@ Item {
             onClicked: root.clicked()
         }
 
-        DankRipple {
+        DRipple {
             id: customRipple
             anchors.fill: parent
             cornerRadius: customImageContainer.radius
@@ -138,7 +139,7 @@ Item {
             visible: !root.isReachable
             radius: parent.radius
 
-            DankIcon {
+            DIcon {
                 name: "phonelink_off"
                 size: 32
                 color: "white"
@@ -181,7 +182,7 @@ Item {
             onClicked: root.clicked()
         }
 
-        DankRipple {
+        DRipple {
             id: genericRipple
             anchors.fill: parent
             cornerRadius: {
@@ -482,7 +483,7 @@ Item {
             }
             clip: true
 
-            DankIcon {
+            DIcon {
                 name: "phonelink_off"
                 size: 32
                 color: "white"

@@ -346,7 +346,7 @@ PluginSettings {
             anchors.centerIn: parent
             anchors.margins: 8
             width: parent.width - 16
-            text: '#!/bin/bash\n# Save as ~/.config/scripts/hook.sh\n# Make executable: chmod +x ~/.config/scripts/hook.sh\n\nHOOK_NAME="$1"  # e.g., "onWallpaperChanged"\nHOOK_VALUE="$2" # e.g., "/path/to/wallpaper.jpg"\n\necho "Hook: $HOOK_NAME, Value: $HOOK_VALUE"\nnotify-send "$HOOK_NAME" "$HOOK_VALUE"'
+            text: '#!/bin/bash\n# Save as ~/.config/scripts/hook.sh\n# Make executable: chmod +x ~/.config/scripts/hook.sh\n\nHOOK_NAME="$1"  # e.g., "onWallpaperChanged"\nHOOK_VALUE="$2" # e.g., "/path/to/wallpaper.jpg"\n\necho "Hook: $HOOK_NAME, Value: $HOOK_VALUE"\ndms notify "$HOOK_NAME" "$HOOK_VALUE"'
             font.pixelSize: Theme.fontSizeSmall
             font.family: "monospace"
             color: Theme.surfaceText

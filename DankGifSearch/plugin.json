@@ -3,7 +3,7 @@
     "name": "GIF Search",
     "description": "Search and browse GIFs powered by Klipy",
     "version": "1.0.5",
-    "author": "Avenge Media",
+    "author": "Dux Labs",
     "icon": "gif_box",
     "type": "launcher",
     "trigger": "gif",
@@ -11,7 +11,7 @@
     "viewModeEnforced": true,
     "component": "./DankGifSearch.qml",
     "settings": "./DankGifSearchSettings.qml",
-    "requires_dms": ">=1.4.0",
+    "requires_dms": ">=2.0.0",
     "permissions": [
         "settings_read",
         "settings_write"

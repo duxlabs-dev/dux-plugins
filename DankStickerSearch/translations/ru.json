@@ -1,0 +1,47 @@
+{
+  "All": {
+    "All": "Все"
+  },
+  "Content copied": {
+    "Content copied": "Содержимое скопировано"
+  },
+  "Copied GIF": {
+    "Copied GIF": "GIF скопирован"
+  },
+  "Copied MP4": {
+    "Copied MP4": "MP4 скопирован"
+  },
+  "Copied WebP": {
+    "Copied WebP": "WebP скопирован"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Скопировано в буфер обмена"
+  },
+  "Copy Content": {
+    "Copy Content": "Копировать содержимое"
+  },
+  "Loading trending...": {
+    "Loading trending...": "Загрузка трендов..."
+  },
+  "No results found": {
+    "No results found": "Ничего не найдено"
+  },
+  "Open in Browser": {
+    "Open in Browser": "Открыть в браузере"
+  },
+  "Paste": {
+    "Paste": "Вставить"
+  },
+  "Searching...": {
+    "Searching...": "Поиск..."
+  },
+  "Shift+Enter to paste": {
+    "Shift+Enter to paste": "Shift+Enter для вставки"
+  },
+  "Trending Stickers": {
+    "Trending Stickers": "Трендовые стикеры"
+  },
+  "Try a different search": {
+    "Try a different search": "Попробуйте другой поиск"
+  }
+}

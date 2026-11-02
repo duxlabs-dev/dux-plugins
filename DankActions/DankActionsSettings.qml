@@ -3,6 +3,7 @@ import qs.Common
 import qs.Services
 import qs.Widgets
 import qs.Modules.Plugins
+import qs.DCommon.Widgets
 
 PluginSettings {
     id: root
@@ -82,7 +83,7 @@ PluginSettings {
                     anchors.verticalCenter: parent.verticalCenter
                 }
 
-                DankButton {
+                DButton {
                     text: "Cancel"
                     iconName: "close"
                     visible: root.editingVariantId !== ""
@@ -104,7 +105,7 @@ PluginSettings {
                         color: Theme.surfaceVariantText
                     }
 
-                    DankTextField {
+                    DTextField {
                         id: nameField
                         width: parent.width
                         placeholderText: "e.g., Power Profile"
@@ -126,7 +127,7 @@ PluginSettings {
                         color: Theme.surfaceVariantText
                     }
 
-                    DankTextField {
+                    DTextField {
                         id: iconField
                         width: parent.width
                         placeholderText: "e.g., power_settings_new"
@@ -150,7 +151,7 @@ PluginSettings {
                     color: Theme.surfaceVariantText
                 }
 
-                DankTextField {
+                DTextField {
                     id: displayTextField
                     width: parent.width
                     placeholderText: "Text to show (or leave empty if using command output)"
@@ -173,7 +174,7 @@ PluginSettings {
                     color: Theme.surfaceVariantText
                 }
 
-                DankTextField {
+                DTextField {
                     id: displayCommandField
                     width: parent.width
                     placeholderText: 'e.g., echo "Hello World" or powerprofilesctl get'
@@ -204,10 +205,10 @@ PluginSettings {
                     color: Theme.surfaceVariantText
                 }
 
-                DankTextField {
+                DTextField {
                     id: clickCommandField
                     width: parent.width
-                    placeholderText: "e.g., notify-send 'Clicked!' or cycle-power-profile.sh"
+                    placeholderText: "e.g., dms notify 'Clicked!' or cycle-power-profile.sh"
                     keyNavigationBacktab: displayCommandField
                     keyNavigationTab: middleClickCommandField
                     onFocusStateChanged: function(hasFocus) {
@@ -235,10 +236,10 @@ PluginSettings {
                     color: Theme.surfaceVariantText
                 }
 
-                DankTextField {
+                DTextField {
                     id: middleClickCommandField
                     width: parent.width
-                    placeholderText: "e.g., notify-send 'Middle clicked!'"
+                    placeholderText: "e.g., dms notify 'Middle clicked!'"
                     keyNavigationBacktab: clickCommandField
                     keyNavigationTab: rightClickCommandField
                     onFocusStateChanged: function(hasFocus) {
@@ -258,10 +259,10 @@ PluginSettings {
                     color: Theme.surfaceVariantText
                 }
 
-                DankTextField {
+                DTextField {
                     id: rightClickCommandField
                     width: parent.width
-                    placeholderText: "e.g., notify-send 'Right clicked!'"
+                    placeholderText: "e.g., dms notify 'Right clicked!'"
                     keyNavigationBacktab: middleClickCommandField
                     keyNavigationTab: updateIntervalField
                     onFocusStateChanged: function(hasFocus) {
@@ -281,7 +282,7 @@ PluginSettings {
                     color: Theme.surfaceVariantText
                 }
 
-                DankTextField {
+                DTextField {
                     id: updateIntervalField
                     width: parent.width
                     placeholderText: "0"
@@ -313,7 +314,7 @@ PluginSettings {
                     color: Theme.surfaceVariantText
                 }
 
-                DankTextField {
+                DTextField {
                     id: visibilityCommandField
                     width: parent.width
                     placeholderText: "e.g., pgrep -x firefox (exit 0 = show, non-zero = hide)"
@@ -344,7 +345,7 @@ PluginSettings {
                     color: Theme.surfaceVariantText
                 }
 
-                DankTextField {
+                DTextField {
                     id: visibilityIntervalField
                     width: parent.width
                     placeholderText: "0"
@@ -378,7 +379,7 @@ PluginSettings {
                         color: Theme.surfaceVariantText
                     }
 
-                    DankToggle {
+                    DToggle {
                         id: showIconToggle
                         checked: true
                         onToggled: function(isChecked) {
@@ -396,7 +397,7 @@ PluginSettings {
                         color: Theme.surfaceVariantText
                     }
 
-                    DankToggle {
+                    DToggle {
                         id: showTextToggle
                         checked: true
                         onToggled: function(isChecked) {
@@ -406,7 +407,7 @@ PluginSettings {
                 }
             }
 
-            DankButton {
+            DButton {
                 text: root.editingVariantId ? "Update Action" : "Create Action"
                 iconName: root.editingVariantId ? "check" : "add"
                 onClicked: {
@@ -503,7 +504,7 @@ PluginSettings {
                                 height: Theme.iconSize
                                 anchors.verticalCenter: parent.verticalCenter
 
-                                DankIcon {
+                                DIcon {
                                     anchors.centerIn: parent
                                     name: model.icon || "terminal"
                                     size: Theme.iconSize
@@ -573,7 +574,7 @@ PluginSettings {
                                     radius: 16
                                     color: editArea.containsMouse ? Theme.primary : "transparent"
 
-                                    DankIcon {
+                                    DIcon {
                                         anchors.centerIn: parent
                                         name: "edit"
                                         size: 16
@@ -598,7 +599,7 @@ PluginSettings {
                                     radius: 16
                                     color: deleteArea.containsMouse ? Theme.error : "transparent"
 
-                                    DankIcon {
+                                    DIcon {
                                         anchors.centerIn: parent
                                         name: "delete"
                                         size: 16
@@ -653,7 +654,7 @@ PluginSettings {
             Row {
                 spacing: Theme.spacingM
 
-                DankIcon {
+                DIcon {
                     name: "lightbulb"
                     size: Theme.iconSize
                     color: Theme.primary
@@ -696,7 +697,7 @@ PluginSettings {
                     color: Theme.surfaceText
                 }
                 StyledText {
-                    text: "Display: uptime -p | sed 's/up //'\nClick: notify-send \"Uptime\" \"$(uptime -p)\""
+                    text: "Display: uptime -p | sed 's/up //'\nClick: dms notify \"Uptime\" \"$(uptime -p)\""
                     font.pixelSize: Theme.fontSizeSmall
                     font.family: "monospace"
                     color: Theme.surfaceVariantText
@@ -712,7 +713,7 @@ PluginSettings {
                     color: Theme.surfaceText
                 }
                 StyledText {
-                    text: "Display: echo \"Hello $(whoami)!\"\nClick: notify-send \"Hi!\" \"Welcome back!\""
+                    text: "Display: echo \"Hello $(whoami)!\"\nClick: dms notify \"Hi!\" \"Welcome back!\""
                     font.pixelSize: Theme.fontSizeSmall
                     font.family: "monospace"
                     color: Theme.surfaceVariantText

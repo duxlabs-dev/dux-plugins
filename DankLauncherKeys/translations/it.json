@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "Attivazione"
+  },
+  "Always Active": {
+    "Always Active": "Sempre attivo"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Copiato negli appunti"
+  },
+  "Copy": {
+    "Copy": "Copia"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "Sorgenti scorciatoie"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "Impostazioni di ricerca delle scorciatoie"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "Scorciatoie mostrate insieme ai normali risultati di ricerca"
+  },
+  "Pin": {
+    "Pin": "Fissa"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "Cerca per combinazione di tasti, descrizione o nome azione.\n\nL'azione predefinita copia la scorciatoia negli appunti.\nFai clic con il tasto destro o premi Freccia destra per fissare le scorciatoie frequenti: appariranno in cima quando non si cerca."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "Cerca le scorciatoie da tastiera nel compositor e nelle applicazioni"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "Seleziona almeno un fornitore"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "Seleziona quali fornitori di scorciatoie includere"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "Prefisso di attivazione"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "Digita questo prefisso per cercare le scorciatoie"
+  },
+  "Unpin": {
+    "Unpin": "Rimuovi"
+  },
+  "Usage Tips": {
+    "Usage Tips": "Suggerimenti d'uso"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "Usa il prefisso di attivazione per attivare"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "הפעלה"
+  },
+  "Always Active": {
+    "Always Active": "פעיל תמיד"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "הועתק ללוח"
+  },
+  "Copy": {
+    "Copy": "העתקה"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "מקורות של קיצורי מקלדת"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "הגדרות חיפוש של קיצורי מקלדת"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "קיצורי מקלדת מוצגים לצד תוצאות חיפוש רגילות"
+  },
+  "Pin": {
+    "Pin": "הצמדה"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "חפש/י לפי צירוף מקשים, תיאור או שם פעולה.\n\nפעולת ברירת מחדל מעתיקה את קיצור המקלדת ללוח ההעתקה.\nלחץ/י לחיצה ימנית או לחץ/י על חץ ימינה כדי להצמיד קיצורי מקלדת בשימוש תכוף - הם יופיעו בראש כשלא מחפשים."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "חפש/י קיצורי מקלדת מהקומפוזיטור והאפליקציות שלך"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "בחר/י לפחות ספק אחד"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "בחר/י אילו ספקי קיצורי מקלדת לכלול"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "קידומת מפעיל"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "הקלד/י קידומת זו לחיפוש קיצורי מקלדת"
+  },
+  "Unpin": {
+    "Unpin": "בטל/י הצמדה"
+  },
+  "Usage Tips": {
+    "Usage Tips": "טיפים לשימוש"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "השתמש/י בקידומת מפעיל להפעלה"
+  }
+}

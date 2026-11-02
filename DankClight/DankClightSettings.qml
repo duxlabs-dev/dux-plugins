@@ -2,6 +2,7 @@ import QtQuick
 import qs.Common
 import qs.Widgets
 import qs.Modules.Plugins
+import qs.DCommon.Widgets
 
 PluginSettings {
     id: root
@@ -17,7 +18,7 @@ PluginSettings {
     Row {
         spacing: Theme.spacingS
 
-        DankIcon {
+        DIcon {
             name: ClightService.available ? "check_circle" : "error"
             size: Theme.iconSize
             color: ClightService.available ? Theme.success : Theme.error
@@ -36,7 +37,7 @@ PluginSettings {
             height: 1
         }
 
-        DankButton {
+        DButton {
             visible: ClightService.available
             text: "Refresh"
             iconName: "refresh"
@@ -53,7 +54,7 @@ PluginSettings {
     SettingsSection {
         title: "Backlight"
 
-        DankToggle {
+        DToggle {
             width: parent.width
             text: "Auto Calibrate"
             description: "Automatically adjust brightness based on ambient light"
@@ -62,7 +63,7 @@ PluginSettings {
             onToggled: isChecked => ClightService.setBacklightProp("NoAutoCalib", !isChecked)
         }
 
-        DankToggle {
+        DToggle {
             width: parent.width
             text: "Smooth Transitions"
             description: "Gradual brightness changes instead of instant"
@@ -71,7 +72,7 @@ PluginSettings {
             onToggled: isChecked => ClightService.setBacklightProp("NoSmooth", !isChecked)
         }
 
-        DankToggle {
+        DToggle {
             width: parent.width
             text: "Inhibit on Lid Closed"
             description: "Stop adjusting brightness when laptop lid is closed"
@@ -80,7 +81,7 @@ PluginSettings {
             onToggled: isChecked => ClightService.setBacklightProp("InhibitOnLidClosed", isChecked)
         }
 
-        DankToggle {
+        DToggle {
             width: parent.width
             text: "Capture on Lid Opened"
             description: "Take a brightness reading when laptop lid is opened"
@@ -135,7 +136,7 @@ PluginSettings {
     SettingsSection {
         title: "Dimmer"
 
-        DankToggle {
+        DToggle {
             width: parent.width
             text: "Smooth Dimming"
             description: "Gradual transition when dimming screen"
@@ -144,7 +145,7 @@ PluginSettings {
             onToggled: isChecked => ClightService.setDimmerProp("NoSmoothEnter", !isChecked)
         }
 
-        DankToggle {
+        DToggle {
             width: parent.width
             text: "Smooth Undimming"
             description: "Gradual transition when undimming screen"
@@ -289,7 +290,7 @@ PluginSettings {
     SettingsSection {
         title: "Inhibition"
 
-        DankToggle {
+        DToggle {
             width: parent.width
             text: "Inhibit When Docked"
             description: "Stop auto-brightness when laptop is docked"
@@ -298,7 +299,7 @@ PluginSettings {
             onToggled: isChecked => ClightService.setInhibitProp("InhibitDocked", isChecked)
         }
 
-        DankToggle {
+        DToggle {
             width: parent.width
             text: "Auto-Inhibit PM"
             description: "Inhibit power management when Clight is inhibited"
@@ -324,7 +325,7 @@ PluginSettings {
                     width: parent.width
                     spacing: Theme.spacingS
 
-                    DankIcon {
+                    DIcon {
                         name: ClightService.getBacklightTypeIcon(modelData)
                         size: 18
                         color: Theme.primary
@@ -385,20 +386,20 @@ PluginSettings {
         visible: ClightService.available
         spacing: Theme.spacingS
 
-        DankButton {
+        DButton {
             text: "Capture"
             iconName: "photo_camera"
             enabled: ClightService.sensorAvailable
             onClicked: ClightService.capture(true, false)
         }
 
-        DankButton {
+        DButton {
             text: ClightService.suspended ? "Resume" : "Pause"
             iconName: ClightService.suspended ? "play_arrow" : "pause"
             onClicked: ClightService.setPaused(!ClightService.suspended)
         }
 
-        DankButton {
+        DButton {
             text: ClightService.inhibited ? "Uninhibit" : "Inhibit"
             iconName: ClightService.inhibited ? "lock_open" : "lock"
             onClicked: ClightService.setInhibit(!ClightService.inhibited)

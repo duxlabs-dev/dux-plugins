@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "پذیرفتن"
+  },
+  "Audio Output": {
+    "Audio Output": "خروجی صوتی"
+  },
+  "Battery": {
+    "Battery": "باتری"
+  },
+  "Browse Files": {
+    "Browse Files": "مرور فایل‌ها"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "کلیپ‌بورد ارسال شد"
+  },
+  "Device paired": {
+    "Device paired": "دستگاه جفت شد"
+  },
+  "Device unpaired": {
+    "Device unpaired": "دستگاه جفت نشده"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": ""
+  },
+  "Excellent": {
+    "Excellent": ""
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "پذیرش جفت‌سازی ناموفق بود"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "مرور دستگاه ناموفق بود"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "اجرای برنامه SMS ناموفق بود"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "رد کردن اتصال ناموفق بود"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "زنگ زدن دستگاه ناموفق بود"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": ""
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "ارسال کلیپ‌بورد ناموفق بود"
+  },
+  "Failed to send file": {
+    "Failed to send file": "ارسال فایل ناموفق بود"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "ارسال پینگ ناموفق بود"
+  },
+  "Failed to share": {
+    "Failed to share": "اشتراک‌گذاری ناموفق بود"
+  },
+  "Fair": {
+    "Fair": ""
+  },
+  "File": {
+    "File": "فایل"
+  },
+  "File received from %1": {
+    "File received from %1": ""
+  },
+  "Forward 10s": {
+    "Forward 10s": ""
+  },
+  "Good": {
+    "Good": "خوب"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "از اجرای KDE Connect یا Valent در دستگاه‌های دیگر خود اطمینان حاصل کنید"
+  },
+  "Media Player": {
+    "Media Player": "پخش‌کننده رسانه"
+  },
+  "Message": {
+    "Message": "پیام"
+  },
+  "Network Type": {
+    "Network Type": ""
+  },
+  "Next": {
+    "Next": "بعدی"
+  },
+  "No Signal": {
+    "No Signal": ""
+  },
+  "No devices": {
+    "No devices": "بدون دستگاه"
+  },
+  "No devices found": {
+    "No devices found": "دستگاهی یافت نشد"
+  },
+  "No images found": {
+    "No images found": ""
+  },
+  "Not paired": {
+    "Not paired": "جفت نشده"
+  },
+  "Notifications": {
+    "Notifications": "اعلان‌ها"
+  },
+  "Offline": {
+    "Offline": "آفلاین"
+  },
+  "Open App": {
+    "Open App": "باز کردن برنامه"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "باز کردن برنامه SMS"
+  },
+  "Opening file browser": {
+    "Opening file browser": "باز کردن مرورگر فایل"
+  },
+  "Pairing failed": {
+    "Pairing failed": "جفت‌سازی ناموفق بود"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": ""
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "درخواست جفت‌سازی فرستاده شد"
+  },
+  "Pairing requested": {
+    "Pairing requested": "جفت‌سازی درخواست شد"
+  },
+  "Pairing...": {
+    "Pairing...": "درحال جفت شدن..."
+  },
+  "Pause": {
+    "Pause": "توقف"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "Phone Connect دردسترس نیست"
+  },
+  "Phone number": {
+    "Phone number": "شماره تلفن"
+  },
+  "Ping": {
+    "Ping": "پینگ"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": ""
+  },
+  "Play": {
+    "Play": ""
+  },
+  "Previous": {
+    "Previous": ""
+  },
+  "Recent Images": {
+    "Recent Images": ""
+  },
+  "Reject": {
+    "Reject": "رد کردن"
+  },
+  "Request Pairing": {
+    "Request Pairing": "درخواست جفت‌سازی"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": ""
+  },
+  "Ring": {
+    "Ring": "زنگ زدن"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": ""
+  },
+  "SMS": {
+    "SMS": "SMS"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": ""
+  },
+  "Select File to Send": {
+    "Select File to Send": "فایل را برای ارسال انتخاب کنید"
+  },
+  "Send": {
+    "Send": "ارسال"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "ارسال کلیپ‌بورد"
+  },
+  "Send SMS": {
+    "Send SMS": "ارسال SMS"
+  },
+  "Sending %1...": {
+    "Sending %1...": ""
+  },
+  "Share": {
+    "Share": "اشتراک‌گذاری"
+  },
+  "Shared": {
+    "Shared": "به اشتراک گذاشته شد"
+  },
+  "Signal Strength": {
+    "Signal Strength": ""
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "برنامه KDE Connect یا Valent را برای استفاده از این افزونه آغاز کنید"
+  },
+  "Text": {
+    "Text": "متن"
+  },
+  "URI": {
+    "URI": ""
+  },
+  "Unavailable": {
+    "Unavailable": "ناموجود"
+  },
+  "Unknown": {
+    "Unknown": "ناشناخته"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "هنرمند ناشناس"
+  },
+  "Unpair": {
+    "Unpair": "لغو جفت‌سازی"
+  },
+  "Unpair failed": {
+    "Unpair failed": "لغو جفت‌سازی ناموفق بود"
+  },
+  "Verification": {
+    "Verification": "تأیید"
+  },
+  "Weak": {
+    "Weak": ""
+  },
+  "device": {
+    "device": "دستگاه"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "承諾"
+  },
+  "Audio Output": {
+    "Audio Output": "オーディオ出力"
+  },
+  "Battery": {
+    "Battery": "バッテリー"
+  },
+  "Browse Files": {
+    "Browse Files": "ファイルをブラウズ"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "クリップボードを送信しました"
+  },
+  "Device paired": {
+    "Device paired": "デバイスがペアリングされました"
+  },
+  "Device unpaired": {
+    "Device unpaired": "デバイスのペアリングを解除しました"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": "共有する URI またはテキストを入力"
+  },
+  "Excellent": {
+    "Excellent": ""
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "ペアリングの承認に失敗しました"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "デバイスの参照に失敗しました"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "SMS アプリの起動に失敗しました"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "ペアリングの拒否に失敗しました"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "デバイスの呼び出しに失敗しました"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": "SMS の送信に失敗しました"
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "クリップボードの送信に失敗しました"
+  },
+  "Failed to send file": {
+    "Failed to send file": "ファイルの送信に失敗しました"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "Ping の送信に失敗しました"
+  },
+  "Failed to share": {
+    "Failed to share": "共有に失敗しました"
+  },
+  "Fair": {
+    "Fair": ""
+  },
+  "File": {
+    "File": "ファイル"
+  },
+  "File received from %1": {
+    "File received from %1": ""
+  },
+  "Forward 10s": {
+    "Forward 10s": "10秒進む"
+  },
+  "Good": {
+    "Good": "良好"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "他のデバイスで KDE Connect または Valent が実行されていることを確認してください"
+  },
+  "Media Player": {
+    "Media Player": "メディアプレーヤー"
+  },
+  "Message": {
+    "Message": "メッセージ"
+  },
+  "Network Type": {
+    "Network Type": "ネットワーク種別"
+  },
+  "Next": {
+    "Next": "次へ"
+  },
+  "No Signal": {
+    "No Signal": ""
+  },
+  "No devices": {
+    "No devices": "デバイスなし"
+  },
+  "No devices found": {
+    "No devices found": "デバイスが見つかりませんでした"
+  },
+  "No images found": {
+    "No images found": "画像が見つかりません"
+  },
+  "Not paired": {
+    "Not paired": "未ペアリング"
+  },
+  "Notifications": {
+    "Notifications": "通知"
+  },
+  "Offline": {
+    "Offline": "オフライン"
+  },
+  "Open App": {
+    "Open App": "アプリを開く"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "SMS アプリを開いています"
+  },
+  "Opening file browser": {
+    "Opening file browser": "ファイルブラウザーを開いています"
+  },
+  "Pairing failed": {
+    "Pairing failed": "ペアリングが失敗しました"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": ""
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "ペアリング要求を送信しました"
+  },
+  "Pairing requested": {
+    "Pairing requested": "ペアリングを要求しました"
+  },
+  "Pairing...": {
+    "Pairing...": "ペアリング中..."
+  },
+  "Pause": {
+    "Pause": "一時停止"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "Phone Connect は利用できません"
+  },
+  "Phone number": {
+    "Phone number": "電話番号"
+  },
+  "Ping": {
+    "Ping": "Ping"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": ""
+  },
+  "Play": {
+    "Play": "再生"
+  },
+  "Previous": {
+    "Previous": "前へ"
+  },
+  "Recent Images": {
+    "Recent Images": "最近の画像"
+  },
+  "Reject": {
+    "Reject": "拒否"
+  },
+  "Request Pairing": {
+    "Request Pairing": "ペアリングを要求"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": "10秒戻る"
+  },
+  "Ring": {
+    "Ring": "着信"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": ""
+  },
+  "SMS": {
+    "SMS": "SMS"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": "SMS を送信しました"
+  },
+  "Select File to Send": {
+    "Select File to Send": "送信するファイルを選択"
+  },
+  "Send": {
+    "Send": "送信"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "クリップボードを送信"
+  },
+  "Send SMS": {
+    "Send SMS": "SMS を送信"
+  },
+  "Sending %1...": {
+    "Sending %1...": ""
+  },
+  "Share": {
+    "Share": "共有"
+  },
+  "Shared": {
+    "Shared": "共有済み"
+  },
+  "Signal Strength": {
+    "Signal Strength": "信号強度"
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "このプラグインを使うには KDE Connect または Valent を起動してください"
+  },
+  "Text": {
+    "Text": "テキスト"
+  },
+  "URI": {
+    "URI": "URI"
+  },
+  "Unavailable": {
+    "Unavailable": "利用できません"
+  },
+  "Unknown": {
+    "Unknown": "不明"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "不明なアーティスト"
+  },
+  "Unpair": {
+    "Unpair": "ペアリング解除"
+  },
+  "Unpair failed": {
+    "Unpair failed": "ペアリング解除に失敗しました"
+  },
+  "Verification": {
+    "Verification": "確認"
+  },
+  "Weak": {
+    "Weak": ""
+  },
+  "device": {
+    "device": "デバイス"
+  }
+}

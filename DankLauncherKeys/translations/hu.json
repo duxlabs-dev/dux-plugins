@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "Aktiválás"
+  },
+  "Always Active": {
+    "Always Active": "Mindig aktív"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Másolva a vágólapra"
+  },
+  "Copy": {
+    "Copy": "Másolás"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "Gyorsbillentyű-források"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "Gyorsbillentyű-keresési beállítások"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "Gyorsbillentyűk megjelenítése a normál keresési eredmények mellett"
+  },
+  "Pin": {
+    "Pin": "Rögzítés"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "Keresés billentyűkombináció, leírás vagy műveletnév alapján.\n\nAz alapértelmezett művelet a vágólapra másolja a gyorsbillentyűt.\nKattints jobb gombbal vagy nyomd meg a jobb nyilat a gyakran használt gyorsbillentyűk rögzítéséhez – ezek a keresésen kívül felül jelennek meg."
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "Gyorsbillentyűk keresése a kompozitortól és az alkalmazásoktól"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "Válassz ki legalább egy szolgáltatót"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "Válaszd ki a befoglalni kívánt gyorsbillentyű-szolgáltatókat"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "Indító előtag"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "Írd be ezt az előtagot a gyorsbillentyűk kereséséhez"
+  },
+  "Unpin": {
+    "Unpin": "Rögzítés feloldása"
+  },
+  "Usage Tips": {
+    "Usage Tips": "Használati tippek"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "Indító előtag használata az aktiváláshoz"
+  }
+}

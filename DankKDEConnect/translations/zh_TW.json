@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "接受"
+  },
+  "Audio Output": {
+    "Audio Output": "音訊輸出"
+  },
+  "Battery": {
+    "Battery": "電池"
+  },
+  "Browse Files": {
+    "Browse Files": "瀏覽檔案"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "剪貼簿已傳送"
+  },
+  "Device paired": {
+    "Device paired": "裝置已配對"
+  },
+  "Device unpaired": {
+    "Device unpaired": "裝置已解除配對"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": ""
+  },
+  "Excellent": {
+    "Excellent": ""
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "無法接受配對"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "無法瀏覽裝置"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "無法啟動簡訊應用程式"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "無法拒絕配對"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "無法讓裝置響鈴"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": ""
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "無法傳送剪貼簿"
+  },
+  "Failed to send file": {
+    "Failed to send file": "傳送檔案失敗"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "無法傳送 Ping"
+  },
+  "Failed to share": {
+    "Failed to share": "無法分享"
+  },
+  "Fair": {
+    "Fair": ""
+  },
+  "File": {
+    "File": "檔案"
+  },
+  "File received from %1": {
+    "File received from %1": ""
+  },
+  "Forward 10s": {
+    "Forward 10s": ""
+  },
+  "Good": {
+    "Good": "好"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "請確認您的其他裝置上已執行 KDE Connect 或 Valent"
+  },
+  "Media Player": {
+    "Media Player": "媒體播放器"
+  },
+  "Message": {
+    "Message": "訊息"
+  },
+  "Network Type": {
+    "Network Type": ""
+  },
+  "Next": {
+    "Next": "下一步"
+  },
+  "No Signal": {
+    "No Signal": ""
+  },
+  "No devices": {
+    "No devices": "無裝置"
+  },
+  "No devices found": {
+    "No devices found": "找不到裝置"
+  },
+  "No images found": {
+    "No images found": ""
+  },
+  "Not paired": {
+    "Not paired": "未配對"
+  },
+  "Notifications": {
+    "Notifications": "通知"
+  },
+  "Offline": {
+    "Offline": "離線"
+  },
+  "Open App": {
+    "Open App": "開啟應用程式"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "正在開啟簡訊應用程式"
+  },
+  "Opening file browser": {
+    "Opening file browser": "正在開啟檔案瀏覽器"
+  },
+  "Pairing failed": {
+    "Pairing failed": "配對失敗"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": ""
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "已送出配對要求"
+  },
+  "Pairing requested": {
+    "Pairing requested": "已要求配對"
+  },
+  "Pairing...": {
+    "Pairing...": "正在配對..."
+  },
+  "Pause": {
+    "Pause": "暫停"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "手機連線無法使用"
+  },
+  "Phone number": {
+    "Phone number": "電話號碼"
+  },
+  "Ping": {
+    "Ping": "Ping"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": ""
+  },
+  "Play": {
+    "Play": ""
+  },
+  "Previous": {
+    "Previous": ""
+  },
+  "Recent Images": {
+    "Recent Images": ""
+  },
+  "Reject": {
+    "Reject": "拒絕"
+  },
+  "Request Pairing": {
+    "Request Pairing": "要求配對"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": ""
+  },
+  "Ring": {
+    "Ring": "響鈴"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": ""
+  },
+  "SMS": {
+    "SMS": "簡訊"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": ""
+  },
+  "Select File to Send": {
+    "Select File to Send": "選取要傳送的檔案"
+  },
+  "Send": {
+    "Send": "傳送"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "傳送剪貼簿"
+  },
+  "Send SMS": {
+    "Send SMS": "傳送簡訊"
+  },
+  "Sending %1...": {
+    "Sending %1...": ""
+  },
+  "Share": {
+    "Share": "分享"
+  },
+  "Shared": {
+    "Shared": "已分享"
+  },
+  "Signal Strength": {
+    "Signal Strength": ""
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "啟動 KDE Connect 或 Valent 以使用此外掛"
+  },
+  "Text": {
+    "Text": "文字"
+  },
+  "URI": {
+    "URI": ""
+  },
+  "Unavailable": {
+    "Unavailable": "不可用"
+  },
+  "Unknown": {
+    "Unknown": "未知"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "未知藝人"
+  },
+  "Unpair": {
+    "Unpair": "取消配對"
+  },
+  "Unpair failed": {
+    "Unpair failed": "取消配對失敗"
+  },
+  "Verification": {
+    "Verification": "驗證"
+  },
+  "Weak": {
+    "Weak": ""
+  },
+  "device": {
+    "device": "裝置"
+  }
+}

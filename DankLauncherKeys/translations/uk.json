@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": "Активація"
+  },
+  "Always Active": {
+    "Always Active": "Завжди активний"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Скопійовано до буфера обміну"
+  },
+  "Copy": {
+    "Copy": "Копіювати"
+  },
+  "Keybind Sources": {
+    "Keybind Sources": "Джерела гарячих клавіш"
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": "Налаштування пошуку гарячих клавіш"
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": "Гарячі клавіші відображаються разом зі звичайними результатами пошуку"
+  },
+  "Pin": {
+    "Pin": "Закріпити"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": "Пошук за комбінацією клавіш, описом або назвою дії\n\nТипова дія копіює гарячу клавішу в буфер обміну.\nНатисніть правою кнопкою миші або стрілку вправо, щоб закріпити часто використовувані клавіші — вони з'являться зверху під час відсутності пошуку"
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": "Пошук гарячих клавіш вашого композитора та програм"
+  },
+  "Select at least one provider": {
+    "Select at least one provider": "Оберіть принаймні одного провайдера"
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": "Оберіть, які провайдери гарячих клавіш включити"
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": "Префікс тригера"
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": "Використовуйте цей префікс для пошуку гарячих клавіш"
+  },
+  "Unpin": {
+    "Unpin": "Відкріпити"
+  },
+  "Usage Tips": {
+    "Usage Tips": "Поради з використання"
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": "Використовуйте префікс тригера для активації"
+  }
+}

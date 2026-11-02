@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "Color de acento"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "Disponible en modo detallado y pronóstico"
+  },
+  "Background Opacity": {
+    "Background Opacity": "Opacidad del fondo de pantalla"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "Elige cómo se muestra el widget del tiempo"
+  },
+  "Compact": {
+    "Compact": "Compacto"
+  },
+  "Custom": {
+    "Custom": "Personalizado"
+  },
+  "Custom Color": {
+    "Custom Color": "Color personalizado"
+  },
+  "Detailed": {
+    "Detailed": "Detallado"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "Mostrar pronósticos por hora"
+  },
+  "Feels": {
+    "Feels": "Sensación"
+  },
+  "Forecast": {
+    "Forecast": "Pronóstico"
+  },
+  "Forecast Days": {
+    "Forecast Days": "Días de pronóstico"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "Cantidad de pronósticos por hora"
+  },
+  "Humidity": {
+    "Humidity": "Humedad"
+  },
+  "No Weather Data": {
+    "No Weather Data": "Sin datos climáticos"
+  },
+  "Precip": {
+    "Precip": "Precipitaciones"
+  },
+  "Pressure": {
+    "Pressure": "Presión"
+  },
+  "Primary": {
+    "Primary": "Primario"
+  },
+  "Secondary": {
+    "Secondary": "Secundario"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "Mostrar sensación térmica"
+  },
+  "Show Forecast": {
+    "Show Forecast": "Mostrar pronóstico"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "Mostrar pronóstico por hora"
+  },
+  "Show Humidity": {
+    "Show Humidity": "Mostrar humedad"
+  },
+  "Show Location": {
+    "Show Location": "Mostrar ubicación"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "Mostrar probabilidad de precipitaciones"
+  },
+  "Show Pressure": {
+    "Show Pressure": "Mostrar presión"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "Mostrar amanecer/anochecer"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "Mostrar estado del tiempo"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "Mostrar velocidad del viento"
+  },
+  "Standard": {
+    "Standard": "Estandar"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "Se usa cuando el color de acento está en Personalizado"
+  },
+  "View Mode": {
+    "View Mode": "Modo de vista"
+  },
+  "Wind": {
+    "Wind": "Viento"
+  }
+}

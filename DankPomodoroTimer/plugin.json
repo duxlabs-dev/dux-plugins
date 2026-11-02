@@ -4,7 +4,7 @@
     "description": "Productivity timer with 25-minute work sessions and breaks",
     "version": "1.1.6",
     "license": "MIT",
-    "author": "Avenge Media",
+    "author": "Dux Labs",
     "icon": "timer",
     "firstParty": true,
     "component": "./DankPomodoroWidget.qml",
@@ -12,5 +12,6 @@
     "permissions": [
         "settings_read",
         "settings_write"
-    ]
+    ],
+    "requires_dms": ">=2.0.0"
 }

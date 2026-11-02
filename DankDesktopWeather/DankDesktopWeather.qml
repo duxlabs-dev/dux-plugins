@@ -5,6 +5,7 @@ import qs.Common
 import qs.Services
 import qs.Widgets
 import qs.Modules.Plugins
+import qs.DCommon.Widgets
 
 DesktopPluginComponent {
     id: root
@@ -155,7 +156,7 @@ DesktopPluginComponent {
             spacing: Theme.spacingS
             visible: !root.available
 
-            DankIcon {
+            DIcon {
                 name: "cloud_off"
                 size: Theme.iconSize * 1.5
                 color: root.dimColor
@@ -163,7 +164,7 @@ DesktopPluginComponent {
             }
 
             StyledText {
-                text: I18n.tr("No Weather Data")
+                text: I18n.trFor("dankDesktopWeather", "No Weather Data")
                 font.pixelSize: Theme.fontSizeSmall
                 color: root.dimColor
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -186,7 +187,7 @@ DesktopPluginComponent {
                 anchors.centerIn: parent
                 spacing: 0
 
-                DankIcon {
+                DIcon {
                     name: WeatherService.getWeatherIcon(root.weather.wCode)
                     size: compactRoot.iconSize
                     color: root.accentColor
@@ -231,7 +232,7 @@ DesktopPluginComponent {
                 width: parent.width
                 spacing: Math.round(baseSize * 0.04)
 
-                DankIcon {
+                DIcon {
                     name: WeatherService.getWeatherIcon(root.weather.wCode)
                     size: standardRoot.iconSize
                     color: root.accentColor
@@ -302,7 +303,7 @@ DesktopPluginComponent {
                     Layout.fillWidth: true
                     spacing: detailedRoot.itemSpacing * 2
 
-                    DankIcon {
+                    DIcon {
                         name: WeatherService.getWeatherIcon(root.weather.wCode)
                         size: detailedRoot.iconSize
                         color: root.accentColor
@@ -357,7 +358,7 @@ DesktopPluginComponent {
 
                         RowLayout {
                             spacing: 2
-                            DankIcon {
+                            DIcon {
                                 name: "wb_twilight"
                                 size: detailedRoot.smallIconSize
                                 color: root.dimColor
@@ -371,7 +372,7 @@ DesktopPluginComponent {
 
                         RowLayout {
                             spacing: 2
-                            DankIcon {
+                            DIcon {
                                 name: "bedtime"
                                 size: detailedRoot.smallIconSize
                                 color: root.dimColor
@@ -398,7 +399,7 @@ DesktopPluginComponent {
                     WeatherMetric {
                         visible: root.showFeelsLike
                         icon: "device_thermostat"
-                        label: I18n.tr("Feels")
+                        label: I18n.trFor("dankDesktopWeather", "Feels")
                         value: WeatherService.formatTemp(root.weather.feelsLike, true, true)
                         accentColor: root.accentColor
                         textColor: root.textColor
@@ -410,7 +411,7 @@ DesktopPluginComponent {
                     WeatherMetric {
                         visible: root.showHumidity
                         icon: "humidity_percentage"
-                        label: I18n.tr("Humidity")
+                        label: I18n.trFor("dankDesktopWeather", "Humidity")
                         value: WeatherService.formatPercent(root.weather.humidity)
                         accentColor: root.accentColor
                         textColor: root.textColor
@@ -422,7 +423,7 @@ DesktopPluginComponent {
                     WeatherMetric {
                         visible: root.showWind
                         icon: "air"
-                        label: I18n.tr("Wind")
+                        label: I18n.trFor("dankDesktopWeather", "Wind")
                         value: {
                             SettingsData.windSpeedUnit;
                             SettingsData.useFahrenheit;
@@ -438,7 +439,7 @@ DesktopPluginComponent {
                     WeatherMetric {
                         visible: root.showPrecipitation
                         icon: "rainy"
-                        label: I18n.tr("Precip")
+                        label: I18n.trFor("dankDesktopWeather", "Precip")
                         value: WeatherService.formatPercent(root.weather.precipitationProbability)
                         accentColor: root.accentColor
                         textColor: root.textColor
@@ -450,7 +451,7 @@ DesktopPluginComponent {
                     WeatherMetric {
                         visible: root.showPressure
                         icon: "speed"
-                        label: I18n.tr("Pressure")
+                        label: I18n.trFor("dankDesktopWeather", "Pressure")
                         value: WeatherService.formatPressure(root.weather.pressure)
                         accentColor: root.accentColor
                         textColor: root.textColor
@@ -484,7 +485,7 @@ DesktopPluginComponent {
                 anchors.fill: parent
                 spacing: Math.round(baseSize * 0.15)
 
-                DankIcon {
+                DIcon {
                     name: WeatherService.getWeatherIcon(root.weather.wCode)
                     size: forecastHeaderRoot.iconSize
                     color: root.accentColor
@@ -578,7 +579,7 @@ DesktopPluginComponent {
                 visible: root.viewMode === "forecast"
             }
 
-            DankListView {
+            DListView {
                 id: hourlyList
                 Layout.fillWidth: true
                 Layout.preferredHeight: root.showHourlyForecast ? Math.round(Math.max(50, Math.min(80, root.height * 0.18))) : 0
@@ -615,7 +616,7 @@ DesktopPluginComponent {
                             Layout.alignment: Qt.AlignHCenter
                         }
 
-                        DankIcon {
+                        DIcon {
                             name: WeatherService.getWeatherIcon(forecast.wCode, forecast.isDay)
                             size: forecastRoot.itemIconSize
                             color: root.accentColor
@@ -644,7 +645,7 @@ DesktopPluginComponent {
                 visible: root.showHourlyForecast && root.weather.hourlyForecast?.length > 0
             }
 
-            DankListView {
+            DListView {
                 id: dailyList
                 Layout.fillWidth: true
                 Layout.fillHeight: true
@@ -679,7 +680,7 @@ DesktopPluginComponent {
                             Layout.preferredWidth: forecastRoot.itemFontSize * 5
                         }
 
-                        DankIcon {
+                        DIcon {
                             name: WeatherService.getWeatherIcon(forecast.wCode, true)
                             size: forecastRoot.itemIconSize + 2
                             color: root.accentColor
@@ -693,7 +694,7 @@ DesktopPluginComponent {
                             spacing: 1
                             visible: forecast.precipitationProbability > 0
 
-                            DankIcon {
+                            DIcon {
                                 name: "water_drop"
                                 size: forecastRoot.itemIconSize - 2
                                 color: Theme.primary

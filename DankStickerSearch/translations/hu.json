@@ -1,0 +1,47 @@
+{
+  "All": {
+    "All": "Összes"
+  },
+  "Content copied": {
+    "Content copied": "Tartalom másolva"
+  },
+  "Copied GIF": {
+    "Copied GIF": "GIF másolva"
+  },
+  "Copied MP4": {
+    "Copied MP4": "MP4 másolva"
+  },
+  "Copied WebP": {
+    "Copied WebP": "WebP másolva"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Másolva a vágólapra"
+  },
+  "Copy Content": {
+    "Copy Content": "Tartalom másolása"
+  },
+  "Loading trending...": {
+    "Loading trending...": "Felkapott matricák betöltése…"
+  },
+  "No results found": {
+    "No results found": "Nincsenek találatok"
+  },
+  "Open in Browser": {
+    "Open in Browser": "Megnyitás böngészőben"
+  },
+  "Paste": {
+    "Paste": "Beillesztés"
+  },
+  "Searching...": {
+    "Searching...": "Keresés…"
+  },
+  "Shift+Enter to paste": {
+    "Shift+Enter to paste": "Shift+Enter a beillesztéshez"
+  },
+  "Trending Stickers": {
+    "Trending Stickers": "Népszerű matricák"
+  },
+  "Try a different search": {
+    "Try a different search": "Próbálkozz más kereséssel"
+  }
+}

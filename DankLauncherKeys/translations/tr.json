@@ -1,0 +1,53 @@
+{
+  "Activation": {
+    "Activation": ""
+  },
+  "Always Active": {
+    "Always Active": ""
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Panoya kopyalandı"
+  },
+  "Copy": {
+    "Copy": ""
+  },
+  "Keybind Sources": {
+    "Keybind Sources": ""
+  },
+  "Keybinds Search Settings": {
+    "Keybinds Search Settings": ""
+  },
+  "Keybinds shown alongside regular search results": {
+    "Keybinds shown alongside regular search results": ""
+  },
+  "Pin": {
+    "Pin": "Sabitle"
+  },
+  "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": {
+    "Search by key combo, description, or action name.\n\nDefault action copies the keybind to clipboard.\nRight-click or press Right Arrow to pin frequently used keybinds - they'll appear at the top when not searching.": ""
+  },
+  "Search keyboard shortcuts from your compositor and applications": {
+    "Search keyboard shortcuts from your compositor and applications": ""
+  },
+  "Select at least one provider": {
+    "Select at least one provider": ""
+  },
+  "Select which keybind providers to include": {
+    "Select which keybind providers to include": ""
+  },
+  "Trigger Prefix": {
+    "Trigger Prefix": ""
+  },
+  "Type this prefix to search keybinds": {
+    "Type this prefix to search keybinds": ""
+  },
+  "Unpin": {
+    "Unpin": ""
+  },
+  "Usage Tips": {
+    "Usage Tips": ""
+  },
+  "Use trigger prefix to activate": {
+    "Use trigger prefix to activate": ""
+  }
+}

@@ -74,11 +74,11 @@ PluginComponent {
             property string notifyUrgency: "normal"
             property string notifyIcon: "battery_alert"
 
-            command: ["notify-send", "-a", "DankMaterialShell", "-i", notifyIcon, "-u", notifyUrgency, notifyTitle, notifyMessage]
+            command: ["dms", "notify", "--app", "Dux Shell", "--icon", notifyIcon, "--urgency", notifyUrgency, notifyTitle, notifyMessage]
 
             onExited: exitCode => {
                 if (exitCode !== 0) {
-                    console.error("DankBatteryAlerts: notify-send failed with code:", exitCode);
+                    console.error("DankBatteryAlerts: dms notify failed with code:", exitCode);
                 }
                 destroy();
             }

@@ -4,7 +4,7 @@
     "description": "Execute custom scripts on system events like wallpaper changes, theme updates, battery level changes, and more",
     "version": "1.0.9",
     "license": "MIT",
-    "author": "Avenge Media",
+    "author": "Dux Labs",
     "icon": "webhook",
     "type": "daemon",
     "component": "./DankHooks.qml",
@@ -12,5 +12,6 @@
     "permissions": [
         "settings_read",
         "settings_write"
-    ]
+    ],
+    "requires_dms": ">=2.0.0"
 }

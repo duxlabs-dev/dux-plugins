@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "قبول"
+  },
+  "Audio Output": {
+    "Audio Output": "مخرج الصوت"
+  },
+  "Battery": {
+    "Battery": "بطارية"
+  },
+  "Browse Files": {
+    "Browse Files": "تصفح الملفات"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "تم إرسال الحافظة"
+  },
+  "Device paired": {
+    "Device paired": "تم اقتران الجهاز"
+  },
+  "Device unpaired": {
+    "Device unpaired": "تم إلغاء اقتران الجهاز"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": "أدخل الرابط أو النص للمشاركة"
+  },
+  "Excellent": {
+    "Excellent": "ممتاز"
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "فشل قبول الاقتران"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "فشل تصفح الجهاز"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "فشل تشغيل تطبيق الرسائل القصيرة"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "فشل في رفض الاقتران"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "فشل في رنين الجهاز"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": "فشل إرسال الرسالة القصيرة"
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "فشل في إرسال الحافظة"
+  },
+  "Failed to send file": {
+    "Failed to send file": "فشل إرسال الملف"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "فشل في إرسال اختبار الاتصال (Ping)"
+  },
+  "Failed to share": {
+    "Failed to share": "فشل في المشاركة"
+  },
+  "Fair": {
+    "Fair": "جيد"
+  },
+  "File": {
+    "File": "ملف"
+  },
+  "File received from %1": {
+    "File received from %1": "تم استلام الملف من %1"
+  },
+  "Forward 10s": {
+    "Forward 10s": "تقديم 10 ثوانٍ"
+  },
+  "Good": {
+    "Good": "جيدة"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "تأكد من تشغيل KDE Connect أو Valent على أجهزتك الأخرى"
+  },
+  "Media Player": {
+    "Media Player": "مشغل الوسائط"
+  },
+  "Message": {
+    "Message": "رسالة"
+  },
+  "Network Type": {
+    "Network Type": "نوع الشبكة"
+  },
+  "Next": {
+    "Next": "التالي"
+  },
+  "No Signal": {
+    "No Signal": "لا توجد إشارة"
+  },
+  "No devices": {
+    "No devices": "لا توجد أجهزة"
+  },
+  "No devices found": {
+    "No devices found": "لم يتم العثور على أجهزة"
+  },
+  "No images found": {
+    "No images found": "لم يتم العثور على صور"
+  },
+  "Not paired": {
+    "Not paired": "غير مقترن"
+  },
+  "Notifications": {
+    "Notifications": "الإشعارات"
+  },
+  "Offline": {
+    "Offline": "غير متصل"
+  },
+  "Open App": {
+    "Open App": "فتح التطبيق"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "فتح تطبيق الرسائل القصيرة"
+  },
+  "Opening file browser": {
+    "Opening file browser": "فتح متصفح الملفات"
+  },
+  "Pairing failed": {
+    "Pairing failed": "فشل الاقتران"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": "طلب اقتران من %1"
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "تم إرسال طلب الاقتران"
+  },
+  "Pairing requested": {
+    "Pairing requested": "تم طلب الاقتران"
+  },
+  "Pairing...": {
+    "Pairing...": "جاري الاقتران..."
+  },
+  "Pause": {
+    "Pause": "إيقاف مؤقت"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "اتصال الهاتف غير متاح"
+  },
+  "Phone number": {
+    "Phone number": "رقم الهاتف"
+  },
+  "Ping": {
+    "Ping": "اختبار الاتصال (Ping)"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": "تم إرسال إشارة إلى %1"
+  },
+  "Play": {
+    "Play": "تشغيل"
+  },
+  "Previous": {
+    "Previous": "السابق"
+  },
+  "Recent Images": {
+    "Recent Images": "الصور الأخيرة"
+  },
+  "Reject": {
+    "Reject": "رفض"
+  },
+  "Request Pairing": {
+    "Request Pairing": "طلب الاقتران"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": "ترجيع 10 ثوانٍ"
+  },
+  "Ring": {
+    "Ring": "رنين"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": "يتم الاتصال بـ %1..."
+  },
+  "SMS": {
+    "SMS": "رسائل قصيرة"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": "تم إرسال الرسالة القصيرة بنجاح"
+  },
+  "Select File to Send": {
+    "Select File to Send": "حدد ملفاً لإرساله"
+  },
+  "Send": {
+    "Send": "إرسال"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "إرسال الحافظة"
+  },
+  "Send SMS": {
+    "Send SMS": "إرسال رسالة قصيرة"
+  },
+  "Sending %1...": {
+    "Sending %1...": "جاري الإرسال %1..."
+  },
+  "Share": {
+    "Share": "مشاركة"
+  },
+  "Shared": {
+    "Shared": "تمت المشاركة"
+  },
+  "Signal Strength": {
+    "Signal Strength": "قوة الإشارة"
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "ابدأ KDE Connect أو Valent لاستخدام هذه الملحق"
+  },
+  "Text": {
+    "Text": "نص"
+  },
+  "URI": {
+    "URI": "رابط"
+  },
+  "Unavailable": {
+    "Unavailable": "غير متاح"
+  },
+  "Unknown": {
+    "Unknown": "غير معروف"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "فنان غير معروف"
+  },
+  "Unpair": {
+    "Unpair": "إلغاء الاقتران"
+  },
+  "Unpair failed": {
+    "Unpair failed": "فشل إلغاء الاقتران"
+  },
+  "Verification": {
+    "Verification": "التحقق"
+  },
+  "Weak": {
+    "Weak": "ضعيف"
+  },
+  "device": {
+    "device": "جهاز"
+  }
+}

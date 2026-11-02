@@ -4,10 +4,14 @@
     "description": "Receive notifications when battery level reaches critical or warning thresholds",
     "version": "1.1.2",
     "license": "MIT",
-    "author": "Avenge Media",
+    "author": "Dux Labs",
     "icon": "battery_alert",
     "type": "daemon",
     "component": "./DankBatteryAlerts.qml",
     "settings": "./DankBatteryAlertsSettings.qml",
-    "permissions": ["settings_read", "settings_write"]
+    "permissions": [
+        "settings_read",
+        "settings_write"
+    ],
+    "requires_dms": ">=2.0.0"
 }

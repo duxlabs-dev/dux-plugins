@@ -1,0 +1,101 @@
+{
+  "Accent Color": {
+    "Accent Color": "Акцентный цвет"
+  },
+  "Available in Detailed and Forecast view modes": {
+    "Available in Detailed and Forecast view modes": "Доступно в режимах просмотра 'Подробно' и 'Прогноз'"
+  },
+  "Background Opacity": {
+    "Background Opacity": "Непрозрачность фона"
+  },
+  "Choose how the weather widget is displayed": {
+    "Choose how the weather widget is displayed": "Выбрать способ отображения виджета погоды"
+  },
+  "Compact": {
+    "Compact": "Компактно"
+  },
+  "Custom": {
+    "Custom": "Свой"
+  },
+  "Custom Color": {
+    "Custom Color": "Пользовательский цвет"
+  },
+  "Detailed": {
+    "Detailed": "Подробно"
+  },
+  "Display hourly weather predictions": {
+    "Display hourly weather predictions": "Отображать почасовые прогнозы погоды"
+  },
+  "Feels": {
+    "Feels": "Ощущается"
+  },
+  "Forecast": {
+    "Forecast": "Прогноз"
+  },
+  "Forecast Days": {
+    "Forecast Days": "Дней прогноза"
+  },
+  "Hourly Forecast Count": {
+    "Hourly Forecast Count": "Количество почасовых прогнозов"
+  },
+  "Humidity": {
+    "Humidity": "Влажность"
+  },
+  "No Weather Data": {
+    "No Weather Data": "Нету данных о погоде"
+  },
+  "Precip": {
+    "Precip": "Осадки"
+  },
+  "Pressure": {
+    "Pressure": "Давление"
+  },
+  "Primary": {
+    "Primary": "Основной"
+  },
+  "Secondary": {
+    "Secondary": "Вторичный"
+  },
+  "Show Feels Like Temperature": {
+    "Show Feels Like Temperature": "Показать ощущаемую температуру"
+  },
+  "Show Forecast": {
+    "Show Forecast": "Показать прогноз"
+  },
+  "Show Hourly Forecast": {
+    "Show Hourly Forecast": "Показать почасовой прогноз"
+  },
+  "Show Humidity": {
+    "Show Humidity": "Показать влажность"
+  },
+  "Show Location": {
+    "Show Location": "Показать локацию"
+  },
+  "Show Precipitation Probability": {
+    "Show Precipitation Probability": "Показать вероятность осадков"
+  },
+  "Show Pressure": {
+    "Show Pressure": "Показывать нажатия"
+  },
+  "Show Sunrise/Sunset": {
+    "Show Sunrise/Sunset": "Показать рассвет/закат"
+  },
+  "Show Weather Condition": {
+    "Show Weather Condition": "Показать условие погоды"
+  },
+  "Show Wind Speed": {
+    "Show Wind Speed": "Показать скорость ветра"
+  },
+  "Standard": {
+    "Standard": "Стандартный"
+  },
+  "Used when accent color is set to Custom": {
+    "Used when accent color is set to Custom": "Используется, когда акцентный цвет установлен в Custom"
+  },
+  "View Mode": {
+    "View Mode": "Режим просмотра"
+  },
+  "Wind": {
+    "Wind": "Ветер"
+  }
+}

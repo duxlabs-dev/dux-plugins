@@ -1,0 +1,11 @@
+{
+  "Chroma Style": {
+    "Chroma Style": "色度风格"
+  },
+  "Color theme for syntax highlighting.": {
+    "Color theme for syntax highlighting.": "语法高亮颜色主题。"
+  },
+  "Color theme for syntax highlighting. %1 themes available.": {
+    "Color theme for syntax highlighting. %1 themes available.": "语法高亮颜色主题。共 %1 个主题可供使用。"
+  }
+}

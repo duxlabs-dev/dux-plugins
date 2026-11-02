@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": "Akcepti"
+  },
+  "Audio Output": {
+    "Audio Output": "Sona eligo"
+  },
+  "Battery": {
+    "Battery": "Baterio"
+  },
+  "Browse Files": {
+    "Browse Files": "Foliumi Dosierojn"
+  },
+  "Clipboard sent": {
+    "Clipboard sent": "Poŝtabulo sendita"
+  },
+  "Device paired": {
+    "Device paired": "Aparato estas parigita"
+  },
+  "Device unpaired": {
+    "Device unpaired": "Aparato malparigita"
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": ""
+  },
+  "Excellent": {
+    "Excellent": ""
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": "Malsukcesis akcepti parigon"
+  },
+  "Failed to browse device": {
+    "Failed to browse device": "Malsukcesis foliumi aparaton"
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": "Malsukcesis lanĉi SMS-aplikaĵon"
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": "Malsukcesis malakcepti parigon"
+  },
+  "Failed to ring device": {
+    "Failed to ring device": "Malsukcesis sonorigi aparaton"
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": ""
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": "Malsukcesis sendi la poŝtabulon"
+  },
+  "Failed to send file": {
+    "Failed to send file": "Malsukcesis sendi dosieron"
+  },
+  "Failed to send ping": {
+    "Failed to send ping": "Malsukcesis sendi ping-on"
+  },
+  "Failed to share": {
+    "Failed to share": "Malsukcesis kundividi"
+  },
+  "Fair": {
+    "Fair": ""
+  },
+  "File": {
+    "File": "Dosiero"
+  },
+  "File received from %1": {
+    "File received from %1": ""
+  },
+  "Forward 10s": {
+    "Forward 10s": ""
+  },
+  "Good": {
+    "Good": "Bona"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": "Certigu, ke KDE Connect aŭ Valent funkcias sur viaj aliaj aparatoj"
+  },
+  "Media Player": {
+    "Media Player": "Aŭdvidaĵ-ludilo"
+  },
+  "Message": {
+    "Message": "Mesaĝo"
+  },
+  "Network Type": {
+    "Network Type": ""
+  },
+  "Next": {
+    "Next": "Sekva"
+  },
+  "No Signal": {
+    "No Signal": ""
+  },
+  "No devices": {
+    "No devices": "Neniuj aparatoj"
+  },
+  "No devices found": {
+    "No devices found": "Neniuj aparatoj estis trovitaj"
+  },
+  "No images found": {
+    "No images found": ""
+  },
+  "Not paired": {
+    "Not paired": "Ne parigita"
+  },
+  "Notifications": {
+    "Notifications": "Sciigoj"
+  },
+  "Offline": {
+    "Offline": "Senkonekte"
+  },
+  "Open App": {
+    "Open App": "Malfermi Aplikaĵon"
+  },
+  "Opening SMS app": {
+    "Opening SMS app": "Malfermante SMS-aplikaĵon"
+  },
+  "Opening file browser": {
+    "Opening file browser": "Malfermante dosierfoliumilon"
+  },
+  "Pairing failed": {
+    "Pairing failed": "Parigado malsukcesis"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": ""
+  },
+  "Pairing request sent": {
+    "Pairing request sent": "Peto pri parigo sendita"
+  },
+  "Pairing requested": {
+    "Pairing requested": "Parigo petita"
+  },
+  "Pairing...": {
+    "Pairing...": "Parigante..."
+  },
+  "Pause": {
+    "Pause": "Paŭzigi"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": "Telefona Konekto Ne Disponebla"
+  },
+  "Phone number": {
+    "Phone number": "Telefonnumero"
+  },
+  "Ping": {
+    "Ping": "Ping"
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": ""
+  },
+  "Play": {
+    "Play": ""
+  },
+  "Previous": {
+    "Previous": ""
+  },
+  "Recent Images": {
+    "Recent Images": ""
+  },
+  "Reject": {
+    "Reject": "Malakcepti"
+  },
+  "Request Pairing": {
+    "Request Pairing": "Peti Parigon"
+  },
+  "Rewind 10s": {
+    "Rewind 10s": ""
+  },
+  "Ring": {
+    "Ring": "Ringo"
+  },
+  "Ringing %1...": {
+    "Ringing %1...": ""
+  },
+  "SMS": {
+    "SMS": "SMS-oj"
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": ""
+  },
+  "Select File to Send": {
+    "Select File to Send": "Elektu Dosieron por Sendi"
+  },
+  "Send": {
+    "Send": "Sendi"
+  },
+  "Send Clipboard": {
+    "Send Clipboard": "Sendi Poŝtabulon"
+  },
+  "Send SMS": {
+    "Send SMS": "Sendu SMS-on"
+  },
+  "Sending %1...": {
+    "Sending %1...": ""
+  },
+  "Share": {
+    "Share": "Kunhavigi"
+  },
+  "Shared": {
+    "Shared": "Kunhavita"
+  },
+  "Signal Strength": {
+    "Signal Strength": ""
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": "Lanĉu KDE Connect aŭ Valent por uzi ĉi tiun kromprogramon"
+  },
+  "Text": {
+    "Text": "Teksto"
+  },
+  "URI": {
+    "URI": ""
+  },
+  "Unavailable": {
+    "Unavailable": "Nedisponebla"
+  },
+  "Unknown": {
+    "Unknown": "Nekonata"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": "Nekonata artisto"
+  },
+  "Unpair": {
+    "Unpair": "Malpari"
+  },
+  "Unpair failed": {
+    "Unpair failed": "Malparigo malsukcesis"
+  },
+  "Verification": {
+    "Verification": "Konfirmo"
+  },
+  "Weak": {
+    "Weak": ""
+  },
+  "device": {
+    "device": "aparato"
+  }
+}

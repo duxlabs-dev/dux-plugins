@@ -1,0 +1,236 @@
+{
+  "Accept": {
+    "Accept": ""
+  },
+  "Audio Output": {
+    "Audio Output": "Ses Çıkışı"
+  },
+  "Battery": {
+    "Battery": "Batarya"
+  },
+  "Browse Files": {
+    "Browse Files": ""
+  },
+  "Clipboard sent": {
+    "Clipboard sent": ""
+  },
+  "Device paired": {
+    "Device paired": "Cihaz eşleştirildi"
+  },
+  "Device unpaired": {
+    "Device unpaired": ""
+  },
+  "Enter URI or text to share": {
+    "Enter URI or text to share": ""
+  },
+  "Excellent": {
+    "Excellent": ""
+  },
+  "Failed to accept pairing": {
+    "Failed to accept pairing": ""
+  },
+  "Failed to browse device": {
+    "Failed to browse device": ""
+  },
+  "Failed to launch SMS app": {
+    "Failed to launch SMS app": ""
+  },
+  "Failed to reject pairing": {
+    "Failed to reject pairing": ""
+  },
+  "Failed to ring device": {
+    "Failed to ring device": ""
+  },
+  "Failed to send SMS": {
+    "Failed to send SMS": ""
+  },
+  "Failed to send clipboard": {
+    "Failed to send clipboard": ""
+  },
+  "Failed to send file": {
+    "Failed to send file": ""
+  },
+  "Failed to send ping": {
+    "Failed to send ping": ""
+  },
+  "Failed to share": {
+    "Failed to share": ""
+  },
+  "Fair": {
+    "Fair": ""
+  },
+  "File": {
+    "File": "Dosya"
+  },
+  "File received from %1": {
+    "File received from %1": ""
+  },
+  "Forward 10s": {
+    "Forward 10s": ""
+  },
+  "Good": {
+    "Good": "İyi"
+  },
+  "Make sure KDE Connect or Valent is running on your other devices": {
+    "Make sure KDE Connect or Valent is running on your other devices": ""
+  },
+  "Media Player": {
+    "Media Player": "Medya Oynatıcı"
+  },
+  "Message": {
+    "Message": ""
+  },
+  "Network Type": {
+    "Network Type": ""
+  },
+  "Next": {
+    "Next": "Devam et"
+  },
+  "No Signal": {
+    "No Signal": ""
+  },
+  "No devices": {
+    "No devices": ""
+  },
+  "No devices found": {
+    "No devices found": "Aygıt bulunamadı"
+  },
+  "No images found": {
+    "No images found": ""
+  },
+  "Not paired": {
+    "Not paired": ""
+  },
+  "Notifications": {
+    "Notifications": "Bildirimler"
+  },
+  "Offline": {
+    "Offline": ""
+  },
+  "Open App": {
+    "Open App": ""
+  },
+  "Opening SMS app": {
+    "Opening SMS app": ""
+  },
+  "Opening file browser": {
+    "Opening file browser": ""
+  },
+  "Pairing failed": {
+    "Pairing failed": "Eşleşme başarısız"
+  },
+  "Pairing request from %1": {
+    "Pairing request from %1": ""
+  },
+  "Pairing request sent": {
+    "Pairing request sent": ""
+  },
+  "Pairing requested": {
+    "Pairing requested": ""
+  },
+  "Pairing...": {
+    "Pairing...": "Eşleşiyor..."
+  },
+  "Pause": {
+    "Pause": "Duraklat"
+  },
+  "Phone Connect Not Available": {
+    "Phone Connect Not Available": ""
+  },
+  "Phone number": {
+    "Phone number": ""
+  },
+  "Ping": {
+    "Ping": ""
+  },
+  "Ping sent to %1": {
+    "Ping sent to %1": ""
+  },
+  "Play": {
+    "Play": ""
+  },
+  "Previous": {
+    "Previous": ""
+  },
+  "Recent Images": {
+    "Recent Images": ""
+  },
+  "Reject": {
+    "Reject": ""
+  },
+  "Request Pairing": {
+    "Request Pairing": ""
+  },
+  "Rewind 10s": {
+    "Rewind 10s": ""
+  },
+  "Ring": {
+    "Ring": ""
+  },
+  "Ringing %1...": {
+    "Ringing %1...": ""
+  },
+  "SMS": {
+    "SMS": ""
+  },
+  "SMS sent successfully": {
+    "SMS sent successfully": ""
+  },
+  "Select File to Send": {
+    "Select File to Send": ""
+  },
+  "Send": {
+    "Send": ""
+  },
+  "Send Clipboard": {
+    "Send Clipboard": ""
+  },
+  "Send SMS": {
+    "Send SMS": ""
+  },
+  "Sending %1...": {
+    "Sending %1...": ""
+  },
+  "Share": {
+    "Share": ""
+  },
+  "Shared": {
+    "Shared": ""
+  },
+  "Signal Strength": {
+    "Signal Strength": ""
+  },
+  "Start KDE Connect or Valent to use this plugin": {
+    "Start KDE Connect or Valent to use this plugin": ""
+  },
+  "Text": {
+    "Text": "Metin"
+  },
+  "URI": {
+    "URI": ""
+  },
+  "Unavailable": {
+    "Unavailable": "Mevcut Değil"
+  },
+  "Unknown": {
+    "Unknown": "Bilinmeyen"
+  },
+  "Unknown Artist": {
+    "Unknown Artist": ""
+  },
+  "Unpair": {
+    "Unpair": ""
+  },
+  "Unpair failed": {
+    "Unpair failed": ""
+  },
+  "Verification": {
+    "Verification": ""
+  },
+  "Weak": {
+    "Weak": ""
+  },
+  "device": {
+    "device": ""
+  }
+}
