@@ -1617,7 +1617,7 @@ PluginComponent {
                                         }
 
                                         InfoRow {
-                                            visible: root.activeDevice && PhoneConnectService.hasPlugin(root.activeDeviceId, "connectivity_report") && root.activeDevice?.networkType
+                                            visible: root.activeDevice && PhoneConnectService.hasPlugin(root.activeDeviceId, "connectivity_report") && !!root.activeDevice?.networkType
                                             icon: PhoneConnectService.getNetworkTypeIcon(root.activeDevice)
                                             label: I18n.trFor("dankKDEConnect", "Network Type", "KDE Connect network type label")
                                             value: PhoneConnectService.getNetworkTypeLabel(root.activeDevice)
