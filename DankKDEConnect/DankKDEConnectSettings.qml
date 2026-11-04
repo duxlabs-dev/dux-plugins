@@ -7,7 +7,6 @@ import QtQuick.Layouts
 import qs.Services
 import qs.Services
 import "./services"
-import QtQuick.Dialogs
 import qs.DCommon.Widgets
 
 PluginSettings {
@@ -458,63 +457,18 @@ PluginSettings {
                                 }
                             }
 
-                            RowLayout {
-                                spacing: 1
+                            DButton {
+                                iconName: "folder_open"
+                                text: ""
+                                width: 42
+                                buttonHeight: customImageField.height
+                                backgroundColor: Theme.surfaceContainerHigh
+                                textColor: Theme.primary
                                 Layout.alignment: Qt.AlignVCenter
-
-                                // Browse Button Item
-                                Item {
-                                    id: browseBtnItem
-                                    height: 36
-                                    width: 96
-
-                                    Rectangle {
-                                        anchors.fill: parent
-                                        topLeftRadius: Theme.cornerRadius
-                                        bottomLeftRadius: Theme.cornerRadius
-                                        topRightRadius: Theme.cornerRadius
-                                        bottomRightRadius: Theme.cornerRadius
-
-                                        color: browseMA.containsMouse ? Theme.withAlpha(Theme.primary, 0.15) : Theme.withAlpha(Theme.surfaceContainer, 0.4)
-                                        border.width: 1
-                                        border.color: Theme.withAlpha(Theme.primary, browseMA.containsMouse ? 0.3 : 0.15)
-                                    }
-
-                                    DRipple {
-                                        anchors.fill: parent
-                                        cornerRadius: Theme.cornerRadius
-                                        rippleColor: Theme.primary
-                                    }
-
-                                    Row {
-                                        anchors.centerIn: parent
-                                        spacing: Theme.spacingXXS
-                                        DIcon {
-                                            name: "folder"
-                                            size: 16
-                                            color: Theme.primary
-                                            anchors.verticalCenter: parent.verticalCenter
-                                        }
-                                        StyledText {
-                                            text: "Browse"
-                                            font.pixelSize: Theme.fontSizeSmall
-                                            font.weight: Font.Medium
-                                            color: Theme.primary
-                                            anchors.verticalCenter: parent.verticalCenter
-                                        }
-                                    }
-
-                                    MouseArea {
-                                        id: browseMA
-                                        anchors.fill: parent
-                                        hoverEnabled: true
-                                        cursorShape: Qt.PointingHandCursor
-                                        onClicked: {
-                                            imageBrowser.targetDeviceId = deviceSettingsRect.modelData;
-                                            imageBrowser.targetField = customImageField;
-                                            imageBrowser.open();
-                                        }
-                                    }
+                                onClicked: {
+                                    imageBrowser.targetDeviceId = deviceSettingsRect.modelData;
+                                    imageBrowser.targetField = customImageField;
+                                    imageBrowser.open();
                                 }
                             }
                         }
@@ -562,34 +516,22 @@ PluginSettings {
                                 placeholderText: "e.g. ~/Pictures or ~/Screenshots"
                                 text: mainSettingsCol.getDeviceRecentImagesPath(deviceSettingsRect.modelData)
                                 onEditingFinished: {
-                                    let newText = text;
-                                    PhoneConnectService.getSftpMountPoint(deviceSettingsRect.modelData, function (mountPoint) {
-                                        if (mountPoint && newText && !newText.startsWith(mountPoint)) {
-                                            ToastService.showError("Invalid Path", "Path must be located on the remote device.");
-                                            recentImagesPathField.text = mainSettingsCol.getDeviceRecentImagesPath(deviceSettingsRect.modelData);
-                                        } else {
-                                            mainSettingsCol.saveDeviceRecentImagesPath(deviceSettingsRect.modelData, newText);
-                                        }
-                                    });
+                                    mainSettingsCol.saveDeviceRecentImagesPath(deviceSettingsRect.modelData, text);
                                 }
                             }
 
                             DButton {
-                                iconName: "folder"
-                                text: "Browse"
+                                iconName: "folder_open"
+                                text: ""
+                                width: 42
+                                buttonHeight: recentImagesPathField.height
+                                backgroundColor: Theme.surfaceContainerHigh
+                                textColor: Theme.primary
                                 Layout.alignment: Qt.AlignVCenter
                                 onClicked: {
-                                    PhoneConnectService.mountAndWait(deviceSettingsRect.modelData, function (success) {
-                                        PhoneConnectService.getSftpMountPoint(deviceSettingsRect.modelData, function (mountPoint) {
-                                            recentImagesBrowser.targetDeviceId = deviceSettingsRect.modelData;
-                                            recentImagesBrowser.targetField = recentImagesPathField;
-                                            recentImagesBrowser.remoteMountPoint = mountPoint;
-                                            if (mountPoint) {
-                                                recentImagesBrowser.currentFolder = "file://" + mountPoint;
-                                            }
-                                            recentImagesBrowser.open();
-                                        });
-                                    });
+                                    recentImagesBrowser.targetDeviceId = deviceSettingsRect.modelData;
+                                    recentImagesBrowser.targetField = recentImagesPathField;
+                                    recentImagesBrowser.open();
                                 }
                             }
                         }
@@ -1189,7 +1131,6 @@ PluginSettings {
         browserType: "generic"
         showHiddenFiles: false
         fileExtensions: ["*.png", "*.jpg", "*.jpeg", "*.webp"]
-
         onFileSelected: function (path) {
             const urlPath = "file://" + path;
             if (targetField) {
@@ -1199,23 +1140,20 @@ PluginSettings {
         }
     }
 
-    FolderDialog {
+    FileBrowserSurfaceModal {
         id: recentImagesBrowser
         property string targetDeviceId: ""
         property var targetField: null
-        property string remoteMountPoint: ""
 
-        title: "Select Recent Images Folder"
+        browserTitle: "Select Recent Images Folder"
+        browserType: "folder_picker"
+        mode: "openFolder"
 
-        onAccepted: function () {
-            var path = selectedFolder.toString();
-            if (path.startsWith("file://")) {
-                path = path.substring(7);
-            }
-            if (remoteMountPoint && !path.startsWith(remoteMountPoint)) {
-                ToastService.showError("Invalid Directory", "Path must be located on the remote device.\nSelected: " + path);
+        onAccepted: function (paths) {
+            if (!paths || paths.length === 0) {
                 return;
             }
+            const path = paths[0];
             if (targetField) {
                 targetField.text = path;
             }
