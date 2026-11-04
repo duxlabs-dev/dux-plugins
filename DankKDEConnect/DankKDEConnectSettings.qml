@@ -7,6 +7,7 @@ import QtQuick.Layouts
 import qs.Services
 import qs.Services
 import "./services"
+import QtQuick.Dialogs
 import qs.DCommon.Widgets
 
 PluginSettings {
@@ -451,9 +452,13 @@ PluginSettings {
                                 id: customImageField
                                 Layout.fillWidth: true
                                 placeholderText: "Absolute path or URL"
-                                text: mainSettingsCol.getDeviceImage(deviceSettingsRect.modelData)
+                                text: {
+                                    const imagePath = mainSettingsCol.getDeviceImage(deviceSettingsRect.modelData);
+                                    return imagePath.startsWith("file://") ? imagePath.substring(7) : imagePath;
+                                }
                                 onEditingFinished: {
-                                    mainSettingsCol.saveDeviceImage(deviceSettingsRect.modelData, text);
+                                    const imagePath = text.startsWith("/") ? "file://" + text : text;
+                                    mainSettingsCol.saveDeviceImage(deviceSettingsRect.modelData, imagePath);
                                 }
                             }
 
@@ -516,7 +521,15 @@ PluginSettings {
                                 placeholderText: "e.g. ~/Pictures or ~/Screenshots"
                                 text: mainSettingsCol.getDeviceRecentImagesPath(deviceSettingsRect.modelData)
                                 onEditingFinished: {
-                                    mainSettingsCol.saveDeviceRecentImagesPath(deviceSettingsRect.modelData, text);
+                                    let newText = text;
+                                    PhoneConnectService.getSftpMountPoint(deviceSettingsRect.modelData, function(mountPoint) {
+                                        if (mountPoint && newText && !newText.startsWith(mountPoint)) {
+                                            ToastService.showError("Invalid Path", "Path must be located on the remote device.");
+                                            recentImagesPathField.text = mainSettingsCol.getDeviceRecentImagesPath(deviceSettingsRect.modelData);
+                                        } else {
+                                            mainSettingsCol.saveDeviceRecentImagesPath(deviceSettingsRect.modelData, newText);
+                                        }
+                                    });
                                 }
                             }
 
@@ -529,9 +542,17 @@ PluginSettings {
                                 textColor: Theme.primary
                                 Layout.alignment: Qt.AlignVCenter
                                 onClicked: {
-                                    recentImagesBrowser.targetDeviceId = deviceSettingsRect.modelData;
-                                    recentImagesBrowser.targetField = recentImagesPathField;
-                                    recentImagesBrowser.open();
+                                    PhoneConnectService.mountAndWait(deviceSettingsRect.modelData, function(success) {
+                                        PhoneConnectService.getSftpMountPoint(deviceSettingsRect.modelData, function(mountPoint) {
+                                            recentImagesBrowser.targetDeviceId = deviceSettingsRect.modelData;
+                                            recentImagesBrowser.targetField = recentImagesPathField;
+                                            recentImagesBrowser.remoteMountPoint = mountPoint;
+                                            if (mountPoint) {
+                                                recentImagesBrowser.currentFolder = "file://" + mountPoint;
+                                            }
+                                            recentImagesBrowser.open();
+                                        });
+                                    });
                                 }
                             }
                         }
@@ -1134,26 +1155,29 @@ PluginSettings {
         onFileSelected: function (path) {
             const urlPath = "file://" + path;
             if (targetField) {
-                targetField.text = urlPath;
+                targetField.text = path;
             }
             mainSettingsCol.saveDeviceImage(targetDeviceId, urlPath);
         }
     }
 
-    FileBrowserSurfaceModal {
+    FolderDialog {
         id: recentImagesBrowser
         property string targetDeviceId: ""
         property var targetField: null
+        property string remoteMountPoint: ""
 
-        browserTitle: "Select Recent Images Folder"
-        browserType: "folder_picker"
-        mode: "openFolder"
+        title: "Select Recent Images Folder"
 
-        onAccepted: function (paths) {
-            if (!paths || paths.length === 0) {
+        onAccepted: function () {
+            let path = selectedFolder.toString();
+            if (path.startsWith("file://")) {
+                path = path.substring(7);
+            }
+            if (remoteMountPoint && !path.startsWith(remoteMountPoint)) {
+                ToastService.showError("Invalid Directory", "Path must be located on the remote device.\nSelected: " + path);
                 return;
             }
-            const path = paths[0];
             if (targetField) {
                 targetField.text = path;
             }
