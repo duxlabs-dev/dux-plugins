@@ -36,7 +36,7 @@
     "Select which keybind providers to include": "Wählen Sie aus, welche Tastenkombinationsanbieter einbezogen werden sollen"
   },
   "Trigger Prefix": {
-    "Trigger Prefix": "Auslöser-Präfix"
+    "Trigger Prefix": "Trigger-Präfix"
   },
   "Type this prefix to search keybinds": {
     "Type this prefix to search keybinds": "Geben Sie dieses Präfix ein, um nach Tastenkombinationen zu suchen"
@@ -48,6 +48,6 @@
     "Usage Tips": "Anwendungstipps"
   },
   "Use trigger prefix to activate": {
-    "Use trigger prefix to activate": "Auslöser-Präfix zum Aktivieren verwenden"
+    "Use trigger prefix to activate": "Trigger-Präfix zum Aktivieren verwenden"
   }
 }
