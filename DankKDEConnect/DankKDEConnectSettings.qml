@@ -634,6 +634,20 @@ PluginSettings {
                     spacing: Theme.spacingS
 
                     DToggle {
+                        id: hideUnpairedDevicesToggle
+                        width: parent.width
+                        text: I18n.trFor("dankKDEConnect", "Hide Unpaired Devices", "Phone Connect hide unpaired devices setting")
+                        description: I18n.trFor("dankKDEConnect", "Only show paired devices in the device lists.", "Phone Connect hide unpaired devices setting description")
+                        Component.onCompleted: {
+                            checked = mainSettingsCol.loadValue("hideUnpairedDevices", false);
+                        }
+                        onToggled: function(newChecked) {
+                            checked = newChecked;
+                            mainSettingsCol.saveValue("hideUnpairedDevices", newChecked);
+                        }
+                    }
+
+                    DToggle {
                         id: chargingAnimToggle
                         width: parent.width
                         text: "Show Charging Fill"
