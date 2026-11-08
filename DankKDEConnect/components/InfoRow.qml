@@ -13,7 +13,7 @@ RowLayout {
     property color valueColor: Theme.surfaceText
 
     spacing: Theme.spacingM
-    width: parent.width
+    Layout.fillWidth: true
 
     DIcon {
         name: root.icon
@@ -28,17 +28,23 @@ RowLayout {
         Layout.alignment: Qt.AlignVCenter
 
         StyledText {
+            width: parent.width
             text: root.label
             font.pixelSize: Theme.fontSizeSmall
             color: Theme.surfaceVariantText
             font.weight: Font.Medium
+            wrapMode: Text.NoWrap
+            elide: Text.ElideRight
         }
 
         StyledText {
+            width: parent.width
             text: root.value
             font.pixelSize: Theme.fontSizeMedium
             color: root.valueColor
             font.weight: Font.Medium
+            wrapMode: Text.NoWrap
+            elide: Text.ElideRight
         }
     }
 }

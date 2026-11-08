@@ -1407,14 +1407,15 @@ PluginComponent {
                             id: mainDeviceContainerRow
                             width: parent.width
                             height: {
+                                const contentHeight = mainInfoColumn.implicitHeight + Theme.spacingM * 2;
                                 if (!root.showDevicePlaceholder) {
-                                    return mainInfoColumn.implicitHeight + Theme.spacingM * 2;
+                                    return contentHeight;
                                 }
                                 const type = root.activeDevice?.type;
                                 if (type === "desktop" || type === "computer" || type === "laptop" || type === "tablet" || type === "tv") {
-                                    return Math.max(mainInfoColumn.implicitHeight + Theme.spacingM * 2, 160);
+                                    return Math.max(contentHeight, 160);
                                 }
-                                return 245;
+                                return Math.max(contentHeight, 245);
                             }
                             spacing: Theme.spacingM
                             visible: root.hasDevice
