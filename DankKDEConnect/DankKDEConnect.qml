@@ -537,13 +537,16 @@ PluginComponent {
         root.selectDevice(ids[idx]);
     }
 
+    // A widget hosted in the island shares its keyboard-focused window, so keys apply only while this plugin is open.
     Shortcut {
         sequence: "Ctrl+Tab"
+        enabled: root.interactionActive
         onActivated: root.switchDeviceNext()
     }
 
     Shortcut {
         sequence: "Ctrl+Shift+Tab"
+        enabled: root.interactionActive
         onActivated: root.switchDevicePrev()
     }
 
@@ -552,6 +555,7 @@ PluginComponent {
         delegate: Item {
             Shortcut {
                 sequence: "Alt+" + (index + 1)
+                enabled: root.interactionActive
                 onActivated: {
                     if (index < PhoneConnectService.deviceIds.length) {
                         root.selectDevice(PhoneConnectService.deviceIds[index]);
@@ -563,7 +567,7 @@ PluginComponent {
 
     Shortcut {
         sequence: "S"
-        enabled: !root.isTyping && !root.showShareDialog && !root.showSmsDialog
+        enabled: root.interactionActive && !root.isTyping && !root.showShareDialog && !root.showSmsDialog
         onActivated: {
             if (root.selectedDeviceId && root.selectedDevice && root.selectedDevice.isReachable) {
                 root.handleAction(root.selectedDeviceId, "share");
