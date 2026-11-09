@@ -1,12 +1,11 @@
 import QtQuick
 import QtQuick.Layouts
 import qs.Common
-import qs.Widgets
 import qs.DCommon.Widgets
 
 RowLayout {
     id: root
-    
+
     property string icon: ""
     property string label: ""
     property string value: ""

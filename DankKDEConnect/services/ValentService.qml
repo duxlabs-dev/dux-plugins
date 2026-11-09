@@ -14,7 +14,6 @@ Singleton {
     readonly property string deviceInterface: "ca.andyholmes.Valent.Device"
     readonly property string actionsInterface: "org.gtk.Actions"
     readonly property string objectManagerInterface: "org.freedesktop.DBus.ObjectManager"
-    readonly property string propertiesInterface: "org.freedesktop.DBus.Properties"
 
     readonly property int stateConnected: 1
     readonly property int statePaired: 2
@@ -30,7 +29,7 @@ Singleton {
     property string announcedName: ""
     property string selfId: ""
 
-    property var _signalSubscriptions: []
+    property string _signalSubscription: ""
     property bool _dbusFinished: false
 
     Timer {
@@ -86,7 +85,7 @@ Singleton {
                 return;
             available = false;
             initialized = false;
-            _signalSubscriptions = [];
+            _signalSubscription = "";
         }
 
         function onCapabilitiesReceived() {
@@ -94,6 +93,8 @@ Singleton {
         }
 
         function onDbusSignalReceived(subId, data) {
+            if (subId !== _signalSubscription)
+                return;
             handleDbusSignal(data);
         }
     }
@@ -109,20 +110,17 @@ Singleton {
             refreshDevices();
     }
 
-    function rememberSubscription(response) {
-        if (response.error) {
-            console.warn("[Valent] Subscription failed:", response.error);
-            return;
-        }
-        _signalSubscriptions = _signalSubscriptions.concat([response.result.subscriptionId]);
-    }
-
     function subscribeToSignals() {
-        for (const id of _signalSubscriptions)
-            DMSService.dbusUnsubscribe(id);
-        _signalSubscriptions = [];
-        DMSService.dbusSubscribe("session", service, "", "", "", rememberSubscription);
-        DMSService.dbusSubscribe("session", service, "", propertiesInterface, "PropertiesChanged", rememberSubscription);
+        if (_signalSubscription !== "")
+            DMSService.dbusUnsubscribe(_signalSubscription);
+        _signalSubscription = "";
+        DMSService.dbusSubscribe("session", service, "", "", "", function (response) {
+            if (response.error) {
+                console.warn("[Valent] Subscription failed:", response.error);
+                return;
+            }
+            _signalSubscription = response.result.subscriptionId;
+        });
     }
 
     function checkAvailability() {

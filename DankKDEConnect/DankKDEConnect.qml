@@ -427,10 +427,6 @@ PluginComponent {
     property string shareDeviceId: ""
     property bool deviceSwitching: false
 
-    onCustomPhoneImageChanged: {
-        console.log("[DMS DEBUG DankKDEConnect] customPhoneImage changed to:", customPhoneImage);
-    }
-
     // Reactive binding: always reflects the latest device data from the service
     readonly property bool hasDevice: selectedDeviceId !== "" && !!PhoneConnectService.devices[selectedDeviceId]
     readonly property var selectedDevice: hasDevice ? (PhoneConnectService.devices[selectedDeviceId] ?? null) : null
@@ -1036,7 +1032,6 @@ PluginComponent {
                 }
             }
 
-            showCloseButton: false
             headerText: ""
 
             Column {

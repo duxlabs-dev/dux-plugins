@@ -1,6 +1,5 @@
 import QtQuick
 import qs.Common
-import qs.Widgets
 import qs.Modules.Plugins
 import qs.Modals.FileBrowser
 import QtQuick.Layouts
@@ -594,7 +593,7 @@ PluginSettings {
                             width: parent.width
                             spacing: Theme.spacingS
 
-                            DankDropdown {
+                            DDropdown {
                                 id: deviceTypeDropdown
                                 Layout.fillWidth: true
                                 compactMode: true
@@ -1148,7 +1147,6 @@ PluginSettings {
         property var targetField: null
 
         browserTitle: "Select Custom Phone Image"
-        browserIcon: "image"
         browserType: "generic"
         showHiddenFiles: false
         fileExtensions: ["*.png", "*.jpg", "*.jpeg", "*.webp"]

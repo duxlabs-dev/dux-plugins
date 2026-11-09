@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Effects
 import qs.Common
-import qs.Widgets
 
 Rectangle {
     id: phoneRoot

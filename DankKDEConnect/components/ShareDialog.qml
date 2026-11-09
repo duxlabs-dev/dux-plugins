@@ -2,7 +2,6 @@ import QtQuick
 import QtQuick.Layouts
 import qs.Common
 import qs.Modals.FileBrowser
-import qs.Widgets
 import qs.Services
 import qs.DCommon.Widgets
 
@@ -419,7 +418,6 @@ StyledRect {
         id: fileBrowser
 
         browserTitle: I18n.trFor("dankKDEConnect", "Select File to Send", "KDE Connect file browser title")
-        browserIcon: "upload_file"
         browserType: "generic"
         showHiddenFiles: false
         fileExtensions: ["*"]

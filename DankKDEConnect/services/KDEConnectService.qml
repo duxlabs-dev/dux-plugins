@@ -24,7 +24,6 @@ Singleton {
     readonly property string pingInterface: "org.kde.kdeconnect.device.ping"
     readonly property string sftpInterface: "org.kde.kdeconnect.device.sftp"
     readonly property string photoInterface: "org.kde.kdeconnect.device.photo"
-    readonly property string propertiesInterface: "org.freedesktop.DBus.Properties"
     readonly property string notificationsInterface: "org.kde.kdeconnect.device.notifications"
 
     property bool available: false
@@ -36,7 +35,7 @@ Singleton {
     property string announcedName: ""
     property string selfId: ""
 
-    property var _signalSubscriptions: []
+    property string _signalSubscription: ""
     property bool _dbusFinished: false
 
     Timer {
@@ -98,7 +97,7 @@ Singleton {
                 return;
             available = false;
             initialized = false;
-            _signalSubscriptions = [];
+            _signalSubscription = "";
         }
 
         function onCapabilitiesReceived() {
@@ -106,6 +105,8 @@ Singleton {
         }
 
         function onDbusSignalReceived(subId, data) {
+            if (subId !== _signalSubscription)
+                return;
             handleDbusSignal(data);
         }
     }
@@ -121,20 +122,17 @@ Singleton {
             refreshDevices();
     }
 
-    function rememberSubscription(response) {
-        if (response.error) {
-            console.warn("[KDEConnect] Subscription failed:", response.error);
-            return;
-        }
-        _signalSubscriptions = _signalSubscriptions.concat([response.result.subscriptionId]);
-    }
-
     function subscribeToSignals() {
-        for (const id of _signalSubscriptions)
-            DMSService.dbusUnsubscribe(id);
-        _signalSubscriptions = [];
-        DMSService.dbusSubscribe("session", service, "", "", "", rememberSubscription);
-        DMSService.dbusSubscribe("session", service, "", propertiesInterface, "PropertiesChanged", rememberSubscription);
+        if (_signalSubscription !== "")
+            DMSService.dbusUnsubscribe(_signalSubscription);
+        _signalSubscription = "";
+        DMSService.dbusSubscribe("session", service, "", "", "", function (response) {
+            if (response.error) {
+                console.warn("[KDEConnect] Subscription failed:", response.error);
+                return;
+            }
+            _signalSubscription = response.result.subscriptionId;
+        });
     }
 
     function checkAvailability() {
@@ -176,9 +174,6 @@ Singleton {
     }
 
     function handleDbusSignal(data) {
-        if (data.path && data.path.includes("mpris")) {
-            console.warn("[KDEConnect] MPRIS DBus Signal:", JSON.stringify(data));
-        }
         switch (data.member) {
         case "deviceAdded":
             if (data.body?.[0]) {
@@ -371,7 +366,6 @@ Singleton {
                 dev.supportedPlugins = newSupportedPlugins;
                 dev.verificationKey = newVerificationKey;
 
-                console.warn("[KDEConnect] Device info changed for", deviceId, ": name =", dev.name);
                 devices = Object.assign({}, devices, {
                     [deviceId]: dev
                 });

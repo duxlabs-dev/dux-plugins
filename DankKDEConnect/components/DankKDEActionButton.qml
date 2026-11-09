@@ -1,6 +1,5 @@
 import QtQuick
 import qs.Common
-import qs.Widgets
 import qs.DCommon.Widgets
 
 Item {
@@ -50,7 +49,7 @@ Item {
         cursorShape: root.enabled ? Qt.PointingHandCursor : undefined
         enabled: root.enabled
 
-        onPressed: function(mouse) {
+        onPressed: function (mouse) {
             ripple.trigger(mouse.x, mouse.y);
         }
         onClicked: {
@@ -78,7 +77,7 @@ Item {
         }
     }
 
-    DankTooltipV2 {
+    DTooltipV2 {
         id: tooltip
     }
 }

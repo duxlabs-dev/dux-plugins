@@ -2,7 +2,6 @@ import QtQuick
 import QtQuick.Layouts
 import qs.Common
 import qs.Services
-import qs.Widgets
 import "../services"
 import QtQuick.Effects
 import QtQuick.Shapes
