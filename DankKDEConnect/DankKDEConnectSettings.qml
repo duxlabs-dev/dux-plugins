@@ -405,6 +405,17 @@ PluginSettings {
                         }
                     }
 
+                    DToggle {
+                        width: parent.width
+                        text: I18n.trFor("dankKDEConnect", "Preferred Device", "Phone Connect preferred device setting")
+                        description: I18n.trFor("dankKDEConnect", "Automatically select this device when it is connected.", "Phone Connect preferred device setting description")
+                        enabled: deviceSettingsRect.device?.isPaired ?? false
+                        checked: mainSettingsCol.loadValue("preferredDeviceId", "") === deviceSettingsRect.modelData
+                        onToggled: function(newChecked) {
+                            mainSettingsCol.saveValue("preferredDeviceId", newChecked ? deviceSettingsRect.modelData : "");
+                        }
+                    }
+
                     // Separator
                     Rectangle {
                         width: parent.width
