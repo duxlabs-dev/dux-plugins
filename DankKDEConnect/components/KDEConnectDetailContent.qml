@@ -514,14 +514,15 @@ Item {
             id: detailDeviceContainerRow
             width: parent.width
             height: {
+                const contentHeight = detailInfoColumn.implicitHeight + Theme.spacingM * 2;
                 if (!root.showDevicePlaceholder) {
-                    return detailInfoColumn.implicitHeight + Theme.spacingM * 2;
+                    return contentHeight;
                 }
                 const type = root.activeDevice?.type;
                 if (type === "desktop" || type === "computer" || type === "laptop" || type === "tablet" || type === "tv") {
-                    return Math.max(detailInfoColumn.implicitHeight + Theme.spacingM * 2, 160);
+                    return Math.max(contentHeight, 160);
                 }
-                return 255;
+                return Math.max(contentHeight, 255);
             }
             spacing: Theme.spacingM
             visible: root.hasDevice
