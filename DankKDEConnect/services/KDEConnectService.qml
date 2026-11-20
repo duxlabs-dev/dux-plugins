@@ -822,21 +822,6 @@ Singleton {
         }
     }
 
-    function getNetworkIcon(device) {
-        if (!device || device.networkStrength < 0)
-            return "";
-        const strength = device.networkStrength;
-        if (strength >= 4)
-            return "signal_cellular_alt";
-        if (strength >= 3)
-            return "signal_cellular_alt_2_bar"; // 3 bars usually translates to 2 out of 3, or just signal_cellular_alt_2_bar
-        if (strength >= 2)
-            return "signal_cellular_alt_2_bar";
-        if (strength >= 1)
-            return "signal_cellular_alt_1_bar";
-        return "signal_cellular_null";
-    }
-
     function getBatteryIcon(device) {
         if (!device || device.batteryCharge < 0)
             return "";
