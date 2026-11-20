@@ -3,10 +3,10 @@
     "Accept": "Akzeptieren"
   },
   "Audio Output": {
-    "Audio Output": "Audio Ausgang"
+    "Audio Output": "Audioausgang"
   },
   "Battery": {
-    "Battery": "Batterie"
+    "Battery": "Akku"
   },
   "Browse Files": {
     "Browse Files": "Dateien durchsuchen"
@@ -117,7 +117,7 @@
     "Opening file browser": "Dateibrowser wird geöffnet"
   },
   "Pairing failed": {
-    "Pairing failed": "Koppeln fehlgeschlagen"
+    "Pairing failed": "Kopplung fehlgeschlagen"
   },
   "Pairing request from %1": {
     "Pairing request from %1": "Kopplungsanfrage von %1"

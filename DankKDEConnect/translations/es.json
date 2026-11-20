@@ -3,7 +3,7 @@
     "Accept": "Aceptar"
   },
   "Audio Output": {
-    "Audio Output": "Salida de auido"
+    "Audio Output": "Salida de audio"
   },
   "Battery": {
     "Battery": "Batería"
@@ -18,13 +18,13 @@
     "Device paired": "Dispositivo emparejado"
   },
   "Device unpaired": {
-    "Device unpaired": "Dispositivo desvinculado"
+    "Device unpaired": "Dispositivo desemparejado"
   },
   "Enter URI or text to share": {
-    "Enter URI or text to share": "Ingresar URI o texto para compartir"
+    "Enter URI or text to share": "Introduce un URI o un texto para compartir"
   },
   "Excellent": {
-    "Excellent": ""
+    "Excellent": "Excelente"
   },
   "Failed to accept pairing": {
     "Failed to accept pairing": "Error al aceptar el emparejamiento"
@@ -57,7 +57,7 @@
     "Failed to share": "Error al compartir"
   },
   "Fair": {
-    "Fair": ""
+    "Fair": "Regular"
   },
   "File": {
     "File": "Archivo"
@@ -69,13 +69,13 @@
     "Forward 10s": "Adelantar 10s"
   },
   "Good": {
-    "Good": "Bien"
+    "Good": "Buena"
   },
   "Make sure KDE Connect or Valent is running on your other devices": {
     "Make sure KDE Connect or Valent is running on your other devices": "Asegúrate de que KDE Connect o Valent esté ejecutándose en tus otros dispositivos"
   },
   "Media Player": {
-    "Media Player": "Reproductor de multimedia"
+    "Media Player": "Reproductor multimedia"
   },
   "Message": {
     "Message": "Mensaje"
@@ -87,7 +87,7 @@
     "Next": "Siguiente"
   },
   "No Signal": {
-    "No Signal": ""
+    "No Signal": "Sin señal"
   },
   "No devices": {
     "No devices": "Sin dispositivos"
@@ -129,13 +129,13 @@
     "Pairing requested": "Emparejamiento solicitado"
   },
   "Pairing...": {
-    "Pairing...": "Vinculando..."
+    "Pairing...": "Emparejando..."
   },
   "Pause": {
     "Pause": "Pausar"
   },
   "Phone Connect Not Available": {
-    "Phone Connect Not Available": "Conexión telefónica no disponible"
+    "Phone Connect Not Available": "Phone Connect no disponible"
   },
   "Phone number": {
     "Phone number": "Número de teléfono"
@@ -165,10 +165,10 @@
     "Rewind 10s": "Retroceder 10s"
   },
   "Ring": {
-    "Ring": "Sonar"
+    "Ring": "Hacer sonar"
   },
   "Ringing %1...": {
-    "Ringing %1...": "Llamando a %1..."
+    "Ringing %1...": "Haciendo sonar %1..."
   },
   "SMS": {
     "SMS": "SMS"
@@ -198,7 +198,7 @@
     "Shared": "Compartido"
   },
   "Signal Strength": {
-    "Signal Strength": "Fuerza de señal"
+    "Signal Strength": "Intensidad de la señal"
   },
   "Start KDE Connect or Valent to use this plugin": {
     "Start KDE Connect or Valent to use this plugin": "Inicia KDE Connect o Valent para usar este complemento"
@@ -219,16 +219,16 @@
     "Unknown Artist": "Artista desconocido"
   },
   "Unpair": {
-    "Unpair": "Desvincular"
+    "Unpair": "Desemparejar"
   },
   "Unpair failed": {
-    "Unpair failed": "Error al desvincular"
+    "Unpair failed": "Error al desemparejar"
   },
   "Verification": {
     "Verification": "Verificación"
   },
   "Weak": {
-    "Weak": ""
+    "Weak": "Débil"
   },
   "device": {
     "device": "dispositivo"

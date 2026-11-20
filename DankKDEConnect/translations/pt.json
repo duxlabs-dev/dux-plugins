@@ -24,7 +24,7 @@
     "Enter URI or text to share": "Insira a URI ou o texto para compartilhar"
   },
   "Excellent": {
-    "Excellent": ""
+    "Excellent": "Excelente"
   },
   "Failed to accept pairing": {
     "Failed to accept pairing": "Falha ao aceitar pareamento"
@@ -57,7 +57,7 @@
     "Failed to share": "Falha ao compartilhar"
   },
   "Fair": {
-    "Fair": ""
+    "Fair": "Razoável"
   },
   "File": {
     "File": "Arquivo"
@@ -87,7 +87,7 @@
     "Next": "Próximo"
   },
   "No Signal": {
-    "No Signal": ""
+    "No Signal": "Sem Sinal"
   },
   "No devices": {
     "No devices": "Sem dispositivos"
@@ -228,7 +228,7 @@
     "Verification": "Verificação"
   },
   "Weak": {
-    "Weak": ""
+    "Weak": "Fraco"
   },
   "device": {
     "device": "dispositivo"
