@@ -81,6 +81,9 @@ PluginComponent {
     property bool showDevicePlaceholder: (showDevicePlaceholderVar.value !== undefined && showDevicePlaceholderVar.value !== null) ? (showDevicePlaceholderVar.value === true || showDevicePlaceholderVar.value === "true") : ((SettingsData.pluginSettings["dankKDEConnect"]?.showDevicePlaceholder !== undefined) ? (SettingsData.pluginSettings["dankKDEConnect"]?.showDevicePlaceholder === true || SettingsData.pluginSettings["dankKDEConnect"]?.showDevicePlaceholder === "true") : true)
 
     property string selectedDeviceId: SettingsData.pluginSettings["dankKDEConnect"]?.selectedDeviceId || ""
+    property string preferredDeviceId: SettingsData.pluginSettings["dankKDEConnect"]?.preferredDeviceId || ""
+    onPreferredDeviceIdChanged: Qt.callLater(root.autoSelectBestDevice)
+
     // Per-device custom image map: { deviceId: imagePath }
     property var deviceImageMap: ({})
 
@@ -575,6 +578,12 @@ PluginComponent {
         const ids = PhoneConnectService.deviceIds;
         if (ids.length === 0) {
             selectDevice("");
+            return;
+        }
+
+        const preferred = PhoneConnectService.getDevice(preferredDeviceId);
+        if (preferred?.isPaired && preferred.isReachable && ids.includes(preferredDeviceId) && selectedDeviceId !== preferredDeviceId) {
+            selectDevice(preferredDeviceId);
             return;
         }
 
