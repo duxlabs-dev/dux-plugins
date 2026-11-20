@@ -27,7 +27,12 @@ Singleton {
     readonly property string announcedName: _backend?.announcedName ?? ""
     readonly property string selfId: _backend?.selfId ?? ""
 
-    readonly property var deviceIds: _backend?.deviceIds ?? []
+    readonly property var deviceIds: {
+        const ids = _backend?.deviceIds ?? [];
+        return SettingsData.pluginSettings["dankKDEConnect"]?.hideUnpairedDevices ? ids.filter(id => devices[id]?.isPaired) : ids;
+    }
+    onDeviceIdsChanged: Qt.callLater(root.devicesListChanged)
+
     readonly property var devices: {
         const rawDevices = _backend?.devices ?? {};
         const result = {};
