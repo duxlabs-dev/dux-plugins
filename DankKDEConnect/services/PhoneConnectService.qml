@@ -6,12 +6,8 @@ import Quickshell
 import Quickshell.Io
 import qs.Common
 import qs.Services
-<<<<<<< HEAD
-import qs.Modules.Plugins
 // qs.Services also exports the native DMS DuxConnectService, qualify local services
 import "." as LocalServices
-=======
->>>>>>> origin/master
 
 Singleton {
     id: root
@@ -25,7 +21,7 @@ Singleton {
 
     readonly property string pluginId: "dankKDEConnect"
 
-    property int preferredBackend: PhoneConnectService.Backend.KDEConnect
+    readonly property int preferredBackend: backendFromName(settings.preferredBackend ?? "")
     onPreferredBackendChanged: detectBackend()
     property int activeBackend: PhoneConnectService.Backend.None
 
@@ -102,14 +98,10 @@ Singleton {
     readonly property var _backendBusNames: ["org.kde.kdeconnect", "ca.andyholmes.Valent"]
 
     Component.onCompleted: {
-        updatePreferredBackend();
         if (DMSService.subscribeConnected)
             resync();
-<<<<<<< HEAD
         else
             detectBackend();
-        updateDeviceTypeMap();
-=======
     }
 
     onHideUnpairedDevicesChanged: syncDeviceIds()
@@ -195,7 +187,6 @@ Singleton {
 
     function setDeviceType(deviceId, type) {
         saveMapEntry("deviceTypeMap", deviceTypeMap, deviceId, type);
->>>>>>> origin/master
     }
 
     Connections {
@@ -274,30 +265,7 @@ Singleton {
         }
     }
 
-    Connections {
-        target: LocalServices.DuxConnectService
-        enabled: activeBackend === PhoneConnectService.Backend.DuxConnect
-
-        function onDevicesListChanged() {
-            root.devicesListChanged();
-        }
-        function onDeviceUpdated(deviceId) {
-            root.deviceUpdated(deviceId);
-        }
-        function onDeviceAdded(deviceId) {
-            root.deviceAdded(deviceId);
-        }
-        function onDeviceRemoved(deviceId) {
-            root.deviceRemoved(deviceId);
-        }
-        function onPairingRequestReceived(deviceId, verificationKey) {
-            root.pairingRequestReceived(deviceId, verificationKey);
-        }
-        function onShareReceived(deviceId, url) {
-            root.shareReceived(deviceId, url);
-        }
-    }
-
+    // Dux Connect talks over its own socket, so it is not among the watched bus names.
     Connections {
         target: LocalServices.DuxConnectService
 
@@ -308,24 +276,15 @@ Singleton {
 
     property int _detectionGeneration: 0
 
-    function updatePreferredBackend() {
-        let value = "KDE Connect";
-        const globals = PluginService.globalVars?.["dankKDEConnect"];
-        if (globals?.preferredBackend)
-            value = globals.preferredBackend;
-        else if (SettingsData.pluginSettings["dankKDEConnect"]?.preferredBackend)
-            value = SettingsData.pluginSettings["dankKDEConnect"].preferredBackend;
-
-        switch (value) {
+    function backendFromName(name) {
+        switch (name) {
         case "Valent":
-            preferredBackend = PhoneConnectService.Backend.Valent;
-            break;
+            return PhoneConnectService.Backend.Valent;
         case "Dux Connect":
         case "DankConnect": // value saved by pre-rebrand alpha builds
-            preferredBackend = PhoneConnectService.Backend.DuxConnect;
-            break;
+            return PhoneConnectService.Backend.DuxConnect;
         default:
-            preferredBackend = PhoneConnectService.Backend.KDEConnect;
+            return PhoneConnectService.Backend.KDEConnect;
         }
     }
 
@@ -346,8 +305,7 @@ Singleton {
         default:
             _backend = null;
         }
-        backendChanged();
-        devicesListChanged();
+        syncDeviceIds();
     }
 
     function detectBackend() {
@@ -375,7 +333,6 @@ Singleton {
             const names = response.error ? [] : (response.result?.names || []);
             const hasKDE = names.includes("org.kde.kdeconnect");
             const hasValent = names.includes("ca.andyholmes.Valent");
-<<<<<<< HEAD
             if (!hasKDE || !names.includes("dev.duxlabs.connect.daemon")) {
                 root._selectDetected(hasKDE, hasValent);
                 return;
@@ -416,35 +373,6 @@ Singleton {
         }
 
         activateBackend(newBackend);
-=======
-
-            let newBackend = PhoneConnectService.Backend.None;
-
-            if (preferredBackend === PhoneConnectService.Backend.KDEConnect && hasKDE) {
-                newBackend = PhoneConnectService.Backend.KDEConnect;
-            } else if (preferredBackend === PhoneConnectService.Backend.Valent && hasValent) {
-                newBackend = PhoneConnectService.Backend.Valent;
-            } else if (hasKDE) {
-                newBackend = PhoneConnectService.Backend.KDEConnect;
-            } else if (hasValent) {
-                newBackend = PhoneConnectService.Backend.Valent;
-            }
-
-            if (newBackend === activeBackend)
-                return;
-            activeBackend = newBackend;
-            switch (activeBackend) {
-            case PhoneConnectService.Backend.KDEConnect:
-                _backend = KDEConnectService;
-                break;
-            case PhoneConnectService.Backend.Valent:
-                _backend = ValentService;
-                break;
-            default:
-                _backend = null;
-            }
-            syncDeviceIds();
-        });
     }
 
     function isListed(device) {
@@ -526,7 +454,6 @@ Singleton {
             if (root.imageViewers > 0)
                 root.scanImages();
         }
->>>>>>> origin/master
     }
 
     function refreshDevices() {
@@ -687,84 +614,6 @@ Singleton {
             if (scannedPath !== root.recentImagesPath)
                 root.scanImages();
         }
-<<<<<<< HEAD
-
-        if (!_backend) {
-            callback?.({
-                error: "No backend"
-            });
-            return;
-        }
-        _backend.sendSms(deviceId, addresses, message, attachmentUrls, callback);
-    }
-
-    function launchSmsApp(deviceId, callback) {
-        if (!_backend) {
-            callback?.({
-                error: "No backend"
-            });
-            return;
-        }
-        _backend.launchSmsApp(deviceId, callback);
-    }
-
-    function getConversations(deviceId, callback) {
-        if (!_backend) {
-            callback?.([]);
-            return;
-        }
-        _backend.getConversations(deviceId, callback);
-    }
-
-    property var deviceTypeMap: ({})
-    onDeviceTypeMapChanged: {
-        root.devicesListChanged();
-    }
-
-    function updateDeviceTypeMap() {
-        let changed = false;
-        let newMap = {};
-        if (PluginService.globalVars && PluginService.globalVars["dankKDEConnect"]) {
-            const vars = PluginService.globalVars["dankKDEConnect"];
-            if (vars && vars["deviceTypeMap"]) {
-                try {
-                    newMap = JSON.parse(vars["deviceTypeMap"]);
-                    changed = true;
-                } catch (e) {}
-            }
-        }
-        if (!changed) {
-            try {
-                const data = SettingsData.pluginSettings["dankKDEConnect"];
-                if (data?.deviceTypeMap) {
-                    newMap = JSON.parse(data.deviceTypeMap);
-                    changed = true;
-                }
-            } catch (e) {}
-        }
-
-        if (JSON.stringify(deviceTypeMap) !== JSON.stringify(newMap)) {
-            deviceTypeMap = newMap;
-            root.devicesListChanged();
-        }
-    }
-
-    Connections {
-        target: PluginService
-        ignoreUnknownSignals: true
-        function onGlobalVarChanged(pluginId, varName) {
-            if (pluginId !== "dankKDEConnect")
-                return;
-            if (varName === "deviceTypeMap")
-                root.updateDeviceTypeMap();
-            else if (varName === "preferredBackend")
-                root.updatePreferredBackend();
-        }
-        function onPluginDataChanged(pluginId) {
-            if (pluginId === "dankKDEConnect") {
-                root.updateDeviceTypeMap();
-                root.updatePreferredBackend();
-=======
         stdout: StdioCollector {
             onStreamFinished: {
                 const paths = text.split("\n").map(line => line.substring(line.indexOf("|") + 1)).filter(path => path.startsWith("/"));
@@ -774,7 +623,6 @@ Singleton {
                 const unchanged = paths.length === root.recentImages.length && paths.every((path, i) => path === root.recentImages[i]);
                 if (!unchanged)
                     root.recentImages = paths;
->>>>>>> origin/master
             }
         }
     }

@@ -110,7 +110,7 @@ Column {
         pad: root.inset
         iconName: "phonelink_off"
         heading: I18n.trFor(root.pluginId, "Phone Connect Not Available", "Phone Connect unavailable error title")
-        hint: I18n.trFor(root.pluginId, "Start KDE Connect or Valent to use this plugin", "Phone Connect daemon hint")
+        hint: I18n.trFor(root.pluginId, "Start Dux Connect, KDE Connect, or Valent to use this plugin", "Phone Connect daemon hint")
     }
 
     PanelMessage {

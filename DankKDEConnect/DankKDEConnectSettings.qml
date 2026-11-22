@@ -14,6 +14,8 @@ PluginSettings {
     pluginId: PhoneConnectService.pluginId
 
     readonly property var deviceTypes: ["phone", "tablet", "laptop", "desktop", "tv"]
+    // in PhoneConnectService.Backend order, starting at KDEConnect
+    readonly property var backendNames: ["KDE Connect", "Valent", "Dux Connect"]
     readonly property var deviceTypeLabels: [I18n.trFor(pluginId, "Phone", "Phone Connect device type"), I18n.trFor(pluginId, "Tablet", "Phone Connect device type"), I18n.trFor(pluginId, "Laptop", "Phone Connect device type"), I18n.trFor(pluginId, "Desktop", "Phone Connect device type"), I18n.trFor(pluginId, "TV", "Phone Connect device type")]
 
     function typeIndex(device) {
@@ -52,396 +54,6 @@ PluginSettings {
         width: parent.width
         spacing: Theme.spacingXS
 
-<<<<<<< HEAD
-        function loadValue(key, def) {
-            return PluginService.loadPluginData(root.pluginId, key, def);
-        }
-
-        function saveValue(key, val) {
-            PluginService.savePluginData(root.pluginId, key, val);
-            PluginService.setGlobalVar(root.pluginId, key, val);
-        }
-
-        function backendName(backend) {
-            switch (backend) {
-            case PhoneConnectService.Backend.Valent:
-                return "Valent";
-            case PhoneConnectService.Backend.DuxConnect:
-                return "Dux Connect";
-            default:
-                return "KDE Connect";
-            }
-        }
-
-        function setPreferredBackend(name, persist) {
-            switch (name) {
-            case "Valent":
-                PhoneConnectService.preferredBackend = PhoneConnectService.Backend.Valent;
-                break;
-            case "Dux Connect":
-            case "DankConnect": // value saved by pre-rebrand alpha builds
-                PhoneConnectService.preferredBackend = PhoneConnectService.Backend.DuxConnect;
-                break;
-            default:
-                PhoneConnectService.preferredBackend = PhoneConnectService.Backend.KDEConnect;
-            }
-            if (persist)
-                saveValue("preferredBackend", name);
-        }
-
-        readonly property string selectedDeviceId: loadValue("selectedDeviceId", "")
-        readonly property string targetDeviceId: selectedDeviceId || (PhoneConnectService.deviceIds.length > 0 ? PhoneConnectService.deviceIds[0] : "")
-        readonly property var targetDevice: PhoneConnectService.getDevice(targetDeviceId)
-        readonly property string targetDeviceName: targetDevice ? targetDevice.name : "Device 1"
-
-        property var deviceTypeMap: ({})
-        property var deviceImageMap: ({})
-        property bool hasDeviceImageMapSetting: false
-
-        function refreshDeviceTypeMap() {
-            const rawMap = loadValue("deviceTypeMap", "");
-            if (rawMap) {
-                try {
-                    deviceTypeMap = JSON.parse(rawMap);
-                    return;
-                } catch (e) {}
-            }
-            deviceTypeMap = {};
-        }
-
-        function refreshDeviceImageMap() {
-            const rawMap = loadValue("deviceImageMap", "");
-            hasDeviceImageMapSetting = rawMap !== undefined && rawMap !== null && rawMap !== "";
-            if (rawMap) {
-                try {
-                    deviceImageMap = JSON.parse(rawMap);
-                    return;
-                } catch (e) {}
-            }
-            deviceImageMap = {};
-        }
-
-        Component.onCompleted: {
-            refreshDeviceTypeMap();
-            refreshDeviceImageMap();
-            setPreferredBackend(loadValue("preferredBackend", "KDE Connect"), false);
-        }
-
-        Connections {
-            target: PluginService
-            ignoreUnknownSignals: true
-            function onGlobalVarChanged(pluginId, varName) {
-                if (pluginId === root.pluginId) {
-                    if (varName === "deviceTypeMap") {
-                        mainSettingsCol.refreshDeviceTypeMap();
-                    } else if (varName === "deviceImageMap") {
-                        mainSettingsCol.refreshDeviceImageMap();
-                    } else if (varName === "preferredBackend") {
-                        mainSettingsCol.setPreferredBackend(mainSettingsCol.loadValue("preferredBackend", "KDE Connect"), false);
-                    }
-                }
-            }
-            function onPluginDataChanged(pluginId) {
-                if (pluginId === root.pluginId) {
-                    mainSettingsCol.refreshDeviceTypeMap();
-                    mainSettingsCol.refreshDeviceImageMap();
-                    mainSettingsCol.setPreferredBackend(mainSettingsCol.loadValue("preferredBackend", "KDE Connect"), false);
-                }
-            }
-        }
-
-        function getDeviceImage(deviceId) {
-            if (!deviceId)
-                return "";
-            if (deviceImageMap[deviceId])
-                return deviceImageMap[deviceId];
-            // Fallback to legacy single image if it's the first device
-            if (!hasDeviceImageMapSetting && PhoneConnectService.deviceIds.length > 0 && deviceId === PhoneConnectService.deviceIds[0]) {
-                return loadValue("customPhoneImage", "");
-            }
-            return "";
-        }
-
-        function saveDeviceImage(deviceId, path) {
-            if (!deviceId)
-                return;
-            let newMap = Object.assign({}, deviceImageMap);
-            if (path === "" || path === null) {
-                delete newMap[deviceId];
-            } else {
-                newMap[deviceId] = path;
-            }
-            deviceImageMap = newMap;
-            hasDeviceImageMapSetting = true;
-            saveValue("deviceImageMap", JSON.stringify(newMap));
-        }
-
-        function getDeviceRecentImagesPath(deviceId) {
-            if (!deviceId)
-                return "";
-            const rawMap = loadValue("deviceRecentImagesPathMap", "");
-            if (rawMap) {
-                try {
-                    const map = JSON.parse(rawMap);
-                    if (map[deviceId])
-                        return map[deviceId];
-                } catch (e) {}
-            }
-            // Fallback to legacy single recentImagesPath if it's the first device
-            if (PhoneConnectService.deviceIds.length > 0 && deviceId === PhoneConnectService.deviceIds[0]) {
-                return loadValue("recentImagesPath", "");
-            }
-            return "";
-        }
-
-        function saveDeviceRecentImagesPath(deviceId, path) {
-            if (!deviceId)
-                return;
-            let map = {};
-            const rawMap = loadValue("deviceRecentImagesPathMap", "");
-            if (rawMap) {
-                try {
-                    map = JSON.parse(rawMap);
-                } catch (e) {}
-            }
-            if (path === "" || path === null) {
-                delete map[deviceId];
-            } else {
-                map[deviceId] = path;
-            }
-            const serialized = JSON.stringify(map);
-            saveValue("deviceRecentImagesPathMap", serialized);
-        }
-
-        function getDeviceType(deviceId) {
-            if (!deviceId)
-                return "Phone";
-            if (deviceTypeMap[deviceId]) {
-                switch (deviceTypeMap[deviceId]) {
-                case "phone":
-                    return "Phone";
-                case "tablet":
-                    return "Tablet";
-                case "laptop":
-                    return "Laptop";
-                case "desktop":
-                    return "PC";
-                }
-            }
-            // Fallback to real device type from service
-            const dev = PhoneConnectService.getDevice(deviceId);
-            if (dev && dev.type) {
-                switch (dev.type) {
-                case "phone":
-                case "smartphone":
-                    return "Phone";
-                case "tablet":
-                    return "Tablet";
-                case "laptop":
-                    return "Laptop";
-                case "desktop":
-                case "computer":
-                    return "PC";
-                }
-            }
-            return "Phone";
-        }
-
-        function saveDeviceType(deviceId, typeStr) {
-            if (!deviceId)
-                return;
-            let typeVal = "";
-            switch (typeStr) {
-            case "Phone":
-                typeVal = "phone";
-                break;
-            case "Tablet":
-                typeVal = "tablet";
-                break;
-            case "Laptop":
-                typeVal = "laptop";
-                break;
-            case "PC":
-                typeVal = "desktop";
-                break;
-            }
-
-            let newMap = Object.assign({}, deviceTypeMap);
-            if (typeVal === "") {
-                delete newMap[deviceId];
-            } else {
-                newMap[deviceId] = typeVal;
-            }
-            deviceTypeMap = newMap;
-            saveValue("deviceTypeMap", JSON.stringify(newMap));
-        }
-
-        // 1. Connection Status Card
-        Rectangle {
-            width: parent.width
-            height: statusCol.implicitHeight + Theme.spacingM * 2
-            color: Theme.surfaceContainer
-            radius: Theme.cornerRadius
-            border.color: Theme.outline
-            border.width: 1
-            opacity: 0.8
-
-            Column {
-                id: statusCol
-                anchors.fill: parent
-                anchors.margins: Theme.spacingM
-                spacing: Theme.spacingM
-
-                RowLayout {
-                    width: parent.width
-                    spacing: Theme.spacingM
-                    DIcon {
-                        name: PhoneConnectService.available ? "check_circle" : "error"
-                        size: 22
-                        color: PhoneConnectService.available ? Theme.success : Theme.error
-                        Layout.alignment: Qt.AlignVCenter
-                    }
-                    Column {
-                        Layout.fillWidth: true
-                        Layout.alignment: Qt.AlignVCenter
-                        spacing: Theme.spacingXXS
-                        StyledText {
-                            text: PhoneConnectService.available ? (serviceName + " Running") : "No Backend Running"
-                            font.weight: Font.Medium
-                            color: Theme.surfaceText
-                        }
-                        StyledText {
-                            text: PhoneConnectService.available ? ("Announced as: " + PhoneConnectService.announcedName + " (" + PhoneConnectService.selfId + ")") : "Please start Dux Connect, kdeconnectd, or Valent"
-                            font.pixelSize: Theme.fontSizeSmall
-                            color: Theme.surfaceVariantText
-                            width: parent.width
-                            wrapMode: Text.WordWrap
-                        }
-                    }
-                    DButton {
-                        text: "Refresh"
-                        iconName: "refresh"
-                        Layout.alignment: Qt.AlignVCenter
-                        onClicked: PhoneConnectService.available ? PhoneConnectService.refreshDevices() : PhoneConnectService.detectBackend()
-                    }
-                }
-
-                RowLayout {
-                    width: parent.width
-                    spacing: Theme.spacingM
-
-                    StyledText {
-                        text: "Preferred Backend"
-                        color: Theme.surfaceText
-                        Layout.fillWidth: true
-                    }
-
-                    DankDropdown {
-                        compactMode: true
-                        dropdownWidth: 180
-                        currentValue: mainSettingsCol.backendName(PhoneConnectService.preferredBackend)
-                        options: ["KDE Connect", "Valent", "Dux Connect"]
-                        optionIcons: ["devices", "devices", "phonelink"]
-                        onValueChanged: function(value) {
-                            if (value !== mainSettingsCol.backendName(PhoneConnectService.preferredBackend))
-                                mainSettingsCol.setPreferredBackend(value, true);
-                        }
-                    }
-                }
-
-                // Device List inside status card
-                Column {
-                    width: parent.width
-                    spacing: Theme.spacingS
-                    visible: PhoneConnectService.available && PhoneConnectService.deviceIds.length > 0
-
-                    StyledText {
-                        text: "Paired Devices"
-                        font.pixelSize: Theme.fontSizeSmall
-                        font.weight: Font.DemiBold
-                        color: Theme.surfaceText
-                    }
-
-                    Repeater {
-                        model: PhoneConnectService.deviceIds
-
-                        Rectangle {
-                            required property string modelData
-                            readonly property var device: PhoneConnectService.getDevice(modelData)
-
-                            width: parent.width
-                            height: deviceRow.implicitHeight + Theme.spacingS * 2
-                            radius: Theme.cornerRadius
-                            color: Theme.surfaceContainerHigh
-                            border.color: Theme.withAlpha(Theme.outline, 0.15)
-                            border.width: 1
-
-                            Row {
-                                id: deviceRow
-                                anchors.left: parent.left
-                                anchors.verticalCenter: parent.verticalCenter
-                                anchors.leftMargin: Theme.spacingS
-                                spacing: Theme.spacingS
-
-                                DIcon {
-                                    name: PhoneConnectService.getDeviceIcon(device)
-                                    size: Theme.iconSize
-                                    color: device?.isReachable ? Theme.primary : Theme.surfaceVariantText
-                                    anchors.verticalCenter: parent.verticalCenter
-                                }
-
-                                Column {
-                                    anchors.verticalCenter: parent.verticalCenter
-                                    spacing: Theme.spacingXXS
-
-                                    StyledText {
-                                        text: device?.name || modelData
-                                        font.pixelSize: Theme.fontSizeSmall
-                                        font.weight: Font.Medium
-                                        color: Theme.surfaceText
-                                    }
-
-                                    StyledText {
-                                        text: device?.isReachable ? "Connected" : (device?.isPaired ? "Offline" : "Not paired")
-                                        font.pixelSize: Theme.fontSizeSmall
-                                        color: device?.isReachable ? Theme.success : Theme.surfaceVariantText
-                                    }
-                                }
-                            }
-
-                            Row {
-                                visible: device && (device.batteryCharge ?? -1) >= 0
-                                anchors.right: parent.right
-                                anchors.verticalCenter: parent.verticalCenter
-                                anchors.rightMargin: Theme.spacingS
-                                spacing: Theme.spacingXS
-
-                                DIcon {
-                                    name: PhoneConnectService.getBatteryIcon(device)
-                                    size: Theme.iconSize - 4
-                                    color: device?.batteryCharging ? Theme.success : Theme.surfaceVariantText
-                                }
-
-                                StyledText {
-                                    text: (device?.batteryCharge ?? 0) + "%"
-                                    font.pixelSize: Theme.fontSizeSmall
-                                    color: Theme.surfaceVariantText
-                                }
-                            }
-                        }
-                    }
-                }
-
-                StyledText {
-                    visible: PhoneConnectService.available && PhoneConnectService.deviceIds.length === 0
-                    text: "No devices found. Pair a device using KDE Connect settings."
-                    font.pixelSize: Theme.fontSizeSmall
-                    color: Theme.surfaceVariantText
-                    width: parent.width
-                    wrapMode: Text.WordWrap
-                }
-            }
-=======
         StyledText {
             width: parent.width
             text: label.title
@@ -449,7 +61,6 @@ PluginSettings {
             font.weight: Theme.fontWeightMedium
             color: Theme.surfaceText
             wrapMode: Text.WordWrap
->>>>>>> origin/master
         }
 
         StyledText {
@@ -576,7 +187,7 @@ PluginSettings {
             anchors.verticalCenter: parent.verticalCenter
             width: parent.width - statusIcon.width - statusRefresh.width - parent.spacing * 2
             title: PhoneConnectService.available ? PhoneConnectService.backendName : I18n.trFor(root.pluginId, "Phone Connect Not Available", "Phone Connect unavailable error title")
-            description: PhoneConnectService.available ? PhoneConnectService.announcedName : I18n.trFor(root.pluginId, "Start KDE Connect or Valent to use this plugin", "Phone Connect daemon hint")
+            description: PhoneConnectService.available ? PhoneConnectService.announcedName : I18n.trFor(root.pluginId, "Start Dux Connect, KDE Connect, or Valent to use this plugin", "Phone Connect daemon hint")
         }
 
         DRefreshButton {
@@ -585,6 +196,29 @@ PluginSettings {
             buttonSize: Theme.iconButtonSize
             busy: PhoneConnectService.isRefreshing
             onClicked: PhoneConnectService.refreshDevices()
+        }
+    }
+
+    Row {
+        width: parent.width
+        spacing: Theme.spacingM
+
+        SettingLabel {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width - backendDropdown.width - parent.spacing
+            title: I18n.trFor(root.pluginId, "Preferred Backend", "Phone Connect backend setting")
+            description: I18n.trFor(root.pluginId, "Used whenever it is running.", "Phone Connect backend setting description")
+        }
+
+        DDropdown {
+            id: backendDropdown
+            anchors.verticalCenter: parent.verticalCenter
+            compactMode: true
+            alignPopupRight: true
+            currentValue: root.backendNames[PhoneConnectService.preferredBackend - PhoneConnectService.Backend.KDEConnect]
+            options: root.backendNames
+            optionIcons: ["devices", "devices", "phonelink"]
+            onValueChanged: value => PhoneConnectService.saveSetting("preferredBackend", value)
         }
     }
 
