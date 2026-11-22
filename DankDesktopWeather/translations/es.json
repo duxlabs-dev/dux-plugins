@@ -6,7 +6,7 @@
     "Available in Detailed and Forecast view modes": "Disponible en modo detallado y pronóstico"
   },
   "Background Opacity": {
-    "Background Opacity": "Opacidad del fondo de pantalla"
+    "Background Opacity": "Opacidad del fondo"
   },
   "Choose how the weather widget is displayed": {
     "Choose how the weather widget is displayed": "Elige cómo se muestra el widget del tiempo"
@@ -42,10 +42,10 @@
     "Humidity": "Humedad"
   },
   "No Weather Data": {
-    "No Weather Data": "Sin datos climáticos"
+    "No Weather Data": "Sin datos del tiempo"
   },
   "Precip": {
-    "Precip": "Precipitaciones"
+    "Precip": "Precip."
   },
   "Pressure": {
     "Pressure": "Presión"
@@ -78,7 +78,7 @@
     "Show Pressure": "Mostrar presión"
   },
   "Show Sunrise/Sunset": {
-    "Show Sunrise/Sunset": "Mostrar amanecer/anochecer"
+    "Show Sunrise/Sunset": "Mostrar amanecer/atardecer"
   },
   "Show Weather Condition": {
     "Show Weather Condition": "Mostrar estado del tiempo"
@@ -87,7 +87,7 @@
     "Show Wind Speed": "Mostrar velocidad del viento"
   },
   "Standard": {
-    "Standard": "Estandar"
+    "Standard": "Estándar"
   },
   "Used when accent color is set to Custom": {
     "Used when accent color is set to Custom": "Se usa cuando el color de acento está en Personalizado"

@@ -1,7 +1,6 @@
 import QtQuick
 import qs.Common
 import qs.Services
-import qs.Widgets
 import qs.Modules.Plugins
 import qs.DCommon.Widgets
 
@@ -110,7 +109,7 @@ PluginSettings {
                         width: parent.width
                         placeholderText: "e.g., Power Profile"
                         keyNavigationTab: iconField
-                        onFocusStateChanged: function(hasFocus) {
+                        onFocusStateChanged: function (hasFocus) {
                             if (hasFocus)
                                 root.ensureItemVisible(nameField);
                         }
@@ -133,7 +132,7 @@ PluginSettings {
                         placeholderText: "e.g., power_settings_new"
                         keyNavigationBacktab: nameField
                         keyNavigationTab: displayTextField
-                        onFocusStateChanged: function(hasFocus) {
+                        onFocusStateChanged: function (hasFocus) {
                             if (hasFocus)
                                 root.ensureItemVisible(iconField);
                         }
@@ -157,7 +156,7 @@ PluginSettings {
                     placeholderText: "Text to show (or leave empty if using command output)"
                     keyNavigationBacktab: iconField
                     keyNavigationTab: displayCommandField
-                    onFocusStateChanged: function(hasFocus) {
+                    onFocusStateChanged: function (hasFocus) {
                         if (hasFocus)
                             root.ensureItemVisible(displayTextField);
                     }
@@ -180,7 +179,7 @@ PluginSettings {
                     placeholderText: 'e.g., echo "Hello World" or powerprofilesctl get'
                     keyNavigationBacktab: displayTextField
                     keyNavigationTab: clickCommandField
-                    onFocusStateChanged: function(hasFocus) {
+                    onFocusStateChanged: function (hasFocus) {
                         if (hasFocus)
                             root.ensureItemVisible(displayCommandField);
                     }
@@ -211,7 +210,7 @@ PluginSettings {
                     placeholderText: "e.g., dms notify 'Clicked!' or cycle-power-profile.sh"
                     keyNavigationBacktab: displayCommandField
                     keyNavigationTab: middleClickCommandField
-                    onFocusStateChanged: function(hasFocus) {
+                    onFocusStateChanged: function (hasFocus) {
                         if (hasFocus)
                             root.ensureItemVisible(clickCommandField);
                     }
@@ -242,7 +241,7 @@ PluginSettings {
                     placeholderText: "e.g., dms notify 'Middle clicked!'"
                     keyNavigationBacktab: clickCommandField
                     keyNavigationTab: rightClickCommandField
-                    onFocusStateChanged: function(hasFocus) {
+                    onFocusStateChanged: function (hasFocus) {
                         if (hasFocus)
                             root.ensureItemVisible(middleClickCommandField);
                     }
@@ -265,7 +264,7 @@ PluginSettings {
                     placeholderText: "e.g., dms notify 'Right clicked!'"
                     keyNavigationBacktab: middleClickCommandField
                     keyNavigationTab: updateIntervalField
-                    onFocusStateChanged: function(hasFocus) {
+                    onFocusStateChanged: function (hasFocus) {
                         if (hasFocus)
                             root.ensureItemVisible(rightClickCommandField);
                     }
@@ -289,7 +288,7 @@ PluginSettings {
                     text: "0"
                     keyNavigationBacktab: rightClickCommandField
                     keyNavigationTab: visibilityCommandField
-                    onFocusStateChanged: function(hasFocus) {
+                    onFocusStateChanged: function (hasFocus) {
                         if (hasFocus)
                             root.ensureItemVisible(updateIntervalField);
                     }
@@ -320,7 +319,7 @@ PluginSettings {
                     placeholderText: "e.g., pgrep -x firefox (exit 0 = show, non-zero = hide)"
                     keyNavigationBacktab: updateIntervalField
                     keyNavigationTab: visibilityIntervalField
-                    onFocusStateChanged: function(hasFocus) {
+                    onFocusStateChanged: function (hasFocus) {
                         if (hasFocus)
                             root.ensureItemVisible(visibilityCommandField);
                     }
@@ -351,7 +350,7 @@ PluginSettings {
                     placeholderText: "0"
                     text: "0"
                     keyNavigationBacktab: visibilityCommandField
-                    onFocusStateChanged: function(hasFocus) {
+                    onFocusStateChanged: function (hasFocus) {
                         if (hasFocus)
                             root.ensureItemVisible(visibilityIntervalField);
                     }
@@ -382,7 +381,7 @@ PluginSettings {
                     DToggle {
                         id: showIconToggle
                         checked: true
-                        onToggled: function(isChecked) {
+                        onToggled: function (isChecked) {
                             checked = isChecked;
                         }
                     }
@@ -400,7 +399,7 @@ PluginSettings {
                     DToggle {
                         id: showTextToggle
                         checked: true
-                        onToggled: function(isChecked) {
+                        onToggled: function (isChecked) {
                             checked = isChecked;
                         }
                     }

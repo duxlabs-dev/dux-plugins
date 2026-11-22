@@ -2,7 +2,6 @@ import QtQuick
 import Quickshell.Io
 import qs.Common
 import qs.Services
-import qs.Widgets
 import qs.Modules.Plugins
 import qs.DCommon.Widgets
 

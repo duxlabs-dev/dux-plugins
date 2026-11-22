@@ -24,7 +24,7 @@
     "No results found": "No se encontraron resultados"
   },
   "Open in Browser": {
-    "Open in Browser": "Abrir en navegador"
+    "Open in Browser": "Abrir en el navegador"
   },
   "Paste": {
     "Paste": "Pegar"
@@ -33,12 +33,12 @@
     "Searching...": "Buscando..."
   },
   "Shift+Enter to paste": {
-    "Shift+Enter to paste": "Mayús+Entrar para pegar"
+    "Shift+Enter to paste": "Mayús+Intro para pegar"
   },
   "Trending GIFs": {
-    "Trending GIFs": "GIFs en tendencia"
+    "Trending GIFs": "GIF populares"
   },
   "Try a different search": {
-    "Try a different search": "Intenta una búsqueda diferente"
+    "Try a different search": "Prueba con otra búsqueda"
   }
 }

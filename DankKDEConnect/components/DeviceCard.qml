@@ -1,356 +1,206 @@
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import qs.Common
-import qs.Widgets
-import "../services"
 import qs.DCommon.Widgets
+import "../services"
 
-StyledRect {
+DCard {
     id: root
 
     required property string deviceId
-    required property var device
-    property bool selectable: false
-    property bool isSelected: false
+    property bool switcherOpen: false
 
-    property bool isFirst: false
-    property bool isLast: false
+    readonly property string pluginId: PhoneConnectService.pluginId
+    readonly property var device: PhoneConnectService.devices[deviceId] ?? null
+    readonly property bool reachable: device?.isReachable ?? false
+    readonly property real headingHeight: Theme.iconButtonSize
+    readonly property real fullDetailsHeight: headingHeight + Theme.spacingM + Theme.buttonHeightXXS * 4 + Theme.spacingS * 3
+    readonly property var info: {
+        const rows = [];
+        if (!device)
+            return rows;
+        if ((device.batteryCharge ?? -1) >= 0)
+            rows.push({
+                icon: PhoneConnectService.getBatteryIcon(device),
+                label: I18n.trFor(pluginId, "Battery", "KDE Connect battery label"),
+                value: device.batteryCharge + "%",
+                accent: device.batteryCharging === true
+            });
+        if ((device.networkStrength ?? -1) >= 0)
+            rows.push({
+                icon: PhoneConnectService.getNetworkIcon(device),
+                label: I18n.trFor(pluginId, "Signal Strength", "KDE Connect signal strength label"),
+                value: PhoneConnectService.getNetworkStrengthLabel(device),
+                accent: false
+            });
+        if (device.networkType)
+            rows.push({
+                icon: PhoneConnectService.getNetworkTypeIcon(device),
+                label: I18n.trFor(pluginId, "Network Type", "KDE Connect network type label"),
+                value: PhoneConnectService.getNetworkTypeLabel(device),
+                accent: false
+            });
+        if (device.notificationCount !== undefined)
+            rows.push({
+                icon: "notifications",
+                label: I18n.trFor(pluginId, "Notifications", "KDE Connect notifications label"),
+                value: String(device.notificationCount),
+                accent: false
+            });
+        return rows;
+    }
+    readonly property var actions: {
+        const list = [
+            {
+                name: "ring",
+                plugin: "findmyphone",
+                icon: "phone_in_talk",
+                label: I18n.trFor(pluginId, "Ring", "KDE Connect ring tooltip")
+            },
+            {
+                name: "ping",
+                plugin: "ping",
+                icon: "notifications_active",
+                label: I18n.trFor(pluginId, "Ping", "KDE Connect ping tooltip")
+            },
+            {
+                name: "browse",
+                plugin: "sftp",
+                icon: "folder_open",
+                label: I18n.trFor(pluginId, "Browse Files", "KDE Connect browse tooltip")
+            },
+            {
+                name: "clipboard",
+                plugin: "clipboard",
+                icon: "content_paste_go",
+                label: I18n.trFor(pluginId, "Send Clipboard", "KDE Connect send clipboard tooltip")
+            },
+            {
+                name: "share",
+                plugin: "share",
+                icon: "share",
+                label: I18n.trFor(pluginId, "Share", "KDE Connect share tooltip")
+            },
+            {
+                name: "sms",
+                plugin: "sms",
+                icon: "sms",
+                label: I18n.trFor(pluginId, "SMS", "KDE Connect SMS tooltip")
+            }
+        ];
+        return PhoneConnectService.clipboardAction ? list : list.filter(action => action.name !== "clipboard");
+    }
 
-    signal clicked
-    signal action(string actionName)
+    signal switcherToggled
+    signal actionTriggered(string name)
 
-    height: contentColumn.implicitHeight + Theme.spacingM * 2
-    radius: 0
-    topLeftRadius: isSelected ? root.height / 2 : (isFirst ? Theme.cornerRadius : 4)
-    topRightRadius: isSelected ? root.height / 2 : (isFirst ? Theme.cornerRadius : 4)
-    bottomLeftRadius: isSelected ? root.height / 2 : (isLast ? Theme.cornerRadius : 4)
-    bottomRightRadius: isSelected ? root.height / 2 : (isLast ? Theme.cornerRadius : 4)
-
-    Behavior on topLeftRadius {
-        NumberAnimation {
-            duration: 200
-        }
-    }
-    Behavior on topRightRadius {
-        NumberAnimation {
-            duration: 200
-        }
-    }
-    Behavior on bottomLeftRadius {
-        NumberAnimation {
-            duration: 200
-        }
-    }
-    Behavior on bottomRightRadius {
-        NumberAnimation {
-            duration: 200
-        }
-    }
-
-    color: isSelected ? Theme.withAlpha(Theme.primary, 0.18) : (cardMouseArea.containsMouse && selectable ? Theme.withAlpha(Theme.primary, 0.10) : Theme.withAlpha(Theme.secondary, 0.04))
-    border.width: 1
-    border.color: isSelected ? Theme.withAlpha(Theme.primary, 0.60) : (cardMouseArea.containsMouse && selectable ? Theme.withAlpha(Theme.primary, 0.40) : Theme.withAlpha(Theme.secondary, 0.15))
-
-    Behavior on color {
-        ColorAnimation {
-            duration: 200
-        }
-    }
-    Behavior on border.color {
-        ColorAnimation {
-            duration: 200
-        }
-    }
-
-    scale: cardMouseArea.pressed ? 0.98 : 1.0
-    Behavior on scale {
-        NumberAnimation {
-            duration: 100
-        }
-    }
-
-    MouseArea {
-        id: cardMouseArea
-        anchors.fill: parent
-        hoverEnabled: root.selectable
-        cursorShape: root.selectable ? Qt.PointingHandCursor : Qt.ArrowCursor
-        onPressed: function (m) {
-            if (root.selectable)
-                cardRipple.trigger(m.x, m.y);
-        }
-        onClicked: if (root.selectable)
-            root.clicked()
-    }
-
-    DRipple {
-        id: cardRipple
-        anchors.fill: parent
-        cornerRadius: root.isSelected ? root.height / 2 : (root.isFirst || root.isLast ? Theme.cornerRadius : 4)
-        rippleColor: Theme.primary
-        visible: root.selectable
-    }
+    restRadius: Theme.cornerRadiusL
+    height: layout.implicitHeight + pad * 2
 
     Column {
-        id: contentColumn
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.top: parent.top
-        anchors.margins: Theme.spacingM
-        spacing: Theme.spacingS
+        id: layout
+        width: parent.width
+        spacing: Theme.spacingM
 
         Row {
+            id: body
             width: parent.width
             spacing: Theme.spacingM
 
-            DIcon {
-                name: PhoneConnectService.getDeviceIcon(root.device)
-                size: Theme.iconSize + 4
-                color: root.device?.isReachable ? Theme.primary : Theme.surfaceVariantText
-                anchors.verticalCenter: parent.verticalCenter
+            DeviceMock {
+                id: mock
+                visible: PhoneConnectService.showDevicePlaceholder
+                maximumHeight: root.fullDetailsHeight
+                deviceType: root.device?.type ?? "phone"
+                image: PhoneConnectService.deviceImage(root.deviceId)
+                reachable: root.reachable
             }
 
             Column {
-                spacing: Theme.spacingXXS
-                anchors.verticalCenter: parent.verticalCenter
-                width: Math.max(0, parent.width - Theme.iconSize - Theme.spacingM * 2 - statusRow.width - 8)
+                width: mock.visible ? body.width - mock.width - body.spacing : body.width
+                spacing: Theme.spacingM
 
-                StyledText {
-                    text: root.device?.name || root.deviceId
-                    font.pixelSize: Theme.fontSizeMedium
-                    font.weight: Font.Medium
-                    color: Theme.surfaceText
-                    elide: Text.ElideRight
+                Item {
                     width: parent.width
-                }
+                    height: root.headingHeight
 
-                StyledText {
-                    text: getStatusText()
-                    font.pixelSize: Theme.fontSizeSmall
-                    color: getStatusColor()
-                    visible: text.length > 0
-                }
-            }
-
-            Row {
-                id: statusRow
-                spacing: Theme.spacingS
-                anchors.verticalCenter: parent.verticalCenter
-
-                Row {
-                    visible: root.device && root.device.batteryCharge >= 0
-                    spacing: Theme.spacingXS
-
-                    DIcon {
-                        name: PhoneConnectService.getBatteryIcon(root.device)
-                        size: Theme.iconSize - 4
-                        color: root.device?.batteryCharging ? Theme.primary : Theme.surfaceVariantText
+                    Column {
+                        anchors.left: parent.left
+                        anchors.right: switchButton.left
+                        anchors.rightMargin: Theme.spacingS
                         anchors.verticalCenter: parent.verticalCenter
+                        spacing: Theme.spacingXXS
+
+                        StyledText {
+                            width: parent.width
+                            text: root.device?.name ?? root.deviceId
+                            font.pixelSize: Theme.fontSizeLarge
+                            font.weight: Theme.fontWeightMedium
+                            color: Theme.onSurface
+                            elide: Text.ElideRight
+                        }
+
+                        StyledText {
+                            width: parent.width
+                            text: PhoneConnectService.statusText(root.device)
+                            font.pixelSize: Theme.fontSizeSmall
+                            color: root.reachable ? Theme.primary : Theme.onSurfaceVariant
+                            elide: Text.ElideRight
+                        }
                     }
 
-                    StyledText {
-                        text: (root.device?.batteryCharge ?? 0) + "%"
-                        font.pixelSize: Theme.fontSizeSmall
-                        color: Theme.surfaceVariantText
+                    DActionButton {
+                        id: switchButton
+                        anchors.right: parent.right
+                        anchors.rightMargin: -(width - iconSize) / 2
                         anchors.verticalCenter: parent.verticalCenter
+                        buttonSize: root.headingHeight
+                        iconName: root.switcherOpen ? "unfold_less" : "unfold_more"
+                        tooltipText: I18n.trFor(root.pluginId, "Devices", "Phone Connect device list toggle tooltip")
+                        onClicked: root.switcherToggled()
                     }
                 }
 
-                DIcon {
-                    visible: PhoneConnectService.getNetworkIcon(root.device) !== ""
-                    name: PhoneConnectService.getNetworkIcon(root.device)
-                    size: Theme.iconSize - 4
-                    color: Theme.surfaceVariantText
-                    anchors.verticalCenter: parent.verticalCenter
+                Column {
+                    width: parent.width
+                    spacing: Theme.spacingS
+                    visible: root.info.length > 0
+
+                    Repeater {
+                        model: root.info
+
+                        InfoRow {
+                            required property var modelData
+                            width: parent.width
+                            icon: modelData.icon
+                            label: modelData.label
+                            value: modelData.value
+                            valueColor: modelData.accent ? Theme.primary : Theme.onSurface
+                        }
+                    }
                 }
             }
         }
 
         Row {
-            visible: !root.selectable && root.device?.isReachable && root.device?.isPaired
+            id: actionRow
+            width: parent.width
             spacing: Theme.spacingXS
-            anchors.horizontalCenter: parent.horizontalCenter
 
-            Item {
-                width: 36
-                height: 36
-                enabled: root.device && root.device.isReachable && PhoneConnectService.hasPlugin(root.deviceId, "findmyphone")
-                DankKDEActionButton {
-                    anchors.fill: parent
-                    enabled: parent.enabled
-                    iconName: "phone_in_talk"
-                    iconColor: Theme.primary
-                    buttonSize: 36
-                    tooltipText: I18n.trFor("dankKDEConnect", "Ring", "KDE Connect ring tooltip")
-                    tooltipSide: "top"
-                    onClicked: {
-                        if (!enabled)
-                            return;
-                        root.action("ring");
-                    }
+            Repeater {
+                model: root.actions
+
+                DIconButton {
+                    required property var modelData
+                    width: (actionRow.width - actionRow.spacing * (root.actions.length - 1)) / root.actions.length
+                    variant: "tonal"
+                    iconName: modelData.icon
+                    tooltipText: modelData.label
+                    enabled: PhoneConnectService.canUse(root.deviceId, modelData.plugin)
+                    onClicked: root.actionTriggered(modelData.name)
                 }
-            }
-
-            Item {
-                width: 36
-                height: 36
-                enabled: root.device && root.device.isReachable && PhoneConnectService.hasPlugin(root.deviceId, "ping")
-                DankKDEActionButton {
-                    anchors.fill: parent
-                    enabled: parent.enabled
-                    iconName: "notifications_active"
-                    iconColor: Theme.primary
-                    buttonSize: 36
-                    tooltipText: I18n.trFor("dankKDEConnect", "Ping", "KDE Connect ping tooltip")
-                    tooltipSide: "top"
-                    onClicked: {
-                        if (!enabled)
-                            return;
-                        root.action("ping");
-                    }
-                }
-            }
-
-            Item {
-                width: 36
-                height: 36
-                visible: typeof SettingsData !== "undefined" ? (SettingsData.pluginSettings["dankKDEConnect"]?.enableClipboardAction ?? true) : true
-                enabled: root.device && root.device.isReachable && PhoneConnectService.hasPlugin(root.deviceId, "clipboard")
-                DankKDEActionButton {
-                    anchors.fill: parent
-                    enabled: parent.enabled
-                    iconName: "content_paste"
-                    iconColor: Theme.primary
-                    buttonSize: 36
-                    tooltipText: I18n.trFor("dankKDEConnect", "Send Clipboard", "KDE Connect clipboard tooltip")
-                    tooltipSide: "top"
-                    onClicked: {
-                        if (!enabled)
-                            return;
-                        root.action("clipboard");
-                    }
-                }
-            }
-
-            Item {
-                width: 36
-                height: 36
-                enabled: root.device && root.device.isReachable && PhoneConnectService.hasPlugin(root.deviceId, "share")
-                DankKDEActionButton {
-                    anchors.fill: parent
-                    enabled: parent.enabled
-                    iconName: "share"
-                    iconColor: Theme.primary
-                    buttonSize: 36
-                    tooltipText: I18n.trFor("dankKDEConnect", "Share", "KDE Connect share tooltip")
-                    tooltipSide: "top"
-                    onClicked: {
-                        if (!enabled)
-                            return;
-                        root.action("share");
-                    }
-                }
-            }
-
-            Item {
-                width: 36
-                height: 36
-                enabled: root.device && root.device.isReachable && PhoneConnectService.hasPlugin(root.deviceId, "sftp")
-                DankKDEActionButton {
-                    anchors.fill: parent
-                    enabled: parent.enabled
-                    iconName: "folder"
-                    iconColor: Theme.primary
-                    buttonSize: 36
-                    tooltipText: I18n.trFor("dankKDEConnect", "Browse Files", "KDE Connect browse tooltip")
-                    tooltipSide: "top"
-                    onClicked: {
-                        if (!enabled)
-                            return;
-                        root.action("browse");
-                    }
-                }
-            }
-
-            Item {
-                width: 36
-                height: 36
-                enabled: root.device && root.device.isReachable && PhoneConnectService.hasPlugin(root.deviceId, "sms")
-                DankKDEActionButton {
-                    anchors.fill: parent
-                    enabled: parent.enabled
-                    iconName: "sms"
-                    iconColor: Theme.primary
-                    buttonSize: 36
-                    tooltipText: I18n.trFor("dankKDEConnect", "SMS", "KDE Connect SMS tooltip")
-                    tooltipSide: "top"
-                    onClicked: {
-                        if (!enabled)
-                            return;
-                        root.action("sms");
-                    }
-                }
-            }
-
-            DankKDEActionButton {
-                visible: root.device?.isPaired
-                iconName: "link_off"
-                iconColor: Theme.primary
-                buttonSize: 36
-                tooltipText: I18n.trFor("dankKDEConnect", "Unpair", "KDE Connect unpair tooltip")
-                tooltipSide: "top"
-                onClicked: root.action("unpair")
             }
         }
-
-        Row {
-            visible: root.device?.isPairRequestedByPeer
-            spacing: Theme.spacingS
-
-            DButton {
-                text: I18n.trFor("dankKDEConnect", "Accept", "KDE Connect accept pairing button")
-                iconName: "check"
-                onClicked: root.action("acceptPair")
-            }
-
-            DButton {
-                text: I18n.trFor("dankKDEConnect", "Reject", "KDE Connect reject pairing button")
-                iconName: "close"
-                onClicked: root.action("rejectPair")
-            }
-        }
-
-        Row {
-            visible: root.device?.isReachable && !root.device?.isPaired && !root.device?.isPairRequestedByPeer
-            spacing: Theme.spacingS
-
-            DButton {
-                text: I18n.trFor("dankKDEConnect", "Request Pairing", "KDE Connect request pairing button")
-                iconName: "link"
-                onClicked: root.action("pair")
-            }
-        }
-    }
-
-    function getStatusText() {
-        if (!root.device)
-            return I18n.trFor("dankKDEConnect", "Unknown", "KDE Connect unknown device status");
-        if (root.device.isPairRequestedByPeer)
-            return I18n.trFor("dankKDEConnect", "Pairing requested", "KDE Connect pairing requested status");
-        if (root.device.isPairRequested)
-            return I18n.trFor("dankKDEConnect", "Pairing...", "KDE Connect pairing in progress status");
-        if (!root.device.isPaired)
-            return I18n.trFor("dankKDEConnect", "Not paired", "KDE Connect not paired status");
-        if (!root.device.isReachable)
-            return I18n.trFor("dankKDEConnect", "Offline", "KDE Connect offline status");
-        return "";
-    }
-
-    function getStatusColor() {
-        if (!root.device)
-            return Theme.surfaceVariantText;
-        if (root.device.isPairRequestedByPeer)
-            return Theme.warning;
-        if (root.device.isPairRequested)
-            return Theme.warning;
-        return Theme.surfaceVariantText;
     }
 }

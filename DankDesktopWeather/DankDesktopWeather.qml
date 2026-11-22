@@ -3,7 +3,6 @@ import QtQuick.Layouts
 import QtQuick.Effects
 import qs.Common
 import qs.Services
-import qs.Widgets
 import qs.Modules.Plugins
 import qs.DCommon.Widgets
 

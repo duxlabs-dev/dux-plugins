@@ -1,6 +1,5 @@
 import QtQuick
 import qs.Common
-import qs.Widgets
 import qs.Modules.Plugins
 import qs.DCommon.Widgets
 
@@ -231,7 +230,6 @@ PluginComponent {
                     parts.push(ClightService.ambientPercent + "% ambient");
                 return parts.join(" • ");
             }
-            showCloseButton: true
 
             headerActions: Component {
                 Row {
@@ -739,5 +737,4 @@ PluginComponent {
             }
         }
     }
-
 }

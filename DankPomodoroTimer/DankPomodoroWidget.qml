@@ -14,8 +14,8 @@ PluginComponent {
     property int shortBreakDuration: pluginData.shortBreakDuration || 5
     property int longBreakDuration: pluginData.longBreakDuration || 15
     property int longBreakFrequency: {
-        const configured = parseInt(pluginData.longBreakFrequency, 10)
-        return configured > 0 ? configured : 4
+        const configured = parseInt(pluginData.longBreakFrequency, 10);
+        return configured > 0 ? configured : 4;
     }
     property bool autoStartBreaks: pluginData.autoStartBreaks ?? false
     property bool autoStartPomodoros: pluginData.autoStartPomodoros ?? false
@@ -354,7 +354,9 @@ PluginComponent {
 
             NumericText {
                 text: root.formatTime(globalRemainingSeconds.value)
-                font.features: ({ "tnum": 1 })
+                font.features: ({
+                        "tnum": 1
+                    })
                 isMonospace: false
                 font.pixelSize: Theme.barTextSize(root.barThickness, root.barConfig?.fontScale, root.barConfig?.maximizeWidgetText)
                 font.weight: Font.Medium
@@ -384,7 +386,9 @@ PluginComponent {
 
                 NumericText {
                     text: String(Math.floor(globalRemainingSeconds.value / 60)).padStart(2, "0")
-                    font.features: ({ "tnum": 1 })
+                    font.features: ({
+                            "tnum": 1
+                        })
                     isMonospace: false
                     font.pixelSize: Theme.barTextSize(root.barThickness, root.barConfig?.fontScale, root.barConfig?.maximizeWidgetText)
                     font.weight: Font.Medium
@@ -395,7 +399,9 @@ PluginComponent {
 
                 NumericText {
                     text: String(globalRemainingSeconds.value % 60).padStart(2, "0")
-                    font.features: ({ "tnum": 1 })
+                    font.features: ({
+                            "tnum": 1
+                        })
                     isMonospace: false
                     font.pixelSize: Theme.barTextSize(root.barThickness, root.barConfig?.fontScale, root.barConfig?.maximizeWidgetText)
                     font.weight: Font.Medium
@@ -419,7 +425,6 @@ PluginComponent {
                     return "Short break";
                 return "Long break";
             }
-            showCloseButton: true
 
             Column {
                 id: popoutContentColumn

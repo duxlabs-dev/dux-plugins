@@ -1,6 +1,6 @@
 {
   "All": {
-    "All": "Todo"
+    "All": "Todos"
   },
   "Content copied": {
     "Content copied": "Contenido copiado"
@@ -27,7 +27,7 @@
     "No results found": "No se encontraron resultados"
   },
   "Open in Browser": {
-    "Open in Browser": "Abrir en navegador"
+    "Open in Browser": "Abrir en el navegador"
   },
   "Paste": {
     "Paste": "Pegar"
@@ -36,12 +36,12 @@
     "Searching...": "Buscando..."
   },
   "Shift+Enter to paste": {
-    "Shift+Enter to paste": "Mayús+Entrar para pegar"
+    "Shift+Enter to paste": "Mayús+Intro para pegar"
   },
   "Trending Stickers": {
-    "Trending Stickers": "Stickers en tendencia"
+    "Trending Stickers": "Stickers populares"
   },
   "Try a different search": {
-    "Try a different search": "Intenta una búsqueda diferente"
+    "Try a different search": "Prueba con otra búsqueda"
   }
 }
