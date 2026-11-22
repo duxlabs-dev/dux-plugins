@@ -115,14 +115,7 @@ PluginComponent {
             property string styleName: "github-dark"
             property bool showLineNumbers: false
 
-            command: ["sh", "-c", "if [ \"$MODE\" = \"markdown\" ]; then printf '%s' \"$CONTENT\" | dms chroma --markdown --inline --style \"$STYLE\" $LINE_NUMBERS_FLAG; elif [ -n \"$LANG\" ]; then printf '%s' \"$CONTENT\" | dms chroma --inline --style \"$STYLE\" -l \"$LANG\" $LINE_NUMBERS_FLAG; else printf '%s' \"$CONTENT\" | dms chroma --inline --style \"$STYLE\" $LINE_NUMBERS_FLAG; fi"]
-            environment: {
-                "CONTENT": content,
-                "MODE": mode,
-                "LANG": language,
-                "STYLE": styleName,
-                "LINE_NUMBERS_FLAG": showLineNumbers ? "--line-numbers" : ""
-            }
+            command: ["sh", "-c", "CONTENT=$1; MODE=$2; LANG=$3; STYLE=$4; LINE_NUMBERS_FLAG=$5; if [ \"$MODE\" = \"markdown\" ]; then printf '%s' \"$CONTENT\" | dms chroma --markdown --inline --style \"$STYLE\" $LINE_NUMBERS_FLAG; elif [ -n \"$LANG\" ]; then printf '%s' \"$CONTENT\" | dms chroma --inline --style \"$STYLE\" -l \"$LANG\" $LINE_NUMBERS_FLAG; else printf '%s' \"$CONTENT\" | dms chroma --inline --style \"$STYLE\" $LINE_NUMBERS_FLAG; fi", "sh", content, mode, language, styleName, showLineNumbers ? "--line-numbers" : ""]
 
             stdout: StdioCollector {
                 onStreamFinished: {
